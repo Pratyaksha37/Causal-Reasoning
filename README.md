@@ -1,4 +1,4 @@
-# Neuro-Symbolic Causal Inference for Diabetes Health Evidence (Phase 1)
+# Neuro-Symbolic Causal Inference for Diabetes Health Evidence
 ### Biomedical Relation Extraction, Evaluation, and Evidence Graph Construction
 
 ## 📖 Table of Contents
