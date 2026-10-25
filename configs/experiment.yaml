@@ -1,0 +1,24 @@
+# Experiment-level configuration
+seed: 42
+run_name: "diabetes_causal_phase1_baseline"
+
+paths:
+  manifest_dir: "data/manifest"
+  annotations_dir: "data/annotations"
+  predictions_dir: "results/predictions"
+  tables_dir: "results/tables"
+  figures_dir: "results/figures"
+  graph_dir: "results/graph"
+  log_dir: "results/logs"
+
+sampling:
+  target_candidate_pairs: 250
+  train_ratio: 0.60
+  dev_ratio: 0.20
+  test_ratio: 0.20
+  double_annotate_ratio: 0.20
+  split_level: "document"  # document-level split to prevent data leakage
+
+logging:
+  level: "${LOG_LEVEL:-INFO}"
+  file: "results/logs/experiment.log"

@@ -1,0 +1,198 @@
+# Canonical variables and phrase alias dictionary
+version: "1.0.0"
+
+canonical_variables:
+  AgeCat:
+    description: "Age categorized into discrete bands"
+    is_phase2_target: true
+    values: ["young", "middle_aged", "older", "elderly"]
+    aliases:
+      young:
+        - "younger adults"
+        - "young adults"
+        - "age < 45"
+        - "age under 45"
+      middle_aged:
+        - "middle aged"
+        - "middle-aged adults"
+        - "age 45-64"
+      older:
+        - "older adults"
+        - "age >= 65"
+        - "age 65 and older"
+      elderly:
+        - "elderly"
+        - "geriatric"
+        - "advanced age"
+
+  Sex:
+    description: "Biological sex"
+    is_phase2_target: true
+    values: ["male", "female"]
+    aliases:
+      male:
+        - "men"
+        - "male"
+        - "males"
+        - "man"
+      female:
+        - "women"
+        - "female"
+        - "females"
+        - "woman"
+
+  Education:
+    description: "Educational attainment level"
+    is_phase2_target: true
+    values: ["low", "medium", "high"]
+    aliases:
+      low:
+        - "low education"
+        - "less than high school"
+        - "primary education"
+        - "lower educational level"
+      medium:
+        - "high school graduate"
+        - "secondary education"
+      high:
+        - "college educated"
+        - "university degree"
+        - "higher education"
+        - "tertiary education"
+
+  Income:
+    description: "Income level or socioeconomic status proxy"
+    is_phase2_target: true
+    values: ["low", "medium", "high"]
+    aliases:
+      low:
+        - "low income"
+        - "poverty"
+        - "low socioeconomic status"
+        - "low household income"
+      high:
+        - "high income"
+        - "affluent"
+        - "high socioeconomic status"
+        - "higher income"
+
+  Smoker:
+    description: "Smoking status with strict CDC 100-cigarette lifetime criterion"
+    is_phase2_target: true
+    precision_rule: "ONLY phrases explicitly specifying lifetime 100+ cigarettes map to Smoker=1; do not map general 'smoking' or 'tobacco use'"
+    values: ["0", "1"]
+    aliases:
+      "1":
+        - "ever smoked at least 100 cigarettes"
+        - "smoked >= 100 cigarettes"
+        - "smoked at least 100 cigarettes lifetime"
+        - "lifetime 100 cigarettes"
+      "0":
+        - "never smoked"
+        - "never smoker"
+        - "smoked less than 100 cigarettes"
+    unmapped_patterns:
+      - "smoking"
+      - "tobacco"
+      - "cigarette use"
+      - "smoking history"
+      - "smoking cessation"
+      - "current smoker"
+      - "smoker"
+
+  PhysActivity:
+    description: "Physical activity status with polarity normalization on inactivity"
+    is_phase2_target: true
+    values: ["0", "1"]
+    aliases:
+      "1":
+        - "physical activity"
+        - "physically active"
+        - "active lifestyle"
+        - "regular exercise"
+        - "moderate-to-vigorous physical activity"
+        - "aerobic exercise"
+      "0":
+        - "physical inactivity"
+        - "physically inactive"
+        - "sedentary lifestyle"
+        - "sedentary behavior"
+        - "sedentariness"
+        - "prolonged sitting"
+    polarity_flip_on_aliases:
+      - "0"
+
+  BMICat:
+    description: "Body Mass Index category"
+    is_phase2_target: true
+    precision_rule: "Distinguish clinical diagnosis of obesity from computed BMI category; obesity/BMI >= 30 maps to highest BMICat"
+    values: ["underweight", "normal", "overweight", "obese"]
+    aliases:
+      underweight:
+        - "underweight"
+        - "BMI < 18.5"
+      normal:
+        - "normal weight"
+        - "healthy weight"
+        - "BMI 18.5-24.9"
+        - "normal BMI"
+      overweight:
+        - "overweight"
+        - "BMI 25-29.9"
+        - "pre-obese"
+      obese:
+        - "obesity"
+        - "obese"
+        - "BMI >= 30"
+        - "BMI > 30"
+        - "morbid obesity"
+        - "class III obesity"
+        - "severe obesity"
+
+  Outcome:
+    description: "Diabetes diagnosis outcome (CDC definition: 0=no diabetes, 1=prediabetes or diabetes)"
+    is_phase2_target: true
+    precision_rule: "Only map when text matches 'no diabetes'->0 or 'prediabetes or diabetes'->1 explicitly"
+    values: ["0", "1"]
+    aliases:
+      "0":
+        - "no diabetes"
+        - "non-diabetic"
+        - "diabetes-free"
+        - "normoglycemic"
+        - "absence of diabetes"
+      "1":
+        - "type 2 diabetes"
+        - "type 2 diabetes mellitus"
+        - "T2DM"
+        - "prediabetes"
+        - "incident type 2 diabetes"
+        - "prediabetes or diabetes"
+        - "diabetes diagnosis"
+        - "new-onset diabetes"
+
+# Additional concepts allowed in the literature graph but not mapped to Phase 2 CDC variables
+open_domain_concepts:
+  Diet:
+    aliases:
+      - "mediterranean diet"
+      - "sugar-sweetened beverage"
+      - "fiber intake"
+      - "dietary pattern"
+      - "ultra-processed food"
+  Hypertension:
+    aliases:
+      - "hypertension"
+      - "high blood pressure"
+      - "elevated systolic blood pressure"
+  SleepDuration:
+    aliases:
+      - "short sleep duration"
+      - "sleep deprivation"
+      - "sleep apnea"
+      - "poor sleep quality"
+  InsulinResistance:
+    aliases:
+      - "insulin resistance"
+      - "impaired insulin sensitivity"
+      - "HOMA-IR"

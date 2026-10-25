@@ -1,0 +1,18 @@
+# Europe PMC retrieval configuration
+query: '("type 2 diabetes" OR "T2DM") AND ("risk factor" OR "causal" OR "causes" OR "associated") AND HAS_ABSTRACT:y AND LANG:eng'
+max_results: 500
+page_size: 100
+sort_by: null  # Solr cursorMark pagination requires default relevance/ID sort
+frozen_mode: true  # Strictly load from frozen manifest; network calls forbidden
+
+api:
+  base_url: "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+  timeout_seconds: 30
+  max_retries: 5
+  backoff_factor: 1.5
+  rate_limit_per_second: 5
+  email: "${EPMC_EMAIL:-causal_nlp_research@example.com}"
+
+manifest:
+  output_file: "data/manifest/corpus_manifest.jsonl"
+  exclusions_file: "data/manifest/exclusions.jsonl"

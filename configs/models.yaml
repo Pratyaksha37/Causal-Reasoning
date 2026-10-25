@@ -1,0 +1,101 @@
+# Model configurations for Phase 1 extractors
+
+spacy:
+  # Primary biomedical/general pipeline for tokenization, sentence splitting, POS, and dependency parsing
+  model_name: "en_core_web_sm"
+  disable_pipes: []
+
+extractors:
+  rules:
+    name: "spaCy-Rules"
+    version: "1.0.0"
+    causal_triggers:
+      - "causes"
+      - "caused"
+      - "cause"
+      - "leads to"
+      - "lead to"
+      - "leading to"
+      - "results in"
+      - "result in"
+      - "resulting in"
+      - "induces"
+      - "induced"
+      - "induce"
+      - "triggers"
+      - "triggered"
+      - "promotes"
+      - "promoted"
+      - "reduces the risk of"
+      - "reduces risk of"
+      - "decreases the risk of"
+      - "increases the risk of"
+      - "elevates the risk of"
+      - "lowers the risk of"
+      - "prevents"
+      - "prevented"
+      - "protective against"
+      - "causal link"
+      - "causal links"
+    association_triggers:
+      - "associated with"
+      - "correlated with"
+      - "linked to"
+      - "related to"
+      - "predicts"
+      - "predicted"
+      - "relationship between"
+      - "inversely related to"
+      - "positively associated with"
+      - "negatively associated with"
+    negation_triggers:
+      - "not"
+      - "no"
+      - "neither"
+      - "never"
+      - "fails to"
+      - "failed to"
+      - "without"
+      - "lack of"
+    hedging_triggers:
+      - "may"
+      - "might"
+      - "could"
+      - "suggests that"
+      - "suggest that"
+      - "suggesting"
+      - "possible"
+      - "potential"
+      - "likely"
+      - "plausible"
+
+  distilbert:
+    name: "KeywordHeuristic"
+    version: "1.0.0"
+    baseline_type: "keyword_heuristic_with_markers"
+    note: "Heuristic baseline using keyword triggers and entity markers; no fine-tuned transformer weights present"
+    base_model: "distilbert-base-uncased"
+    max_length: 128
+    batch_size: 16
+    learning_rate: 2.0e-5
+    num_train_epochs: 4
+    weight_decay: 0.01
+    warmup_ratio: 0.1
+    entity_marker_tokens:
+      e1_start: "[E1]"
+      e1_end: "[/E1]"
+      e2_start: "[E2]"
+      e2_end: "[/E2]"
+
+  llm:
+    name: "Prompted-LLM-Gemini"
+    version: "1.0.0"
+    provider: "gemini"
+    base_url: "${GEMINI_BASE_URL:-https://generativelanguage.googleapis.com/v1beta/openai}"
+    api_key: "${GEMINI_API_KEY:-}"
+    model_id: "${GEMINI_MODEL:-gemini-3.5-flash-lite}"
+    temperature: 0.0
+    seed: 42
+    max_retries: 3
+    timeout_seconds: 30
+    cache_path: "data/cache/llm_cache.jsonl"
