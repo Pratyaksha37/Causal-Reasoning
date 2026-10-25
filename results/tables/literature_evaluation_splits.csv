@@ -1,0 +1,13 @@
+Split,Extractor,Macro-F1,Causal-F1,Causal-Support,Assoc-F1,Assoc-Support,None-F1,None-Support,Direction-Acc (Causal),Polarity-Acc,Lang-Status-Acc,Split-Support,Causal-Generalization-Status
+train,KeywordHeuristic,0.6058,0.2222,4,0.7253,45,0.87,101,1.0,0.6531,0.88,150,MEASURED
+train,Prompted-LLM-Gemini,0.2819,0.0,4,0.0426,45,0.8032,101,1.0,0.0,1.0,150,MEASURED
+train,Prompted-LLM-Groq,0.2683,0.0,4,0.0,45,0.8048,101,1.0,0.0,1.0,150,MEASURED
+train,spaCy-Rules,0.922,1.0,4,0.8333,45,0.9327,101,1.0,0.7755,0.9,150,MEASURED
+dev,KeywordHeuristic,0.5506,0.0,0,0.8,23,0.8519,27,1.0,0.6522,0.86,50,UNMEASURED (0 gold examples)
+dev,Prompted-LLM-Gemini,0.2338,0.0,0,0.0,23,0.7013,27,1.0,0.0,1.0,50,UNMEASURED (0 gold examples)
+dev,Prompted-LLM-Groq,0.2338,0.0,0,0.0,23,0.7013,27,1.0,0.0,1.0,50,UNMEASURED (0 gold examples)
+dev,spaCy-Rules,0.6263,0.0,0,0.9333,23,0.9455,27,1.0,0.913,0.72,50,UNMEASURED (0 gold examples)
+test,KeywordHeuristic,0.5181,0.0,0,0.7059,17,0.8485,33,1.0,0.5882,1.0,50,UNMEASURED (0 gold examples)
+test,Prompted-LLM-Gemini,0.2651,0.0,0,0.0,17,0.7952,33,1.0,0.0,1.0,50,UNMEASURED (0 gold examples)
+test,Prompted-LLM-Groq,0.2651,0.0,0,0.0,17,0.7952,33,1.0,0.0,1.0,50,UNMEASURED (0 gold examples)
+test,spaCy-Rules,0.5857,0.0,0,0.8276,17,0.9296,33,1.0,0.5882,0.96,50,UNMEASURED (0 gold examples)

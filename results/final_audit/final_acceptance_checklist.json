@@ -1,0 +1,98 @@
+{
+  "report_title": "Final Acceptance Criteria Audit Checklist",
+  "timestamp": "2026-10-25T06:49:58.524605Z",
+  "criteria": {
+    "original_work_and_artifacts_backed_up": {
+      "status": "PASS",
+      "notes": "Created timestamped backup at backups/audit_pre_repair_20261025/ containing annotations, predictions, tables, graph, and metrics. Excluded from git."
+    },
+    "annotation_provenance_is_truthful": {
+      "status": "PASS",
+      "notes": "Marked all 250 records in sample.jsonl as PROVISIONAL_RULE_PSEUDO_GOLD with human_reviewed=False and labeling_method=rule_heuristic_regex_v1."
+    },
+    "no_pseudo_labels_represented_as_human_gold": {
+      "status": "PASS",
+      "notes": "All documentation, tables, and plots explicitly state PROVISIONAL_RULE_PSEUDO_GOLD with human review pending."
+    },
+    "no_synthetic_agreement_represented_as_human_agreement": {
+      "status": "PASS",
+      "notes": "inter_annotator_agreement.json and all docs clearly disclaim synthetic Cohen kappa (0.8816) as a programmatic consistency sanity check."
+    },
+    "no_nonexistent_transformer_presented_as_implemented": {
+      "status": "PASS",
+      "notes": "Clarified that Extractor B is KeywordHeuristic baseline. Excluded duplicate finetuned-distilbert file from multi-model comparison."
+    },
+    "prediction_files_validated_schemas_and_provenance": {
+      "status": "PASS",
+      "notes": "All JSONL prediction files validated against Pydantic schema with full sentence, span, and confidence provenance."
+    },
+    "duplicate_and_missing_predictions_detected": {
+      "status": "PASS",
+      "notes": "evaluate_predictions detects duplicate pair IDs and penalizes missing predictions in recall."
+    },
+    "train_dev_test_metrics_clearly_separated": {
+      "status": "PASS",
+      "notes": "literature_evaluation_splits.csv reports train, dev, and test splits separately with exact class support counts."
+    },
+    "zero_support_classes_handled_honestly": {
+      "status": "PASS",
+      "notes": "Explicitly flags that causal generalization on held-out dev and test sets is UNMEASURED (0 gold causal examples)."
+    },
+    "causal_generalization_not_claimed_without_held_out_evidence": {
+      "status": "PASS",
+      "notes": "Documentation, evaluation tables, and final report clearly declare causal test generalization unmeasured."
+    },
+    "known_false_positive_causal_examples_have_regression_tests": {
+      "status": "PASS",
+      "notes": "Added unit tests for PMID:42828458:s04 (dementia risk in T2DM) and PMID:42901975:s03 (mediator of dietary quality)."
+    },
+    "every_retained_causal_edge_has_inspectable_evidence": {
+      "status": "PASS",
+      "notes": "BMICat -> Outcome has 2 inspectable literature sentences (PMID:41424208 MR study and PMID:42415555 pediatric etiology)."
+    },
+    "invalid_direct_causal_relations_excluded": {
+      "status": "PASS",
+      "notes": "InsulinResistance -> Outcome, Outcome -> exposures, and demographic targets/sources excluded from causal DAG."
+    },
+    "association_and_causal_graph_semantics_distinct": {
+      "status": "PASS",
+      "notes": "Causal DAG contains 1 directed edge; Association graph contains 31 undirected edges with full provenance."
+    },
+    "synthetic_fixtures_and_backups_cannot_contaminate_graph": {
+      "status": "PASS",
+      "notes": "Synthetic eval candidates excluded by default; backup directories excluded from file discovery; tests pass."
+    },
+    "evidence_counts_not_inflated_by_duplicate_records": {
+      "status": "PASS",
+      "notes": "builder.py deduplicates predictions from same extractor; unique_sentence_count and unique_papers_count tracked independently."
+    },
+    "cycle_repairs_deterministic_logged_inspectable": {
+      "status": "PASS",
+      "notes": "Causal graph is naturally acyclic (0 cycles); repair log recorded at results/graph/cycle_repair.log."
+    },
+    "offline_reconstruction_succeeds_without_network": {
+      "status": "PASS",
+      "notes": "run.sh --from-saved-predictions runs in under 4 seconds with 0 API calls and zero network requests."
+    },
+    "full_test_suite_passes": {
+      "status": "PASS",
+      "notes": "All 68 unit, integration, and regression tests pass in 5.47s."
+    },
+    "final_graphs_and_reports_regenerated": {
+      "status": "PASS",
+      "notes": "Regenerated GraphML exports, provenance JSON, evaluation CSVs, and figures after final code fixes."
+    },
+    "documentation_accurately_describes_implementation": {
+      "status": "PASS",
+      "notes": "README.md, TODO.md, SUMMARY.md, VIVA_QUESTIONS.md updated to match actual code and evidence."
+    },
+    "phase_2_handoff_document_exists": {
+      "status": "PASS",
+      "notes": "Created docs/PHASE_2_HANDOFF.md detailing inputs, provisional status, Bayesian network assumptions, and baseline commands."
+    },
+    "final_audit_bundle_contains_actual_results": {
+      "status": "PASS",
+      "notes": "All 10 audit files created in results/final_audit/ with actual verification metrics."
+    }
+  }
+}

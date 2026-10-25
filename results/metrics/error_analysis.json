@@ -1,0 +1,281 @@
+{
+  "KeywordHeuristic": {
+    "counts": {
+      "entity_linking_error": 18,
+      "negation_uncertainty_error": 25,
+      "assoc_vs_causal": 4
+    },
+    "examples_per_category": {
+      "entity_linking_error": [
+        {
+          "pair_id": "PMID:42575672:s05:p04",
+          "sentence_text": "Fine-Gray competing risks Cox models estimated adjusted HRs (aHRs) and 95% CIs for a primary composite outcome of incident HF or HF-related death, adjusting for sociodemographic factors, deprivation, obesity, smoking, hypertension and T2DM and accounting for all-cause mortality.",
+          "entity_1": "smoking",
+          "entity_2": "hypertension",
+          "gold": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          },
+          "pred": {
+            "rel": "association_only",
+            "dir": "not_applicable",
+            "pol": "increases",
+            "lang": "affirmed"
+          }
+        },
+        {
+          "pair_id": "PMID:42707244:s05:p03",
+          "sentence_text": "Logistic regression models were applied to evaluate the association between the NNR score and T2DM risk, with progressive adjustment for age, sex, smoking, physical activity, BMI, and total caloric intake.<h4>Results</h4>Cases had significantly higher BMI (28.32\u202f\u00b1\u202f2.64 vs. 26.85\u202f\u00b1\u202f2.15\u202fkg/m<sup>2</sup>; <i>p</i>\u202f=\u202f0.039), caloric intake, carbohydrate, and cholesterol consumption, alongside significantly lower intakes of dietary fibre, PUFA, magnesium, selenium, folate, vitamins A, E, and B\u2081, beta-carotene, and biotin compared to controls.",
+          "entity_1": "smoking",
+          "entity_2": "physical activity",
+          "gold": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          },
+          "pred": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          }
+        }
+      ],
+      "negation_uncertainty_error": [
+        {
+          "pair_id": "PMID:42481915:s01:p39",
+          "sentence_text": "<h4>Aim</h4>We investigated the contribution of antecedent gestational diabetes mellitus (GDM) or gestational hypertensive disorder (GHTD) to the risk of cardiovascular disease (CVD) among women with Type 2 diabetes mellitus (T2DM).<h4>Methods</h4>In a population-based cohort using the Ministry of Health of Ontario (Canada) healthcare administrative data, women without prior CVD with T2DM and a history of GDM or GHTD as of 1 January 2018 (n\u2009=\u200911\u2009525, mean age: 43\u2009years) were age-matched to three comparator cohorts (women with T2DM and no history of GDM or GHTD [n\u2009=\u200911\u2009525], women without T2DM and without GDM or GHTD [n\u2009=\u200911\u2009525] and men with T2DM [n\u2009=\u200911\u2009525]).",
+          "entity_1": "T2DM",
+          "entity_2": "men",
+          "gold": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          },
+          "pred": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "negated"
+          }
+        },
+        {
+          "pair_id": "PMID:41531546:s09:p01",
+          "sentence_text": "In addition, specific AA profiles were related to insulin resistance and demand for insulin or oral hypoglycemic drug treatment.<h4>Conclusion</h4>Our study results demonstrate a close relationship between AA levels and the occurrence, development, and treatment demand for T2DM, offering potential biomarkers for predicting complications and guiding personalized treatment.",
+          "entity_1": "insulin resistance",
+          "entity_2": "T2DM",
+          "gold": {
+            "rel": "association_only",
+            "dir": "not_applicable",
+            "pol": "increases",
+            "lang": "uncertain"
+          },
+          "pred": {
+            "rel": "association_only",
+            "dir": "not_applicable",
+            "pol": "increases",
+            "lang": "affirmed"
+          }
+        }
+      ],
+      "assoc_vs_causal": [
+        {
+          "pair_id": "PMID:42817769:s05:p01",
+          "sentence_text": "In the T2DM cohort (N\u2009=\u2009140, 90% overweight or obese), each 1\u2009kg/m<sup>2</sup> increase in BMI above ethnicity-adjusted normal range was associated with increased odds of pre-eclampsia (aOR 1.082, 95% CI 1.024 to 1.144) and preterm delivery (aOR 1.042, 95% CI 1.001 to 1.084).",
+          "entity_1": "T2DM",
+          "entity_2": "overweight",
+          "gold": {
+            "rel": "association_only",
+            "dir": "not_applicable",
+            "pol": "increases",
+            "lang": "affirmed"
+          },
+          "pred": {
+            "rel": "causal",
+            "dir": "entity_1->entity_2",
+            "pol": "increases",
+            "lang": "affirmed"
+          }
+        },
+        {
+          "pair_id": "PMID:42817769:s06:p01",
+          "sentence_text": "In the T2DM cohort, the odds of LGA were numerically higher with each 1\u2009kg/m<sup>2</sup> increase in BMI, but this was no longer statistically significant after adjustment for potential confounders.<h4>Conclusions</h4>On separate analyses within each diabetes subtype, maternal overweight/obesity was potentially associated with increased odds of pre-eclampsia and preterm delivery in the T2DM cohort.",
+          "entity_1": "T2DM",
+          "entity_2": "overweight",
+          "gold": {
+            "rel": "association_only",
+            "dir": "not_applicable",
+            "pol": "increases",
+            "lang": "uncertain"
+          },
+          "pred": {
+            "rel": "causal",
+            "dir": "entity_1->entity_2",
+            "pol": "increases",
+            "lang": "negated"
+          }
+        }
+      ]
+    }
+  },
+  "Prompted-LLM-Gemini": {
+    "counts": {
+      "entity_linking_error": 2
+    },
+    "examples_per_category": {
+      "entity_linking_error": [
+        {
+          "pair_id": "PMID:35570489:s04:p01",
+          "sentence_text": "Multiple linear regression was used to assess the association of the R192H risk allele and cognitive domains.<h4>Results</h4>Patients with two PAX4 R192H risk alleles showed significantly lower attention index score (\u03b2=\u200a-8.46, 95% CI [-13.71, -3.21], p\u200a=\u200a0.002) than patients with wild-type alleles after adjusting for age, gender, diabetes onset age, HbA1c, body-mass index, renal function, lipid profiles, systolic blood pressure, metformin usage, smoking history, education level, Geriatric Depression Scale score, and presence of APOE\u025b4 allele.<h4>Conclusion</h4>Ethnic-specific R192H variation in PAX4 is associated with attention-specific cognitive impairment in Chinese with T2DM.",
+          "entity_1": "smoking",
+          "entity_2": "Geriatric",
+          "gold": {
+            "rel": "association_only",
+            "dir": "not_applicable",
+            "pol": "decreases",
+            "lang": "affirmed"
+          },
+          "pred": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          }
+        },
+        {
+          "pair_id": "PMID:42717744:s04:p01",
+          "sentence_text": "Multivariable analysis of covariance, adjusted for age, sex, body mass index, and smoking status, showed that subjects with T2DM had significantly higher PTA-mean values compared to controls (64.4\u2009\u00b1\u200917.1\u2009dB vs. 56.4\u2009\u00b1\u200914.8\u2009dB; p\u2009=\u20090.007), indicating worse hearing thresholds.",
+          "entity_1": "smoking",
+          "entity_2": "T2DM",
+          "gold": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          },
+          "pred": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          }
+        }
+      ]
+    }
+  },
+  "Prompted-LLM-Groq": {
+    "counts": {
+      "entity_linking_error": 1
+    },
+    "examples_per_category": {
+      "entity_linking_error": [
+        {
+          "pair_id": "PMID:35570489:s04:p01",
+          "sentence_text": "Multiple linear regression was used to assess the association of the R192H risk allele and cognitive domains.<h4>Results</h4>Patients with two PAX4 R192H risk alleles showed significantly lower attention index score (\u03b2=\u200a-8.46, 95% CI [-13.71, -3.21], p\u200a=\u200a0.002) than patients with wild-type alleles after adjusting for age, gender, diabetes onset age, HbA1c, body-mass index, renal function, lipid profiles, systolic blood pressure, metformin usage, smoking history, education level, Geriatric Depression Scale score, and presence of APOE\u025b4 allele.<h4>Conclusion</h4>Ethnic-specific R192H variation in PAX4 is associated with attention-specific cognitive impairment in Chinese with T2DM.",
+          "entity_1": "smoking",
+          "entity_2": "Geriatric",
+          "gold": {
+            "rel": "association_only",
+            "dir": "not_applicable",
+            "pol": "decreases",
+            "lang": "affirmed"
+          },
+          "pred": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          }
+        }
+      ]
+    }
+  },
+  "spaCy-Rules": {
+    "counts": {
+      "entity_linking_error": 18,
+      "negation_uncertainty_error": 31
+    },
+    "examples_per_category": {
+      "entity_linking_error": [
+        {
+          "pair_id": "PMID:42575672:s05:p04",
+          "sentence_text": "Fine-Gray competing risks Cox models estimated adjusted HRs (aHRs) and 95% CIs for a primary composite outcome of incident HF or HF-related death, adjusting for sociodemographic factors, deprivation, obesity, smoking, hypertension and T2DM and accounting for all-cause mortality.",
+          "entity_1": "smoking",
+          "entity_2": "hypertension",
+          "gold": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          },
+          "pred": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          }
+        },
+        {
+          "pair_id": "PMID:42707244:s05:p03",
+          "sentence_text": "Logistic regression models were applied to evaluate the association between the NNR score and T2DM risk, with progressive adjustment for age, sex, smoking, physical activity, BMI, and total caloric intake.<h4>Results</h4>Cases had significantly higher BMI (28.32\u202f\u00b1\u202f2.64 vs. 26.85\u202f\u00b1\u202f2.15\u202fkg/m<sup>2</sup>; <i>p</i>\u202f=\u202f0.039), caloric intake, carbohydrate, and cholesterol consumption, alongside significantly lower intakes of dietary fibre, PUFA, magnesium, selenium, folate, vitamins A, E, and B\u2081, beta-carotene, and biotin compared to controls.",
+          "entity_1": "smoking",
+          "entity_2": "physical activity",
+          "gold": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          },
+          "pred": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          }
+        }
+      ],
+      "negation_uncertainty_error": [
+        {
+          "pair_id": "PMID:42213742:s02:p03",
+          "sentence_text": "This disease and its more dangerous inflammatory variant, metabolic dysfunction-associated steatohepatitis (MASH), promote the development of serious secondary conditions including cardiovascular diseases (CVDs), type 2 diabetes mellitus, and hepatocellular carcinoma (HCC).<h4>Methods</h4>This review is based on pertinent publications retrieved from the PubMed-MEDLINE and Google Scholar databases and on current guidelines.<h4>Results</h4>Conditions that are known to be associated with MASLD and/or MASH include obesity (with or without insulin resistance), dyslipidemia, hypertension, type 2 diabetes mellitus, obstructive sleep apnea, CVDs, and chronic kidney disease (CKD).",
+          "entity_1": "type 2 diabetes mellitus",
+          "entity_2": "hypertension",
+          "gold": {
+            "rel": "association_only",
+            "dir": "not_applicable",
+            "pol": "increases",
+            "lang": "affirmed"
+          },
+          "pred": {
+            "rel": "association_only",
+            "dir": "not_applicable",
+            "pol": "increases",
+            "lang": "negated"
+          }
+        },
+        {
+          "pair_id": "PMID:42674669:s01:p02",
+          "sentence_text": "<h4>Objective</h4>To analyse the temporal trend of stroke incidence from 2019 to 2024 in Macao and evaluate its relationship with hypertension (HTN) and type 2 diabetes mellitus (T2DM) management within a universal health coverage (UHC) system.<h4>Design</h4>Retrospective observational study using routinely collected electronic health records.<h4>Setting</h4>Macao Health Bureau's primary care system, which provides free, publicly funded community health services to all residents.<h4>Participants</h4>Macao residents aged \u226515 years with a confirmed diagnosis of ischaemic or haemorrhagic stroke recorded in the Macao Health Bureau medical system between 1 January 2019 and 31 December 2024 (n=8265).<h4>Results</h4>Age-standardised stroke incidence declined from 250.03 per 100\u2009000 in 2019 to 219.95 per 100\u2009000 in 2022, followed by a rebound in 2023-2024\u2009which may partly reflect pandemic-related data entry delays.",
+          "entity_1": "hypertension",
+          "entity_2": "T2DM",
+          "gold": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "uncertain"
+          },
+          "pred": {
+            "rel": "none",
+            "dir": "not_applicable",
+            "pol": "not_applicable",
+            "lang": "affirmed"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,84 @@
+======================================================================
+🚀 Causal Relation Extraction & Evidence Graph Pipeline
+   Working Directory: /Users/pratyaksha_003/Desktop/Causal
+======================================================================
+🧪 Running pytest test suite...
+============================= test session starts ==============================
+platform darwin -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /Users/pratyaksha_003/Desktop/Causal/.venv/bin/python3.11
+cachedir: .pytest_cache
+rootdir: /Users/pratyaksha_003/Desktop/Causal
+configfile: pyproject.toml
+testpaths: tests
+plugins: mock-3.17.0, anyio-4.15.1
+collecting ... collected 68 items
+
+tests/integration/test_frozen_mode.py::test_frozen_mode_forbids_network_when_manifest_missing PASSED [  1%]
+tests/integration/test_frozen_mode.py::test_frozen_mode_byte_identical_reproducibility PASSED [  2%]
+tests/integration/test_frozen_mode.py::test_frozen_mode_blocks_live_retrieval PASSED [  4%]
+tests/unit/test_alias_mapper.py::test_phys_activity_mapping_and_polarity_flip PASSED [  5%]
+tests/unit/test_alias_mapper.py::test_smoker_strict_precision_rules PASSED [  7%]
+tests/unit/test_alias_mapper.py::test_bmicat_precision_rules PASSED      [  8%]
+tests/unit/test_alias_mapper.py::test_outcome_precision_rules PASSED     [ 10%]
+tests/unit/test_alias_mapper.py::test_unmapped_fallback_never_force_match PASSED [ 11%]
+tests/unit/test_candidate_sampling_audit.py::test_full_corpus_candidate_selection_includes_later_records PASSED [ 13%]
+tests/unit/test_candidate_sampling_audit.py::test_valid_causal_evidence_accepted_into_causal_dag PASSED [ 14%]
+tests/unit/test_candidate_sampling_audit.py::test_unrelated_endpoints_and_trends_routed_to_association PASSED [ 16%]
+tests/unit/test_candidate_sampling_audit.py::test_annotation_sample_zero_self_loops_and_no_leakage PASSED [ 17%]
+tests/unit/test_candidate_sampling_audit.py::test_dementia_risk_in_t2dm_patients_rejected_from_causal_dag PASSED [ 19%]
+tests/unit/test_candidate_sampling_audit.py::test_mediated_relationship_not_direct_causal_edge PASSED [ 20%]
+tests/unit/test_candidate_sampling_audit.py::test_evaluation_metrics_detects_duplicates_and_missing PASSED [ 22%]
+tests/unit/test_candidate_sampling_audit.py::test_backup_directories_never_loaded_into_evaluation PASSED [ 23%]
+tests/unit/test_candidates.py::test_candidate_generation_ordered_pairs PASSED [ 25%]
+tests/unit/test_candidates.py::test_candidate_generation_single_or_no_mentions PASSED [ 26%]
+tests/unit/test_config.py::test_load_existing_config PASSED              [ 27%]
+tests/unit/test_config.py::test_load_nonexistent_config_raises PASSED    [ 29%]
+tests/unit/test_config.py::test_env_var_expansion PASSED                 [ 30%]
+tests/unit/test_config.py::test_config_overrides PASSED                  [ 32%]
+tests/unit/test_dedup.py::test_dedup_pmid_priority PASSED                [ 33%]
+tests/unit/test_dedup.py::test_dedup_text_hash_duplicate PASSED          [ 35%]
+tests/unit/test_document_schema.py::test_compute_text_hash_deterministic PASSED [ 36%]
+tests/unit/test_document_schema.py::test_document_create_pmid_priority PASSED [ 38%]
+tests/unit/test_document_schema.py::test_document_create_fallback_ids PASSED [ 39%]
+tests/unit/test_document_schema.py::test_document_invalid_hash_raises PASSED [ 41%]
+tests/unit/test_epmc_mocked.py::test_epmc_client_pagination_and_exclusions PASSED [ 42%]
+tests/unit/test_evaluation_artifacts.py::test_evaluate_predictions_metrics_calculation PASSED [ 44%]
+tests/unit/test_evaluation_artifacts.py::test_categorize_errors_diagnostic_categories PASSED [ 45%]
+tests/unit/test_evaluation_artifacts.py::test_generate_evaluation_artifacts_end_to_end PASSED [ 47%]
+tests/unit/test_exporter_importer.py::test_import_valid_annotations PASSED [ 48%]
+tests/unit/test_exporter_importer.py::test_import_invalid_relation_class_raises PASSED [ 50%]
+tests/unit/test_graph_coverage_fixes.py::test_all_cause_mortality_not_classified_as_causal PASSED [ 51%]
+tests/unit/test_graph_coverage_fixes.py::test_because_substring_not_classified_as_causal PASSED [ 52%]
+tests/unit/test_graph_coverage_fixes.py::test_association_graph_retains_full_provenance_and_unique_counts PASSED [ 54%]
+tests/unit/test_graph_coverage_fixes.py::test_get_combined_graph_multi_relational PASSED [ 55%]
+tests/unit/test_graph_coverage_fixes.py::test_export_and_plot_artifacts_completeness PASSED [ 57%]
+tests/unit/test_graph_coverage_fixes.py::test_unrelated_endpoint_not_accepted_as_causal_for_diabetes PASSED [ 58%]
+tests/unit/test_graph_coverage_fixes.py::test_parallel_trend_and_morphometry_not_accepted_as_causal PASSED [ 60%]
+tests/unit/test_kappa.py::test_kappa_perfect_agreement PASSED            [ 61%]
+tests/unit/test_kappa.py::test_kappa_with_known_disagreement PASSED      [ 63%]
+tests/unit/test_llm_extractor.py::test_cache_roundtrip PASSED            [ 64%]
+tests/unit/test_llm_extractor.py::test_llm_extractor_predict_with_mock_client PASSED [ 66%]
+tests/unit/test_llm_extractor.py::test_llm_extractor_schema_error_handling PASSED [ 67%]
+tests/unit/test_logging.py::test_setup_logging_console_and_file PASSED   [ 69%]
+tests/unit/test_manifest.py::test_manifest_roundtrip PASSED              [ 70%]
+tests/unit/test_manifest.py::test_manifest_tampered_hash_raises PASSED   [ 72%]
+tests/unit/test_manifest.py::test_write_exclusions PASSED                [ 73%]
+tests/unit/test_mapping_report.py::test_generate_mapping_report PASSED   [ 75%]
+tests/unit/test_pipeline_audit_fixes.py::test_synthetic_eval_examples_excluded_by_default PASSED [ 76%]
+tests/unit/test_pipeline_audit_fixes.py::test_repeated_predictions_single_evidence_count_and_agreement PASSED [ 77%]
+tests/unit/test_pipeline_audit_fixes.py::test_different_evidence_sentences_increase_count PASSED [ 79%]
+tests/unit/test_pipeline_audit_fixes.py::test_different_papers_counted_separately PASSED [ 80%]
+tests/unit/test_pipeline_audit_fixes.py::test_offline_graph_building_makes_zero_api_calls PASSED [ 82%]
+tests/unit/test_pipeline_audit_fixes.py::test_missing_prediction_files_produce_clear_error PASSED [ 83%]
+tests/unit/test_pipeline_audit_fixes.py::test_cached_llm_responses_reused_without_network PASSED [ 85%]
+tests/unit/test_pipeline_audit_fixes.py::test_invalid_self_loop_pairs_filtered_and_counted PASSED [ 86%]
+tests/unit/test_pipeline_audit_fixes.py::test_graph_serialization_citations_and_visualization PASSED [ 88%]
+tests/unit/test_pipeline_audit_fixes.py::test_evaluation_metrics_separate_from_graph_stats PASSED [ 89%]
+tests/unit/test_pipeline_audit_fixes.py::test_keyword_heuristic_extractor_renamed_and_runnable PASSED [ 91%]
+tests/unit/test_sampler.py::test_partition_documents_no_leakage PASSED   [ 92%]
+tests/unit/test_sampler.py::test_partition_documents_seed_reproducible PASSED [ 94%]
+tests/unit/test_seed.py::test_seed_determinism PASSED                    [ 95%]
+tests/unit/test_seed.py::test_seed_status_dict PASSED                    [ 97%]
+tests/unit/test_splitter.py::test_sentence_splitter_basic PASSED         [ 98%]
+tests/unit/test_splitter.py::test_sentence_splitter_empty PASSED         [100%]
+
+============================== 68 passed in 5.47s ==============================

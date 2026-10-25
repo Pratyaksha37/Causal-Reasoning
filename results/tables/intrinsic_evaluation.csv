@@ -1,0 +1,5 @@
+Extractor,Macro-F1,Causal-F1,Causal-Support,Assoc-F1,Assoc-Support,None-F1,None-Support,Direction-Acc (Causal),Polarity-Acc,Lang-Status-Acc,Total-Evaluated,Benchmark-Provenance
+KeywordHeuristic,0.6012,0.2,4,0.7412,85,0.8625,161,1.0,0.6404,0.9,250,PROVISIONAL_RULE_PSEUDO_GOLD
+Prompted-LLM-Gemini,0.2685,0.0,4,0.023,85,0.7824,161,1.0,0.0,1.0,250,PROVISIONAL_RULE_PSEUDO_GOLD
+Prompted-LLM-Groq,0.2612,0.0,4,0.0,85,0.7835,161,1.0,0.0,1.0,250,PROVISIONAL_RULE_PSEUDO_GOLD
+spaCy-Rules,0.9316,1.0,4,0.8608,85,0.9341,161,1.0,0.7753,0.876,250,PROVISIONAL_RULE_PSEUDO_GOLD

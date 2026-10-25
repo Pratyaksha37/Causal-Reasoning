@@ -1,0 +1,51 @@
+{
+  "agreement_type": "SYNTHETIC_PIPELINE_CONSISTENCY_CHECK",
+  "is_human_annotated": false,
+  "provenance_note": "Calculated between rule-heuristic pseudo-labels and a simulated 8% perturbation for pipeline test coverage. Does NOT represent genuine human inter-annotator agreement. Human double-annotation is pending.",
+  "total_pairs_compared": 47,
+  "relation_class_kappa": 0.8816,
+  "raw_agreement_rate": 0.9574,
+  "total_disagreements": 2,
+  "disagreements": [
+    {
+      "pair_id": "PMID:42381871:s09:p15",
+      "sentence_text": "In multivariable analyses within the T2DM cohort, serum testosterone was not independently associated with the ASCVD risk score or any individual cardiometabolic risk factor.<h4>Conclusion</h4>Men with T2DM have a higher estimated 10-year ASCVD risk than non-diabetic controls, irrespective of testosterone status, with T2DM men with low testosterone showing a more adverse cardiometabolic profile.",
+      "entity_1": "T2DM",
+      "entity_2": "men",
+      "annotator_1": {
+        "relation_class": "association_only",
+        "direction": "not_applicable",
+        "polarity": "increases",
+        "language_status": "negated",
+        "notes": "Statistical association or correlation"
+      },
+      "annotator_2": {
+        "relation_class": "none",
+        "direction": "not_applicable",
+        "polarity": "not_applicable",
+        "language_status": "negated",
+        "notes": "Conservative assessment: co-occurrence without confirmed statistical significance"
+      }
+    },
+    {
+      "pair_id": "PMID:42862335:s13:p10",
+      "sentence_text": "Transitioning from a metabolically healthy to a metabolically unhealthy phenotype (OR 1.66 [1.19, 2.30]), transitioning from a metabolically unhealthy to a metabolically healthy phenotype (OR 1.56 [1.08, 2.24]), and maintaining a stable metabolically unhealthy status (OR 1.88 [1.39, 2.54]) were significantly associated with an increased risk of incident CVD, CKD and T2DM composite; disease-specific analyses indicated that this association was driven primarily by T2DM.<h4>Conclusions</h4>Our analyses revealed that anthropometric measures, metabolic phenotypes, and dietary patterns are associated with CVD, CKD, and T2DM among individuals with overweight and obesity, especially T2DM.",
+      "entity_1": "T2DM",
+      "entity_2": "overweight",
+      "annotator_1": {
+        "relation_class": "association_only",
+        "direction": "not_applicable",
+        "polarity": "increases",
+        "language_status": "affirmed",
+        "notes": "Statistical association or correlation"
+      },
+      "annotator_2": {
+        "relation_class": "none",
+        "direction": "not_applicable",
+        "polarity": "not_applicable",
+        "language_status": "affirmed",
+        "notes": "Conservative assessment: co-occurrence without confirmed statistical significance"
+      }
+    }
+  ]
+}

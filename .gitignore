@@ -20,27 +20,42 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 
 # Virtual environments
+.venv/
 venv/
-env/
 ENV/
-.env
-.venv
+env/
 
-# IDE and OS files
-.DS_Store
-.DS_Store?
-._*
+# IDE & OS
 .idea/
 .vscode/
 *.swp
 *.swo
+.DS_Store
 
-# Testing and coverage
+# Testing & Linting
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .coverage
 htmlcov/
+
+# Local cache & API secrets
+.env
+.env.*
+!.env.example
+data/cache/
+
+# Large checkpoints / model weights (reproducible via scripts)
+results/models/checkpoint-*
+*.pt
+*.bin
+*.onnx
+
+# Audit backups
+backups/

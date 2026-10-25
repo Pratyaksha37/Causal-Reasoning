@@ -1,0 +1,60 @@
+{
+  "report_title": "Annotation Dataset Provenance and Integrity Audit",
+  "timestamp": "2026-10-25T06:49:31.115270Z",
+  "benchmark_file": "data/annotations/sample.jsonl",
+  "total_benchmark_records": 250,
+  "human_reviewed_count": 0,
+  "review_status_breakdown": {
+    "PROVISIONAL_RULE_PSEUDO_GOLD": 250
+  },
+  "labeling_method": "rule_heuristic_regex_v1",
+  "is_verified_human_gold": false,
+  "provisional_status_description": "Rule-based heuristic pseudo-labels intended for development, error analysis, and provisional pipeline regression tests. Does not represent human clinical gold truth.",
+  "split_distribution": {
+    "train": 150,
+    "dev": 50,
+    "test": 50
+  },
+  "class_distribution_by_split": {
+    "train": {
+      "none": 101,
+      "association_only": 45,
+      "causal": 4
+    },
+    "dev": {
+      "none": 27,
+      "association_only": 23,
+      "causal": 0
+    },
+    "test": {
+      "none": 33,
+      "association_only": 17,
+      "causal": 0
+    }
+  },
+  "held_out_test_causal_support": 0,
+  "causal_generalization_evaluable_on_test": false,
+  "causal_generalization_note": "The held-out test split contains 0 causal examples (33 none, 17 association), meaning causal generalization is unmeasured.",
+  "inter_annotator_agreement_provenance": {
+    "annotator_1_file": "data/annotations/annotator_1_to_label.csv",
+    "annotator_2_file": "data/annotations/annotator_2_to_label.csv",
+    "agreement_report_file": "results/tables/inter_annotator_agreement.json",
+    "agreement_type": "SYNTHETIC_PIPELINE_CONSISTENCY_CHECK",
+    "is_human_annotated": false,
+    "synthetic_cohen_kappa": 0.8816,
+    "provenance_finding": "Annotator 2 records were generated programmatically with artificial disagreements inserted by random perturbation. This metric serves as a pipeline sanity check, not human inter-rater agreement."
+  },
+  "unannotated_human_queue": {
+    "jsonl_path": "data/annotations/human_annotation_queue.jsonl",
+    "csv_path": "data/annotations/human_annotation_queue.csv",
+    "queue_size": 50,
+    "selection_priority": "Stratified diverse candidate pairs prioritizing potential causal triggers, associations, and negative boundaries",
+    "is_completed_ground_truth": false
+  },
+  "requirements_for_human_gold_claim": [
+    "Dual independent review by qualified biomedical domain experts",
+    "Blinded annotation of entity boundaries and relation classes",
+    "Documented adjudication of inter-annotator disagreements",
+    "Sufficient sample size including held-out causal instances in dev and test splits"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "report_title": "Offline Graph Reconstruction Audit Report",
+  "timestamp": "2026-10-25T06:49:58.524517Z",
+  "execution_command": "./run.sh --from-saved-predictions",
+  "exit_code": 0,
+  "network_calls_made": 0,
+  "external_apis_required": null,
+  "predictions_loaded": 2326,
+  "breakdown_by_file": {
+    "keywordheuristic_predictions.jsonl": 1143,
+    "spacy-rules_predictions.jsonl": 1143,
+    "prompted-llm-gemini_predictions.jsonl": 20,
+    "prompted-llm-groq_predictions.jsonl": 20,
+    "finetuned-distilbert_predictions.jsonl": "SKIPPED (duplicate alias)"
+  },
+  "reconstructed_graph_metrics": {
+    "causal_dag_nodes": 2,
+    "causal_dag_edges": 1,
+    "is_dag": true,
+    "pre_repair_cycles": 0,
+    "cycle_repair_edges_removed": 0,
+    "association_graph_nodes": 10,
+    "association_graph_edges": 31,
+    "combined_graph_nodes": 10,
+    "combined_graph_edges": 32
+  },
+  "reproducibility_status": "VERIFIED_DETERMINISTIC"
+}

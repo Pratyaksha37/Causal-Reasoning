@@ -1,0 +1,5 @@
+Extractor,Macro-F1,Causal-F1,Assoc-F1,None-F1,Direction-Acc (Causal),Polarity-Acc,Lang-Status-Acc,Total-Evaluated
+KeywordHeuristic,0.1111,0.0,0.0,0.3333,1.0,0.0,1.0,10
+Prompted-LLM-Gemini,0.1111,0.0,0.0,0.3333,1.0,0.0,1.0,10
+Prompted-LLM-Groq,1.0,1.0,1.0,1.0,1.0,0.625,1.0,10
+spaCy-Rules,0.1111,0.0,0.0,0.3333,1.0,0.0,1.0,10

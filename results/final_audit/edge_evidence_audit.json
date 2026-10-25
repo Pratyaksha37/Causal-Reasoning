@@ -1,0 +1,136 @@
+{
+  "report_title": "Literature Graph Edge Evidence and Verification Audit",
+  "timestamp": "2026-10-25T06:49:58.522621Z",
+  "graph_statistics": {
+    "causal_dag_nodes_count": 2,
+    "causal_dag_edges_count": 1,
+    "association_nodes_count": 10,
+    "association_edges_count": 31,
+    "is_dag": true
+  },
+  "accepted_causal_edges": [
+    {
+      "source": "BMICat",
+      "target": "Outcome",
+      "relation_class": "causal",
+      "polarity": "increases",
+      "support_count": 2,
+      "unique_evidence_sentences": 2,
+      "unique_papers_count": 2,
+      "extractors": [
+        "KeywordHeuristic",
+        "spaCy-Rules"
+      ],
+      "agreement_count": null,
+      "aggregated_confidence": 0.865,
+      "supporting_evidence": [
+        {
+          "evidence_key": "PMID:41424208:s12",
+          "pair_id": "PMID:41424208:s12:p01",
+          "doc_id": "PMID:41424208",
+          "sent_id": "PMID:41424208:s12",
+          "pmid": "41424208",
+          "url": "https://europepmc.org/article/MED/41424208",
+          "sentence_text": "Crucially, MR analysis identifies abdominal obesity, quantified by waist circumference, as the dominant causal link between NAFLD and T2DM.",
+          "char_spans": [
+            44,
+            138
+          ],
+          "extractor": "KeywordHeuristic",
+          "supporting_extractors": [
+            "KeywordHeuristic",
+            "spaCy-Rules"
+          ],
+          "confidence": 0.865,
+          "predictions": [
+            {
+              "extractor": "KeywordHeuristic",
+              "confidence": 0.88,
+              "polarity": "increases",
+              "language_status": "affirmed",
+              "reasoning": "Keyword heuristic classification: causal"
+            },
+            {
+              "extractor": "spaCy-Rules",
+              "confidence": 0.85,
+              "polarity": "increases",
+              "language_status": "affirmed",
+              "reasoning": "Matched causal trigger 'causal link' (passive=False, decrease=False)"
+            }
+          ]
+        },
+        {
+          "evidence_key": "PMID:42415555:s01",
+          "pair_id": "PMID:42415555:s01:p01",
+          "doc_id": "PMID:42415555",
+          "sent_id": "PMID:42415555:s01",
+          "pmid": "42415555",
+          "url": "https://europepmc.org/article/MED/42415555",
+          "sentence_text": "Pediatric obesity is a growing global concern because it leads to an increased prevalence of abnormal glucose metabolism, including dysglycemia, prediabetes, and type 2 diabetes.",
+          "char_spans": [
+            10,
+            156
+          ],
+          "extractor": "KeywordHeuristic",
+          "supporting_extractors": [
+            "KeywordHeuristic",
+            "spaCy-Rules"
+          ],
+          "confidence": 0.865,
+          "predictions": [
+            {
+              "extractor": "KeywordHeuristic",
+              "confidence": 0.88,
+              "polarity": "increases",
+              "language_status": "affirmed",
+              "reasoning": "Keyword heuristic classification: causal"
+            },
+            {
+              "extractor": "spaCy-Rules",
+              "confidence": 0.85,
+              "polarity": "increases",
+              "language_status": "affirmed",
+              "reasoning": "Matched causal trigger 'leads to' (passive=True, decrease=False)"
+            }
+          ]
+        }
+      ],
+      "validation_status": "ACCEPTED_CAUSAL_DAG",
+      "rationale": "Supported by Mendelian Randomization (PMID:41424208) and pediatric longitudinal etiology (PMID:42415555)."
+    }
+  ],
+  "audited_and_excluded_causal_candidates": [
+    {
+      "source": "InsulinResistance",
+      "target": "Outcome",
+      "status": "EXCLUDED_FROM_CAUSAL_DAG_ROUTED_TO_ASSOCIATION",
+      "evaluated_evidence": [
+        {
+          "doc_id": "PMID:42828458",
+          "sent_id": "PMID:42828458:s04",
+          "sentence_text": "Multiple studies have investigated them, suggesting that insulin resistance, hyperglycemia and neuroinflammation are some potential factors which can increase risk of dementia in patients with T2DM.",
+          "exclusion_reason": "Secondary outcome (dementia) among patients with pre-existing T2DM cohort condition. Does not support InsulinResistance causing diabetes."
+        },
+        {
+          "doc_id": "PMID:42901975",
+          "sent_id": "PMID:42901975:s03",
+          "sentence_text": "poor dietary quality can increase the risk of metabolic syndrome and T2DM through increased visceral adiposity and insulin resistance, inflammation and an unhealthy microbiome",
+          "exclusion_reason": "Biological mediator/mechanism of dietary quality rather than direct interventional causal exposure."
+        }
+      ],
+      "final_action": "Preserved in observational association graph (31 evidence sentences across 27 papers)."
+    },
+    {
+      "source": "Outcome",
+      "target": "BMICat / InsulinResistance / PhysActivity",
+      "status": "EXCLUDED_REVERSE_CAUSATION",
+      "exclusion_reason": "Diagnosis of diabetes does not retroactively cause baseline BMI, lifestyle, or biological precursor traits."
+    },
+    {
+      "source": "BMICat / Outcome",
+      "target": "Sex / AgeCat",
+      "status": "EXCLUDED_DEMOGRAPHIC_IMMUTABILITY",
+      "exclusion_reason": "Demographic attributes are baseline strata and cannot be caused by disease or lifestyle."
+    }
+  ]
+}

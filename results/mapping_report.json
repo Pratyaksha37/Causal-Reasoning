@@ -1,0 +1,39 @@
+{
+  "total_mentions": 3821,
+  "mapped_count": 3760,
+  "unmapped_count": 61,
+  "mapped_rate": 0.984,
+  "unmapped_rate": 0.016,
+  "polarity_flipped_count": 21,
+  "canonical_breakdown": {
+    "Outcome": 2692,
+    "Sex": 329,
+    "BMICat": 299,
+    "InsulinResistance": 142,
+    "Hypertension": 111,
+    "AgeCat": 82,
+    "PhysActivity": 74,
+    "SleepDuration": 16,
+    "Diet": 13,
+    "Income": 1,
+    "Education": 1
+  },
+  "top_unmapped_phrases": [
+    {
+      "phrase": "smoking",
+      "count": 49
+    },
+    {
+      "phrase": "tobacco",
+      "count": 10
+    },
+    {
+      "phrase": "cigarette",
+      "count": 1
+    },
+    {
+      "phrase": "smoker",
+      "count": 1
+    }
+  ]
+}

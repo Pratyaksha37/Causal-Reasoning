@@ -1,0 +1,71 @@
+{
+  "report_title": "Prediction Files Integrity and Provenance Audit",
+  "timestamp": "2026-10-25T06:49:58.521154Z",
+  "predictions_directory": "results/predictions",
+  "files": {
+    "finetuned-distilbert_predictions.jsonl": {
+      "byte_size": 1579021,
+      "sha256": "86a2ced55747915ba056fb6395f63289db320b93884a0641e260854efa14d288",
+      "total_records": 1143,
+      "valid_schema_records": 1143,
+      "unique_pair_ids": 1143,
+      "duplicate_pair_ids": 0,
+      "extractors_recorded": [
+        "KeywordHeuristic"
+      ],
+      "is_duplicate_alias": true
+    },
+    "keywordheuristic_predictions.jsonl": {
+      "byte_size": 1579021,
+      "sha256": "86a2ced55747915ba056fb6395f63289db320b93884a0641e260854efa14d288",
+      "total_records": 1143,
+      "valid_schema_records": 1143,
+      "unique_pair_ids": 1143,
+      "duplicate_pair_ids": 0,
+      "extractors_recorded": [
+        "KeywordHeuristic"
+      ],
+      "is_duplicate_alias": false
+    },
+    "prompted-llm-gemini_predictions.jsonl": {
+      "byte_size": 31589,
+      "sha256": "64acc3231198ac1237c0fd4c953e464b230d10690e6519c60fa2e65fef93612a",
+      "total_records": 20,
+      "valid_schema_records": 20,
+      "unique_pair_ids": 20,
+      "duplicate_pair_ids": 0,
+      "extractors_recorded": [
+        "Prompted-LLM-Gemini"
+      ],
+      "is_duplicate_alias": false
+    },
+    "prompted-llm-groq_predictions.jsonl": {
+      "byte_size": 25805,
+      "sha256": "13917f771289b3d3d2e5f26475a6b403c3c6b0d0eb0254522fa730949add252e",
+      "total_records": 20,
+      "valid_schema_records": 20,
+      "unique_pair_ids": 20,
+      "duplicate_pair_ids": 0,
+      "extractors_recorded": [
+        "Prompted-LLM-Groq"
+      ],
+      "is_duplicate_alias": false
+    },
+    "spacy-rules_predictions.jsonl": {
+      "byte_size": 1165500,
+      "sha256": "feb4f322a879daa543125b4482b3bb41e7354b20190779e0cc8d7ebbb9d4182f",
+      "total_records": 1143,
+      "valid_schema_records": 1143,
+      "unique_pair_ids": 1143,
+      "duplicate_pair_ids": 0,
+      "extractors_recorded": [
+        "spaCy-Rules"
+      ],
+      "is_duplicate_alias": false
+    }
+  },
+  "alias_detection": {
+    "finetuned_distilbert_vs_keywordheuristic_identical": true,
+    "handling_policy": "Excluded finetuned-distilbert_predictions.jsonl from offline graph reconstruction and model evaluation tables to prevent duplicate evidence inflation and misleading multi-model claims."
+  }
+}

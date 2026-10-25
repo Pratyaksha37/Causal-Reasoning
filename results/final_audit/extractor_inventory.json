@@ -1,0 +1,83 @@
+{
+  "report_title": "Relation Extractor Implementation & Provenance Inventory",
+  "timestamp": "2026-10-25T06:49:31.115704Z",
+  "extractors": {
+    "spaCy-Rules": {
+      "genuinely_implemented": true,
+      "class_name": "RulesExtractor",
+      "module_path": "src/extractors/rules_extractor.py",
+      "algorithmic_method": "Lexical trigger matching with syntactic dependency subtree traversal, active/passive voice detection, and lexical negation/hedging detection.",
+      "dependencies": [
+        "spacy>=3.8.0",
+        "en_core_web_sm"
+      ],
+      "requires_network": false,
+      "requires_api_key": false,
+      "input_schema": "CandidatePair (Pydantic v2)",
+      "output_schema": "Prediction with RelationLabel and Provenance",
+      "saved_predictions_file": "results/predictions/spacy-rules_predictions.jsonl",
+      "saved_predictions_count": 1143,
+      "known_limitations": "Brittle on non-standard syntactic inversions and complex multi-clause sentence structures."
+    },
+    "KeywordHeuristic": {
+      "genuinely_implemented": true,
+      "class_name": "KeywordHeuristicExtractor",
+      "module_path": "src/extractors/distilbert_extractor.py",
+      "algorithmic_method": "Entity marker tokenization ([E1]...[/E1], [E2]...[/E2]) with regex keyword heuristics and device discovery (PyTorch MPS/CUDA/CPU).",
+      "dependencies": [
+        "torch>=2.0"
+      ],
+      "requires_network": false,
+      "requires_api_key": false,
+      "input_schema": "CandidatePair (Pydantic v2)",
+      "output_schema": "Prediction with RelationLabel and Provenance",
+      "saved_predictions_file": "results/predictions/keywordheuristic_predictions.jsonl",
+      "saved_predictions_count": 1143,
+      "known_limitations": "Operates strictly as a fast heuristic baseline; lacks contextual semantic disambiguation."
+    },
+    "FineTuned-DistilBERT": {
+      "genuinely_implemented": false,
+      "status": "DISCLAIMED_AND_DEPRECATED",
+      "module_path": "src/extractors/distilbert_extractor.py (aliased to KeywordHeuristicExtractor)",
+      "audit_findings": [
+        "No model weights (.pt, .bin, .safetensors) exist in the repository.",
+        "The class DistilBERTExtractor was an exact alias: DistilBERTExtractor = KeywordHeuristicExtractor.",
+        "results/predictions/finetuned-distilbert_predictions.jsonl is 100% byte-identical to keywordheuristic_predictions.jsonl.",
+        "Preserved historical file in backups/ for auditability, but excluded from multi-model tables and graph discovery."
+      ],
+      "action_taken": "Removed misleading claims of fine-tuned transformer. Marked genuine neural Transformer inference as future work."
+    },
+    "Prompted-LLM-Gemini": {
+      "genuinely_implemented": true,
+      "class_name": "LLMExtractor",
+      "module_path": "src/extractors/llm_extractor.py",
+      "algorithmic_method": "Zero-shot / few-shot structured JSON prompting via Google Gemini REST API (gemini-3.5-flash) with local SHA-256 caching.",
+      "dependencies": [
+        "requests"
+      ],
+      "requires_network": true,
+      "requires_api_key": true,
+      "env_key_variable": "GEMINI_API_KEY",
+      "input_schema": "CandidatePair (Pydantic v2)",
+      "output_schema": "Prediction with RelationLabel and Provenance",
+      "saved_predictions_file": "results/predictions/prompted-llm-gemini_predictions.jsonl",
+      "saved_predictions_count": 20,
+      "known_limitations": "External API rate limits; evaluated as a pilot sample across 20 candidate pairs."
+    },
+    "Prompted-LLM-Groq": {
+      "genuinely_implemented": true,
+      "class_name": "LLMExtractor",
+      "module_path": "src/extractors/llm_extractor.py",
+      "algorithmic_method": "Structured JSON prompting via Groq REST API (llama-3.3-70b-versatile) with local SHA-256 caching.",
+      "dependencies": [
+        "requests"
+      ],
+      "requires_network": true,
+      "requires_api_key": true,
+      "env_key_variable": "GROQ_API_KEY",
+      "saved_predictions_file": "results/predictions/prompted-llm-groq_predictions.jsonl",
+      "saved_predictions_count": 20,
+      "known_limitations": "Evaluated as a pilot sample across 20 candidate pairs."
+    }
+  }
+}
