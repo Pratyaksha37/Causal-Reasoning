@@ -3,8 +3,8 @@
 import logging
 from typing import Any
 
-from sklearn.metrics import f1_score, precision_score, recall_score
-
+from src.evaluation.relation import empty_relation_metrics, relation_metrics
+from src.schemas.evaluation import FullRelationEvaluation
 from src.schemas.prediction import Prediction
 
 logger = logging.getLogger(__name__)
@@ -14,7 +14,7 @@ def evaluate_predictions(
     gold_labels: list[dict[str, Any]],
     predictions: list[Prediction],
     penalize_missing: bool = True,
-) -> dict[str, Any]:
+) -> FullRelationEvaluation:
     """
     Compute comprehensive intrinsic relation extraction metrics.
 
@@ -30,6 +30,7 @@ def evaluate_predictions(
     """
     if not gold_labels:
         return {
+            **empty_relation_metrics(),
             "total_evaluated": 0,
             "gold_total": 0,
             "macro_f1": 0.0,
@@ -72,6 +73,7 @@ def evaluate_predictions(
 
     if not eval_gold_records:
         return {
+            **empty_relation_metrics(),
             "total_evaluated": 0,
             "gold_total": len(gold_labels),
             "macro_f1": 0.0,
@@ -129,39 +131,37 @@ def evaluate_predictions(
             if g_rel != "none":
                 polarity_total += 1
 
-    classes = ["causal", "association_only", "none"]
-    causal_support = sum(1 for y in y_true_rel if y == "causal")
+    common = relation_metrics(y_true_rel, y_pred_rel)
 
-    report: dict[str, Any] = {
+    report: FullRelationEvaluation = {
+        **common,
+        "evaluated_fields": ["relation_class", "direction", "polarity", "language_status"],
         "total_evaluated": len(eval_gold_records),
         "gold_total": len(gold_labels),
         "predictions_total": len(predictions),
         "missing_predictions_count": len(missing_gold_ids),
         "duplicate_predictions_count": len(duplicate_pred_ids),
         "extra_predictions_count": len(extra_pred_ids),
-        "causal_generalization_measured": causal_support > 0,
-        "macro_f1": round(float(f1_score(y_true_rel, y_pred_rel, labels=classes, average="macro", zero_division=0)), 4),
+        "causal_generalization_measured": common["causal_generalization_measured"],
+        "macro_f1": round(common["macro_f1_all_three_classes"], 4),
         "per_class": {},
-        "direction_accuracy_conditional_on_causal": round(causal_dir_matches / causal_dir_total, 4) if causal_dir_total > 0 else 1.0,
+        "direction_accuracy_conditional_on_causal": round(causal_dir_matches / causal_dir_total, 4)
+        if causal_dir_total > 0
+        else 1.0,
         "causal_direction_evaluated_count": causal_dir_total,
-        "polarity_accuracy": round(polarity_matches / polarity_total, 4) if polarity_total > 0 else 1.0,
+        "polarity_accuracy": round(polarity_matches / polarity_total, 4)
+        if polarity_total > 0
+        else 1.0,
         "language_status_accuracy": round(lang_matches / lang_total, 4) if lang_total > 0 else 1.0,
     }
 
-    for c in classes:
-        support = sum(1 for y in y_true_rel if y == c)
-        p_score = precision_score(y_true_rel, y_pred_rel, labels=[c], average="micro", zero_division=0)
-        r_score = recall_score(y_true_rel, y_pred_rel, labels=[c], average="micro", zero_division=0)
-        f_score = f1_score(y_true_rel, y_pred_rel, labels=[c], average="micro", zero_division=0)
-        c_report: dict[str, Any] = {
-            "precision": round(float(p_score), 4),
-            "recall": round(float(r_score), 4),
-            "f1": round(float(f_score), 4),
-            "support": support,
-            "evaluable": support > 0,
+    # Preserve historical four-decimal fields, using the same underlying class calculation.
+    for name, metrics in common["per_class"].items():
+        report["per_class"][name] = {
+            **metrics,
+            "precision": round(metrics["precision"], 4),
+            "recall": round(metrics["recall"], 4),
+            "f1": round(metrics["f1"], 4),
         }
-        if support == 0:
-            c_report["note"] = "Zero gold support in this split; metric is unmeasured."
-        report["per_class"][c] = c_report
 
     return report

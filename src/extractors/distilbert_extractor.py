@@ -5,14 +5,13 @@ NOTE ON MODEL PROVENANCE:
 This module implements a lightweight keyword-based heuristic baseline (Extractor B)
 that operates on text tokenized with entity markers [E1]...[/E1] and [E2]...[/E2].
 It does NOT load or evaluate fine-tuned neural Transformer weights.
-A true fine-tuned DistilBERT / Bio-Transformer relation extractor remains future work.
+The real pretrained encoder is FrozenTransformerEncoder in transformer_encoder.py.
+The DistilBERTExtractor name is retained only as a backward-compatible heuristic alias.
 """
 
 import logging
 import re
 from typing import Any
-
-import torch
 
 from src.extractors.base import BaseExtractor
 from src.schemas.prediction import (
@@ -70,7 +69,7 @@ class KeywordHeuristicExtractor(BaseExtractor):
     """
     Extractor B: Baseline relation extractor using keyword matching with entity marker tokens.
     Note: Operates as a fast heuristic baseline; does not run trained neural weights.
-    A genuine fine-tuned Transformer model remains future work.
+    Real transformer features are implemented by FrozenTransformerEncoder, separately.
     """
 
     def __init__(
@@ -91,15 +90,7 @@ class KeywordHeuristicExtractor(BaseExtractor):
 
         self.classes = [RelationClass.CAUSAL, RelationClass.ASSOCIATION_ONLY, RelationClass.NONE]
 
-        # Check PyTorch device (MPS for Apple Silicon, CUDA, or CPU)
-        if torch.backends.mps.is_available():
-            self.device = torch.device("mps")
-        elif torch.cuda.is_available():
-            self.device = torch.device("cuda")
-        else:
-            self.device = torch.device("cpu")
-
-        logger.info("KeywordHeuristicExtractor initialized (heuristic baseline, device: %s)", self.device)
+        logger.info("KeywordHeuristicExtractor initialized (pure Python regex baseline)")
 
     def predict_single(self, pair: CandidatePair) -> Prediction:
         """Extract relation for single CandidatePair with entity marker tokenization."""
@@ -141,7 +132,9 @@ class KeywordHeuristicExtractor(BaseExtractor):
             )
             polarity = (
                 Polarity.DECREASES
-                if any(w in text_lower for w in ["reduce", "reduces", "prevent", "decrease", "protect"])
+                if any(
+                    w in text_lower for w in ["reduce", "reduces", "prevent", "decrease", "protect"]
+                )
                 else Polarity.INCREASES
             )
             confidence = 0.88
@@ -159,8 +152,14 @@ class KeywordHeuristicExtractor(BaseExtractor):
             confidence = 0.92
             reasoning = "Keyword heuristic classification: none"
 
-        lang_status = LanguageStatus.NEGATED if "not " in text_lower or "no " in text_lower else (
-            LanguageStatus.UNCERTAIN if "may " in text_lower or "might " in text_lower or "could " in text_lower else LanguageStatus.AFFIRMED
+        lang_status = (
+            LanguageStatus.NEGATED
+            if "not " in text_lower or "no " in text_lower
+            else (
+                LanguageStatus.UNCERTAIN
+                if "may " in text_lower or "might " in text_lower or "could " in text_lower
+                else LanguageStatus.AFFIRMED
+            )
         )
 
         provenance = Provenance(

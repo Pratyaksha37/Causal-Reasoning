@@ -1,0 +1,14 @@
+seed: 42
+annotations: data/annotations/sample.jsonl
+candidates: data/candidates_corpus.jsonl
+output: results/benchmark
+encoder:
+  model_id: sentence-transformers/all-MiniLM-L6-v2
+  revision: c9745ed1d9f207416be6d2e6f8de32d1f16199bf
+  path: data/models/all-MiniLM-L6-v2
+  batch_size: 16
+  max_length: 256
+classifier:
+  C: 1.0
+  class_weight: balanced
+  max_iter: 2000
