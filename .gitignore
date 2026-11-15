@@ -59,3 +59,18 @@ results/models/checkpoint-*
 
 # Audit backups
 backups/
+
+# Reproducible public Probabilistic modelling observations and large derived row tables
+data/brfss/
+results/modelling/**/processed.csv
+results/modelling/**/splits.csv
+
+# Local pretrained encoder weights and derived embedding caches
+data/models/
+data/cache/
+
+# Local preparation archives and document build artifacts
+/data/brfss.zip
+/.artifact_build/
+/.chart-data-*/
+/results/modelling/demo/

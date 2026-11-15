@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d9" for="edge" attr.name="evidence_json" attr.type="string" />
+  <key id="d8" for="edge" attr.name="aggregated_confidence" attr.type="double" />
+  <key id="d7" for="edge" attr.name="agreement_count" attr.type="long" />
+  <key id="d6" for="edge" attr.name="extractors" attr.type="string" />
+  <key id="d5" for="edge" attr.name="unique_papers_count" attr.type="long" />
+  <key id="d4" for="edge" attr.name="unique_evidence_sentences" attr.type="long" />
+  <key id="d3" for="edge" attr.name="support_count" attr.type="long" />
+  <key id="d2" for="edge" attr.name="language_status" attr.type="string" />
+  <key id="d1" for="edge" attr.name="polarity" attr.type="string" />
+  <key id="d0" for="edge" attr.name="relation_class" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="BMICat" />
+    <node id="Outcome" />
+    <edge source="BMICat" target="Outcome">
+      <data key="d0">causal</data>
+      <data key="d1">increases</data>
+      <data key="d2">affirmed</data>
+      <data key="d3">2</data>
+      <data key="d4">2</data>
+      <data key="d5">2</data>
+      <data key="d6">KeywordHeuristic,spaCy-Rules</data>
+      <data key="d7">2</data>
+      <data key="d8">0.865</data>
+      <data key="d9">[{"evidence_key": "PMID:41424208:s12", "pair_id": "PMID:41424208:s12:p01", "doc_id": "PMID:41424208", "sent_id": "PMID:41424208:s12", "pmid": "41424208", "url": "https://europepmc.org/article/MED/41424208", "sentence_text": "Crucially, MR analysis identifies abdominal obesity, quantified by waist circumference, as the dominant causal link between NAFLD and T2DM.", "char_spans": [44, 138], "extractor": "KeywordHeuristic", "supporting_extractors": ["KeywordHeuristic", "spaCy-Rules"], "confidence": 0.865, "predictions": [{"extractor": "KeywordHeuristic", "confidence": 0.88, "polarity": "increases", "language_status": "affirmed", "reasoning": "Keyword heuristic classification: causal"}, {"extractor": "spaCy-Rules", "confidence": 0.85, "polarity": "increases", "language_status": "affirmed", "reasoning": "Matched causal trigger 'causal link' (passive=False, decrease=False)"}]}, {"evidence_key": "PMID:42415555:s01", "pair_id": "PMID:42415555:s01:p01", "doc_id": "PMID:42415555", "sent_id": "PMID:42415555:s01", "pmid": "42415555", "url": "https://europepmc.org/article/MED/42415555", "sentence_text": "Pediatric obesity is a growing global concern because it leads to an increased prevalence of abnormal glucose metabolism, including dysglycemia, prediabetes, and type 2 diabetes.", "char_spans": [10, 156], "extractor": "KeywordHeuristic", "supporting_extractors": ["KeywordHeuristic", "spaCy-Rules"], "confidence": 0.865, "predictions": [{"extractor": "KeywordHeuristic", "confidence": 0.88, "polarity": "increases", "language_status": "affirmed", "reasoning": "Keyword heuristic classification: causal"}, {"extractor": "spaCy-Rules", "confidence": 0.85, "polarity": "increases", "language_status": "affirmed", "reasoning": "Matched causal trigger 'leads to' (passive=True, decrease=False)"}]}]</data>
+    </edge>
+  </graph>
+</graphml>
