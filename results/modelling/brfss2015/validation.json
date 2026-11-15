@@ -1,0 +1,14 @@
+{
+  "status": "pending",
+  "queue_size": 50,
+  "reviews": [],
+  "reviewed_items": 0,
+  "double_reviewed_items": 0,
+  "reviewer_count": 0,
+  "agreements": [],
+  "human_gold_established": false,
+  "independence": "Reviewer attestation; software cannot verify blinding or expertise",
+  "pseudo_labels_included": false,
+  "adjudicated_items": 0,
+  "gold_records": []
+}

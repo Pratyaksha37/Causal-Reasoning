@@ -1,0 +1,32 @@
+seed: 42
+test_size: 0.2
+paths:
+  graph: results/graph/current/evidence_graph_after_repair.graphml
+  provenance: results/graph/current/provenance.json
+  annotation_queue: data/annotations/human_annotation_queue.jsonl
+  output: results/modelling/brfss2015
+model:
+  mode: literature_prior
+  variables:
+  - BMICat
+  - Outcome
+  exploratory_edges: []
+  acknowledge_independence: false
+estimation:
+  method: bayesian
+  equivalent_sample_size: 5.0
+data:
+  year: 2015
+  profile: brfss_2015
+  missing_policy: complete_case_model_variables
+  age_boundaries:
+  - 18
+  - 45
+  - 65
+  - 75
+  - 81
+  outcome_definition: prediabetes_or_diabetes
+causal:
+  assume_causal_sufficiency: false
+  assume_consistency: false
+  acknowledge_structural_prior: false

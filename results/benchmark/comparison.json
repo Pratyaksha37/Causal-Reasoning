@@ -1,0 +1,976 @@
+{
+  "annotations_path": "data/annotations/sample.jsonl",
+  "artifact_dir": "results/benchmark",
+  "task": "relation_class_only",
+  "label_status": "PROVISIONAL_RULE_PSEUDO_GOLD",
+  "human_benchmark_claim": false,
+  "primary_metric": "macro_f1_supported_classes",
+  "label_provenance": {
+    "labeling_methods": [
+      "rule_heuristic_regex_v1"
+    ],
+    "recorded_generator": "rule_heuristic_regex_v1",
+    "generator_implementation_verified": false,
+    "independent_gold": false,
+    "rule_method_comparison_bias": "Rule-generated references may make related rule evaluations circular; exact generator implementation is not verified by metadata alone."
+  },
+  "split_strategy": "existing_frozen_document_holdout",
+  "input_sha256": "e38bba42ec74af9e1ca381225d4499bf36ba3430ff6fa3a4d8d4229d2a05c404",
+  "document_overlap": 0,
+  "partitions": {
+    "train": {
+      "pairs": 150,
+      "documents": 76
+    },
+    "dev": {
+      "pairs": 50,
+      "documents": 22
+    },
+    "test": {
+      "pairs": 50,
+      "documents": 26
+    }
+  },
+  "split_pair_ids": {
+    "train": [
+      "PMID:42432886:s03:p02",
+      "PMID:42630470:s09:p17",
+      "PMID:42730413:s03:p01",
+      "PMID:42582489:s05:p01",
+      "PMID:42575672:s05:p04",
+      "PMID:42381871:s09:p15",
+      "PMID:42651350:s01:p01",
+      "PMID:42630470:s09:p06",
+      "PMID:42718572:s03:p29",
+      "PMID:42502734:s01:p05",
+      "PMID:42542636:s03:p02",
+      "PMID:42817769:s01:p03",
+      "PMID:42481915:s01:p39",
+      "PMID:42862335:s01:p02",
+      "PMID:42745276:s01:p03",
+      "PMID:42707244:s05:p03",
+      "PMID:42381871:s09:p06",
+      "PMID:42760186:s01:p02",
+      "PMID:42504374:s09:p03",
+      "PMID:42817769:s05:p01",
+      "PMID:42730413:s03:p05",
+      "PMID:41531546:s09:p01",
+      "PMID:42682447:s10:p05",
+      "PMID:41645112:s07:p01",
+      "PMID:42523808:s01:p04",
+      "PMID:42481915:s01:p34",
+      "PMID:42381871:s09:p08",
+      "PMID:42877484:s09:p01",
+      "PMID:42817769:s01:p02",
+      "PMID:42582489:s10:p01",
+      "PMID:42213742:s02:p03",
+      "PMID:42674669:s01:p02",
+      "PMID:42898555:s02:p02",
+      "PMID:42651340:s02:p01",
+      "PMID:42718572:s03:p34",
+      "PMID:42812257:s09:p01",
+      "PMID:42381871:s08:p03",
+      "PMID:42796348:s02:p03",
+      "PMID:42523808:s01:p06",
+      "PMID:42707244:s05:p02",
+      "PMID:42299201:s11:p02",
+      "PMID:42630470:s03:p03",
+      "PMID:42588238:s03:p01",
+      "PMID:42756900:s01:p03",
+      "PMID:42817769:s06:p01",
+      "PMID:42620560:s02:p02",
+      "PMID:42862335:s13:p10",
+      "PMID:42638941:s07:p02",
+      "PMID:42363097:s11:p03",
+      "PMID:42488722:s03:p04",
+      "PMID:42299201:s10:p02",
+      "PMID:42424092:s09:p01",
+      "PMID:42491982:s01:p02",
+      "PMID:42601774:s04:p02",
+      "PMID:42388501:s02:p06",
+      "PMID:42305142:s04:p02",
+      "PMID:42466348:s02:p02",
+      "PMID:42255424:s01:p12",
+      "PMID:42685090:s02:p03",
+      "PMID:42670404:s14:p02",
+      "PMID:42862335:s13:p14",
+      "PMID:42694689:s02:p03",
+      "PMID:42499222:s01:p04",
+      "PMID:42424092:s09:p02",
+      "PMID:42747132:s01:p03",
+      "PMID:42630470:s09:p05",
+      "PMID:42718572:s03:p14",
+      "PMID:42718572:s03:p25",
+      "PMID:41998064:s02:p03",
+      "PMID:42331891:s01:p02",
+      "PMID:42466348:s02:p06",
+      "PMID:42796297:s06:p01",
+      "PMID:42615248:s06:p10",
+      "PMID:42388961:s01:p03",
+      "PMID:42381871:s03:p09",
+      "PMID:42620560:s02:p05",
+      "PMID:42891248:s04:p01",
+      "PMID:42817769:s08:p03",
+      "PMID:42632082:s01:p01",
+      "PMID:42363097:s04:p03",
+      "PMID:42523808:s02:p03",
+      "PMID:42796297:s06:p02",
+      "PMID:42638941:s07:p06",
+      "PMID:42299201:s11:p01",
+      "PMID:42620560:s03:p03",
+      "PMID:42259891:s11:p01",
+      "PMID:42381871:s09:p07",
+      "PMID:42420879:s01:p04",
+      "PMID:42503624:s01:p03",
+      "PMID:42694689:s03:p01",
+      "PMID:42898555:s02:p01",
+      "PMID:42784648:s12:p01",
+      "PMID:42707353:s08:p01",
+      "PMID:42620560:s03:p01",
+      "PMID:42670404:s12:p01",
+      "PMID:42381871:s07:p02",
+      "PMID:42510915:s03:p03",
+      "PMID:42624955:s01:p01",
+      "PMID:42381871:s07:p03",
+      "PMID:42643835:s01:p05",
+      "PMID:42299201:s11:p23",
+      "PMID:42638941:s07:p01",
+      "PMID:42651350:s11:p01",
+      "PMID:42620560:s02:p03",
+      "PMID:42523808:s02:p01",
+      "PMID:42575672:s05:p06",
+      "PMID:42718572:s03:p50",
+      "PMID:42363097:s11:p05",
+      "PMID:42620560:s02:p01",
+      "PMID:42255424:s01:p20",
+      "PMID:42481915:s01:p50",
+      "PMID:42255424:s01:p19",
+      "PMID:42299201:s12:p01",
+      "PMID:42718572:s01:p02",
+      "PMID:42365226:s01:p05",
+      "PMID:42748410:s05:p09",
+      "PMID:42450077:s04:p03",
+      "PMID:42547683:s02:p03",
+      "PMID:42707244:s05:p01",
+      "PMID:42872196:s08:p01",
+      "PMID:42630470:s09:p15",
+      "PMID:42812257:s07:p01",
+      "PMID:42718572:s03:p31",
+      "PMID:42523808:s01:p05",
+      "PMID:42587650:s11:p01",
+      "PMID:42299201:s11:p09",
+      "PMID:42299201:s11:p03",
+      "PMID:42189766:s07:p04",
+      "PMID:42527195:s10:p01",
+      "PMID:42575672:s06:p06",
+      "PMID:42491982:s01:p03",
+      "PMID:42213742:s02:p09",
+      "PMID:42630470:s09:p20",
+      "PMID:42718572:s03:p02",
+      "PMID:42331891:s01:p01",
+      "PMID:42718572:s03:p28",
+      "PMID:42523808:s04:p03",
+      "PMID:42718572:s01:p07",
+      "PMID:42481915:s03:p06",
+      "PMID:42812257:s09:p03",
+      "PMID:42349256:s03:p02",
+      "PMID:42713502:s01:p01",
+      "PMID:42718572:s03:p54",
+      "PMID:42643835:s01:p06",
+      "PMID:42769387:s01:p08",
+      "PMID:41804913:s02:p01",
+      "PMID:42630470:s09:p11",
+      "PMID:42899079:s01:p01",
+      "PMID:42058783:s04:p02",
+      "PMID:42718572:s03:p49"
+    ],
+    "dev": [
+      "PMID:35570489:s04:p03",
+      "PMID:42523603:s04:p03",
+      "PMID:42595238:s01:p01",
+      "PMID:42802801:s02:p03",
+      "PMID:42523603:s04:p02",
+      "PMID:42819449:s02:p01",
+      "PMID:42694168:s07:p01",
+      "PMID:41634666:s14:p03",
+      "PMID:42694168:s01:p01",
+      "PMID:42819449:s04:p01",
+      "PMID:42513540:s01:p01",
+      "PMID:42694168:s11:p05",
+      "PMID:41634666:s17:p01",
+      "PMID:42889580:s01:p02",
+      "PMID:42783806:s08:p01",
+      "PMID:42571999:s02:p02",
+      "PMID:42653674:s01:p01",
+      "PMID:42571999:s02:p01",
+      "PMID:42177716:s06:p01",
+      "PMID:42502449:s08:p01",
+      "PMID:42763718:s09:p03",
+      "PMID:42763718:s03:p01",
+      "PMID:41634666:s03:p01",
+      "PMID:42824721:s12:p01",
+      "PMID:42824721:s14:p01",
+      "PMID:42513540:s01:p02",
+      "PMID:42818676:s11:p02",
+      "PMID:41634666:s17:p03",
+      "PMID:42824721:s03:p04",
+      "PMID:35570489:s04:p01",
+      "PMID:42654275:s01:p01",
+      "PMID:42694168:s02:p03",
+      "PMID:41975840:s05:p02",
+      "PMID:42694168:s11:p10",
+      "PMID:41439842:s01:p02",
+      "PMID:42502449:s05:p01",
+      "PMID:42818676:s11:p03",
+      "PMID:42595238:s01:p03",
+      "PMID:42513540:s03:p01",
+      "PMID:42819449:s05:p01",
+      "PMID:42824721:s12:p07",
+      "PMID:42694168:s11:p04",
+      "PMID:42271260:s04:p01",
+      "PMID:42824721:s03:p02",
+      "PMID:42630215:s04:p02",
+      "PMID:42783806:s03:p07",
+      "PMID:42694168:s10:p01",
+      "PMID:42818676:s11:p04",
+      "PMID:42694168:s02:p02",
+      "PMID:42824721:s03:p03"
+    ],
+    "test": [
+      "PMID:42381893:s01:p03",
+      "PMID:42700058:s02:p04",
+      "PMID:42466973:s08:p01",
+      "PMID:42656766:s02:p11",
+      "PMID:42899427:s09:p01",
+      "PMID:41883562:s01:p14",
+      "PMID:42074925:s02:p03",
+      "PMID:42733913:s02:p01",
+      "PMID:42422434:s13:p01",
+      "PMID:42187875:s01:p11",
+      "PMID:42656766:s12:p02",
+      "PMID:42639604:s05:p17",
+      "PMID:42763678:s07:p01",
+      "PMID:42655935:s05:p08",
+      "PMID:42656766:s02:p02",
+      "PMID:42607927:s01:p02",
+      "PMID:41867241:s07:p01",
+      "PMID:42700058:s03:p01",
+      "PMID:42656766:s13:p35",
+      "PMID:42187875:s01:p06",
+      "PMID:42717744:s04:p01",
+      "PMID:42639604:s06:p01",
+      "PMID:42694683:s07:p01",
+      "PMID:42254320:s05:p01",
+      "PMID:42656766:s13:p27",
+      "PMID:42074925:s01:p01",
+      "PMID:42566486:s02:p01",
+      "PMID:42685619:s10:p01",
+      "PMID:42656766:s13:p23",
+      "PMID:42607927:s09:p02",
+      "PMID:42655935:s05:p02",
+      "PMID:42899427:s07:p01",
+      "PMID:42851090:s09:p01",
+      "PMID:42656766:s13:p22",
+      "PMID:41883562:s01:p05",
+      "PMID:42656766:s13:p04",
+      "PMID:42187875:s01:p07",
+      "PMID:42656766:s13:p21",
+      "PMID:42469908:s11:p01",
+      "PMID:42399945:s05:p01",
+      "PMID:42381893:s06:p02",
+      "PMID:42639604:s05:p16",
+      "PMID:42422434:s12:p01",
+      "PMID:42409396:s08:p03",
+      "PMID:42550956:s03:p02",
+      "PMID:41883562:s01:p04",
+      "PMID:42550956:s03:p01",
+      "PMID:42656766:s13:p30",
+      "PMID:42381893:s06:p01",
+      "PMID:42897745:s02:p06"
+    ]
+  },
+  "results": {
+    "train": {
+      "spaCy-Rules": {
+        "schema_version": 1,
+        "n": 150,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.9220085470085472,
+        "macro_f1_supported_classes": 0.9220085470085472,
+        "causal_generalization_measured": true,
+        "per_class": {
+          "causal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4,
+            "evaluable": true
+          },
+          "association_only": {
+            "precision": 0.8974358974358975,
+            "recall": 0.7777777777777778,
+            "f1": 0.8333333333333334,
+            "support": 45,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.9065420560747663,
+            "recall": 0.9603960396039604,
+            "f1": 0.9326923076923077,
+            "support": 101,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            35,
+            10
+          ],
+          [
+            0,
+            4,
+            97
+          ]
+        ]
+      },
+      "KeywordHeuristic": {
+        "schema_version": 1,
+        "n": 150,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.6058323158323158,
+        "macro_f1_supported_classes": 0.6058323158323158,
+        "causal_generalization_measured": true,
+        "per_class": {
+          "causal": {
+            "precision": 0.2,
+            "recall": 0.25,
+            "f1": 0.2222222222222222,
+            "support": 4,
+            "evaluable": true
+          },
+          "association_only": {
+            "precision": 0.717391304347826,
+            "recall": 0.7333333333333333,
+            "f1": 0.7252747252747253,
+            "support": 45,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.8787878787878788,
+            "recall": 0.8613861386138614,
+            "f1": 0.87,
+            "support": 101,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            33,
+            10
+          ],
+          [
+            2,
+            12,
+            87
+          ]
+        ]
+      },
+      "TF-IDF + LogisticRegression": {
+        "schema_version": 1,
+        "n": 150,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 1.0,
+        "macro_f1_supported_classes": 1.0,
+        "causal_generalization_measured": true,
+        "per_class": {
+          "causal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4,
+            "evaluable": true
+          },
+          "association_only": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 45,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 101,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            45,
+            0
+          ],
+          [
+            0,
+            0,
+            101
+          ]
+        ]
+      },
+      "MiniLM frozen encoder + LogisticRegression": {
+        "schema_version": 1,
+        "n": 150,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.7156079137722858,
+        "macro_f1_supported_classes": 0.7156079137722858,
+        "causal_generalization_measured": true,
+        "per_class": {
+          "causal": {
+            "precision": 0.3076923076923077,
+            "recall": 1.0,
+            "f1": 0.47058823529411764,
+            "support": 4,
+            "evaluable": true
+          },
+          "association_only": {
+            "precision": 0.7755102040816326,
+            "recall": 0.8444444444444444,
+            "f1": 0.8085106382978723,
+            "support": 45,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.9318181818181818,
+            "recall": 0.8118811881188119,
+            "f1": 0.8677248677248677,
+            "support": 101,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            38,
+            6
+          ],
+          [
+            8,
+            11,
+            82
+          ]
+        ]
+      }
+    },
+    "dev": {
+      "spaCy-Rules": {
+        "schema_version": 1,
+        "n": 50,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.6262626262626263,
+        "macro_f1_supported_classes": 0.9393939393939394,
+        "causal_generalization_measured": false,
+        "per_class": {
+          "causal": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "evaluable": false,
+            "note": "Zero reference support; class generalization is unmeasured."
+          },
+          "association_only": {
+            "precision": 0.9545454545454546,
+            "recall": 0.9130434782608695,
+            "f1": 0.9333333333333333,
+            "support": 23,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.9285714285714286,
+            "recall": 0.9629629629629629,
+            "f1": 0.9454545454545454,
+            "support": 27,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            21,
+            2
+          ],
+          [
+            0,
+            1,
+            26
+          ]
+        ]
+      },
+      "KeywordHeuristic": {
+        "schema_version": 1,
+        "n": 50,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.5506172839506173,
+        "macro_f1_supported_classes": 0.825925925925926,
+        "causal_generalization_measured": false,
+        "per_class": {
+          "causal": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "evaluable": false,
+            "note": "Zero reference support; class generalization is unmeasured."
+          },
+          "association_only": {
+            "precision": 0.8181818181818182,
+            "recall": 0.782608695652174,
+            "f1": 0.8,
+            "support": 23,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.8518518518518519,
+            "recall": 0.8518518518518519,
+            "f1": 0.8518518518518519,
+            "support": 27,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            18,
+            4
+          ],
+          [
+            0,
+            4,
+            23
+          ]
+        ]
+      },
+      "TF-IDF + LogisticRegression": {
+        "schema_version": 1,
+        "n": 50,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.5685862407173882,
+        "macro_f1_supported_classes": 0.8528793610760823,
+        "causal_generalization_measured": false,
+        "per_class": {
+          "causal": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "evaluable": false,
+            "note": "Zero reference support; class generalization is unmeasured."
+          },
+          "association_only": {
+            "precision": 1.0,
+            "recall": 0.6956521739130435,
+            "f1": 0.8205128205128205,
+            "support": 23,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.7941176470588235,
+            "recall": 1.0,
+            "f1": 0.8852459016393442,
+            "support": 27,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            16,
+            7
+          ],
+          [
+            0,
+            0,
+            27
+          ]
+        ]
+      },
+      "MiniLM frozen encoder + LogisticRegression": {
+        "schema_version": 1,
+        "n": 50,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.3931623931623931,
+        "macro_f1_supported_classes": 0.5897435897435896,
+        "causal_generalization_measured": false,
+        "per_class": {
+          "causal": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "evaluable": false,
+            "note": "Zero reference support; class generalization is unmeasured."
+          },
+          "association_only": {
+            "precision": 0.625,
+            "recall": 0.43478260869565216,
+            "f1": 0.5128205128205128,
+            "support": 23,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.6333333333333333,
+            "recall": 0.7037037037037037,
+            "f1": 0.6666666666666666,
+            "support": 27,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            10,
+            11
+          ],
+          [
+            2,
+            6,
+            19
+          ]
+        ]
+      }
+    },
+    "test": {
+      "spaCy-Rules": {
+        "schema_version": 1,
+        "n": 50,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.5857212238950947,
+        "macro_f1_supported_classes": 0.878581835842642,
+        "causal_generalization_measured": false,
+        "per_class": {
+          "causal": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "evaluable": false,
+            "note": "Zero reference support; class generalization is unmeasured."
+          },
+          "association_only": {
+            "precision": 1.0,
+            "recall": 0.7058823529411765,
+            "f1": 0.8275862068965517,
+            "support": 17,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.868421052631579,
+            "recall": 1.0,
+            "f1": 0.9295774647887324,
+            "support": 33,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            12,
+            5
+          ],
+          [
+            0,
+            0,
+            33
+          ]
+        ]
+      },
+      "KeywordHeuristic": {
+        "schema_version": 1,
+        "n": 50,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.5181224004753416,
+        "macro_f1_supported_classes": 0.7771836007130125,
+        "causal_generalization_measured": false,
+        "per_class": {
+          "causal": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "evaluable": false,
+            "note": "Zero reference support; class generalization is unmeasured."
+          },
+          "association_only": {
+            "precision": 0.7058823529411765,
+            "recall": 0.7058823529411765,
+            "f1": 0.7058823529411765,
+            "support": 17,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.8484848484848485,
+            "recall": 0.8484848484848485,
+            "f1": 0.8484848484848485,
+            "support": 33,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            12,
+            5
+          ],
+          [
+            0,
+            5,
+            28
+          ]
+        ]
+      },
+      "TF-IDF + LogisticRegression": {
+        "schema_version": 1,
+        "n": 50,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.5533430467864658,
+        "macro_f1_supported_classes": 0.8300145701796988,
+        "causal_generalization_measured": false,
+        "per_class": {
+          "causal": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "evaluable": false,
+            "note": "Zero reference support; class generalization is unmeasured."
+          },
+          "association_only": {
+            "precision": 0.9166666666666666,
+            "recall": 0.6470588235294118,
+            "f1": 0.7586206896551724,
+            "support": 17,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.8421052631578947,
+            "recall": 0.9696969696969697,
+            "f1": 0.9014084507042254,
+            "support": 33,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            11,
+            6
+          ],
+          [
+            0,
+            1,
+            32
+          ]
+        ]
+      },
+      "MiniLM frozen encoder + LogisticRegression": {
+        "schema_version": 1,
+        "n": 50,
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "primary_metric": "macro_f1_supported_classes",
+        "macro_f1_all_three_classes": 0.4884135472370767,
+        "macro_f1_supported_classes": 0.732620320855615,
+        "causal_generalization_measured": false,
+        "per_class": {
+          "causal": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0,
+            "evaluable": false,
+            "note": "Zero reference support; class generalization is unmeasured."
+          },
+          "association_only": {
+            "precision": 0.6470588235294118,
+            "recall": 0.6470588235294118,
+            "f1": 0.6470588235294118,
+            "support": 17,
+            "evaluable": true
+          },
+          "none": {
+            "precision": 0.8181818181818182,
+            "recall": 0.8181818181818182,
+            "f1": 0.8181818181818182,
+            "support": 33,
+            "evaluable": true
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            11,
+            6
+          ],
+          [
+            0,
+            6,
+            27
+          ]
+        ]
+      }
+    }
+  },
+  "timings": {
+    "spaCy-Rules": {
+      "inference_seconds": 0.06898729197564535,
+      "training_seconds": 0
+    },
+    "KeywordHeuristic": {
+      "inference_seconds": 0.010411249997559935,
+      "training_seconds": 0
+    },
+    "encoder_setup_seconds": 0.3155876660021022,
+    "TF-IDF + LogisticRegression": {
+      "training_seconds": 0.021494709013495594,
+      "inference_seconds": 0.00926304201129824
+    },
+    "MiniLM frozen encoder + LogisticRegression": {
+      "training_seconds": 0.004482290998566896,
+      "inference_seconds": 0.010643749992595986,
+      "embedding_seconds_including_cache": 0.0028473330021370202
+    }
+  },
+  "encoder": {
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+    "weights_sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+    "architecture": "BertModel",
+    "parameter_count": 22713216,
+    "encoder_finetuned": false,
+    "pooling": "attention_mask_mean_then_l2_normalization",
+    "device": "cpu",
+    "max_length": 256
+  },
+  "common_tokenizer_truncated_examples": 4,
+  "same_classifier_settings": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "max_iter": 2000,
+    "random_state": 42
+  },
+  "fairness": [
+    "Same candidate IDs, document splits, relation classes, and metrics for every method",
+    "TF-IDF vocabulary and both classifier heads fit on train only",
+    "Both learned models receive the same token-bounded mention-marked texts",
+    "Pretrained transformer is frozen; only its logistic head is fitted",
+    "No test-based hyperparameter selection; settings fixed in configuration",
+    "Rules operate on original sentence/mention spans; learned systems use bounded text",
+    "Training time is not directly comparable to fixed pretrained-model inference"
+  ],
+  "limitations": [
+    "Pseudo-labels are rule-derived, favouring related rules; not independent gold accuracy",
+    "Dev/test have zero causal support: held-out causal generalization is unmeasured",
+    "Small training set: only four causal training pairs",
+    "Relation classification alone does not estimate direction/polarity or justify a DAG edge",
+    "Historical LLM pilots cover different subsets and are excluded from this controlled comparison",
+    "Frozen encoder benchmark is not full transformer fine-tuning; pretraining corpus overlap is unknown"
+  ],
+  "error_analysis_path": "results/benchmark/error_analysis.json"
+}

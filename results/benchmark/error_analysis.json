@@ -1,0 +1,1508 @@
+{
+  "reference_status": "PROVISIONAL_RULE_PSEUDO_GOLD",
+  "primary_metric": "macro_f1_supported_classes",
+  "partitions": {
+    "train": {
+      "spaCy-Rules": {
+        "evaluated_fields": [
+          "relation_class",
+          "direction",
+          "polarity",
+          "language_status"
+        ],
+        "misclassified_count": 14,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:42760186:s01:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "<h4>Background</h4>Obesity is the primary risk factor for type 2 diabetes mellitus (T2DM), characterized by progressive loss of pancreatic function."
+          },
+          {
+            "pair_id": "PMID:42299201:s11:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Age greater than 45 years, female gender, higher BMI (overweight or obese), and uncontrolled T2DM (HbA1c \u22657) were identified as risk factors for hypovitaminosis D. Age \u226545 years, female gender, and uncontrolled T2DM were found to be significant predictors of hypovitaminosis D. A significant association was observed between hypovitaminosis D and microvascular complications of T2DM.<h4>Conclusions</h4>The prevalence of hypovitaminosis D among patients with T2DM was high."
+          },
+          {
+            "pair_id": "PMID:42255424:s01:p12",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Objective</h4>This study aimed to investigate the dose-response association between magnetic resonance imaging-derived hepatic proton density fat fraction (MRI-derived PDFF) and the type 2 diabetes mellitus (T2DM) prevalence in postmenopausal women with abnormal glucose metabolism, evaluate its utility in risk stratification, while examine the potential mediating role of liver enzymes and to explore the nonlinear relationship between MRI-derived PDFF and insulin resistance assessed by the Triglyceride-Glucose (TyG) index, in this specific population.<h4>Methods</h4>In this cross-sectional study, 96 postmenopausal women with abnormal glucose metabolism (46 with prediabetes, 50 with T2DM) were included."
+          },
+          {
+            "pair_id": "PMID:41998064:s02:p03",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Obesity is a risk factor for type 2 diabetes mellitus through insulin resistance."
+          },
+          {
+            "pair_id": "PMID:42299201:s11:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Age greater than 45 years, female gender, higher BMI (overweight or obese), and uncontrolled T2DM (HbA1c \u22657) were identified as risk factors for hypovitaminosis D. Age \u226545 years, female gender, and uncontrolled T2DM were found to be significant predictors of hypovitaminosis D. A significant association was observed between hypovitaminosis D and microvascular complications of T2DM.<h4>Conclusions</h4>The prevalence of hypovitaminosis D among patients with T2DM was high."
+          },
+          {
+            "pair_id": "PMID:42299201:s11:p23",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Age greater than 45 years, female gender, higher BMI (overweight or obese), and uncontrolled T2DM (HbA1c \u22657) were identified as risk factors for hypovitaminosis D. Age \u226545 years, female gender, and uncontrolled T2DM were found to be significant predictors of hypovitaminosis D. A significant association was observed between hypovitaminosis D and microvascular complications of T2DM.<h4>Conclusions</h4>The prevalence of hypovitaminosis D among patients with T2DM was high."
+          },
+          {
+            "pair_id": "PMID:42651350:s11:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<b>Conclusions:</b> This study suggests that poorer cognitive performance may partially account for the observed relationship between T2DM and the decline in physical performance of the elderly."
+          },
+          {
+            "pair_id": "PMID:42255424:s01:p20",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Objective</h4>This study aimed to investigate the dose-response association between magnetic resonance imaging-derived hepatic proton density fat fraction (MRI-derived PDFF) and the type 2 diabetes mellitus (T2DM) prevalence in postmenopausal women with abnormal glucose metabolism, evaluate its utility in risk stratification, while examine the potential mediating role of liver enzymes and to explore the nonlinear relationship between MRI-derived PDFF and insulin resistance assessed by the Triglyceride-Glucose (TyG) index, in this specific population.<h4>Methods</h4>In this cross-sectional study, 96 postmenopausal women with abnormal glucose metabolism (46 with prediabetes, 50 with T2DM) were included."
+          },
+          {
+            "pair_id": "PMID:42255424:s01:p19",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Objective</h4>This study aimed to investigate the dose-response association between magnetic resonance imaging-derived hepatic proton density fat fraction (MRI-derived PDFF) and the type 2 diabetes mellitus (T2DM) prevalence in postmenopausal women with abnormal glucose metabolism, evaluate its utility in risk stratification, while examine the potential mediating role of liver enzymes and to explore the nonlinear relationship between MRI-derived PDFF and insulin resistance assessed by the Triglyceride-Glucose (TyG) index, in this specific population.<h4>Methods</h4>In this cross-sectional study, 96 postmenopausal women with abnormal glucose metabolism (46 with prediabetes, 50 with T2DM) were included."
+          },
+          {
+            "pair_id": "PMID:42748410:s05:p09",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Individuals with specific risk factors were identified: obesity (BMI >30\u00a0kg/m2), type 2 diabetes, alcohol consumption >400/>280\u00a0g/week in males/females, respectively, coding for steatosis and ALT >50/>35\u00a0IU/mL in males/females, respectively."
+          },
+          {
+            "pair_id": "PMID:42299201:s11:p09",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Age greater than 45 years, female gender, higher BMI (overweight or obese), and uncontrolled T2DM (HbA1c \u22657) were identified as risk factors for hypovitaminosis D. Age \u226545 years, female gender, and uncontrolled T2DM were found to be significant predictors of hypovitaminosis D. A significant association was observed between hypovitaminosis D and microvascular complications of T2DM.<h4>Conclusions</h4>The prevalence of hypovitaminosis D among patients with T2DM was high."
+          },
+          {
+            "pair_id": "PMID:42299201:s11:p03",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Age greater than 45 years, female gender, higher BMI (overweight or obese), and uncontrolled T2DM (HbA1c \u22657) were identified as risk factors for hypovitaminosis D. Age \u226545 years, female gender, and uncontrolled T2DM were found to be significant predictors of hypovitaminosis D. A significant association was observed between hypovitaminosis D and microvascular complications of T2DM.<h4>Conclusions</h4>The prevalence of hypovitaminosis D among patients with T2DM was high."
+          },
+          {
+            "pair_id": "PMID:42189766:s07:p04",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "While smoking exposure declined in all regions, low physical activity and diets high in red and processed meat increased over time.<h4>Conclusion</h4>T2DM burden in Brazil is growing due to the increasing exposure to T2DM risk factors."
+          },
+          {
+            "pair_id": "PMID:42481915:s03:p06",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Compared to women with T2DM but no history of GDM or GHTD, women with T2DM and a history of GDM or GHTD exhibited higher incident CVD (adjusted hazard ratio [aHR]: 1.19, 95% CI: 1.01, 1.41) and CAD (aHR: 1.35, 95% CI: 1.10, 1.66) risks."
+          }
+        ],
+        "full_extraction_diagnostics": {
+          "counts": {
+            "entity_linking_error": 6,
+            "negation_uncertainty_error": 15
+          },
+          "examples_per_category": {
+            "entity_linking_error": [
+              {
+                "pair_id": "PMID:42575672:s05:p04",
+                "sentence_text": "Fine-Gray competing risks Cox models estimated adjusted HRs (aHRs) and 95% CIs for a primary composite outcome of incident HF or HF-related death, adjusting for sociodemographic factors, deprivation, obesity, smoking, hypertension and T2DM and accounting for all-cause mortality.",
+                "entity_1": "smoking",
+                "entity_2": "hypertension",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                }
+              },
+              {
+                "pair_id": "PMID:42707244:s05:p03",
+                "sentence_text": "Logistic regression models were applied to evaluate the association between the NNR score and T2DM risk, with progressive adjustment for age, sex, smoking, physical activity, BMI, and total caloric intake.<h4>Results</h4>Cases had significantly higher BMI (28.32\u202f\u00b1\u202f2.64 vs. 26.85\u202f\u00b1\u202f2.15\u202fkg/m<sup>2</sup>; <i>p</i>\u202f=\u202f0.039), caloric intake, carbohydrate, and cholesterol consumption, alongside significantly lower intakes of dietary fibre, PUFA, magnesium, selenium, folate, vitamins A, E, and B\u2081, beta-carotene, and biotin compared to controls.",
+                "entity_1": "smoking",
+                "entity_2": "physical activity",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                }
+              }
+            ],
+            "negation_uncertainty_error": [
+              {
+                "pair_id": "PMID:42213742:s02:p03",
+                "sentence_text": "This disease and its more dangerous inflammatory variant, metabolic dysfunction-associated steatohepatitis (MASH), promote the development of serious secondary conditions including cardiovascular diseases (CVDs), type 2 diabetes mellitus, and hepatocellular carcinoma (HCC).<h4>Methods</h4>This review is based on pertinent publications retrieved from the PubMed-MEDLINE and Google Scholar databases and on current guidelines.<h4>Results</h4>Conditions that are known to be associated with MASLD and/or MASH include obesity (with or without insulin resistance), dyslipidemia, hypertension, type 2 diabetes mellitus, obstructive sleep apnea, CVDs, and chronic kidney disease (CKD).",
+                "entity_1": "type 2 diabetes mellitus",
+                "entity_2": "hypertension",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "negated"
+                }
+              },
+              {
+                "pair_id": "PMID:42674669:s01:p02",
+                "sentence_text": "<h4>Objective</h4>To analyse the temporal trend of stroke incidence from 2019 to 2024 in Macao and evaluate its relationship with hypertension (HTN) and type 2 diabetes mellitus (T2DM) management within a universal health coverage (UHC) system.<h4>Design</h4>Retrospective observational study using routinely collected electronic health records.<h4>Setting</h4>Macao Health Bureau's primary care system, which provides free, publicly funded community health services to all residents.<h4>Participants</h4>Macao residents aged \u226515 years with a confirmed diagnosis of ischaemic or haemorrhagic stroke recorded in the Macao Health Bureau medical system between 1 January 2019 and 31 December 2024 (n=8265).<h4>Results</h4>Age-standardised stroke incidence declined from 250.03 per 100\u2009000 in 2019 to 219.95 per 100\u2009000 in 2022, followed by a rebound in 2023-2024\u2009which may partly reflect pandemic-related data entry delays.",
+                "entity_1": "hypertension",
+                "entity_2": "T2DM",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "uncertain"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "KeywordHeuristic": {
+        "evaluated_fields": [
+          "relation_class",
+          "direction",
+          "polarity",
+          "language_status"
+        ],
+        "misclassified_count": 29,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:42575672:s05:p04",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Fine-Gray competing risks Cox models estimated adjusted HRs (aHRs) and 95% CIs for a primary composite outcome of incident HF or HF-related death, adjusting for sociodemographic factors, deprivation, obesity, smoking, hypertension and T2DM and accounting for all-cause mortality."
+          },
+          {
+            "pair_id": "PMID:42760186:s01:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "<h4>Background</h4>Obesity is the primary risk factor for type 2 diabetes mellitus (T2DM), characterized by progressive loss of pancreatic function."
+          },
+          {
+            "pair_id": "PMID:42817769:s05:p01",
+            "reference": "association_only",
+            "prediction": "causal",
+            "sentence_text": "In the T2DM cohort (N\u2009=\u2009140, 90% overweight or obese), each 1\u2009kg/m<sup>2</sup> increase in BMI above ethnicity-adjusted normal range was associated with increased odds of pre-eclampsia (aOR 1.082, 95% CI 1.024 to 1.144) and preterm delivery (aOR 1.042, 95% CI 1.001 to 1.084)."
+          },
+          {
+            "pair_id": "PMID:42523808:s01:p04",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Background</h4>Within the last three decades, common metabolic diseases have become a worldwide health burden, including type 2 diabetes mellitus (T2DM), hypertension, obesity, hypercholesterolemia, and metabolic dysfunction-associated steatotic liver disease (MASLD)."
+          },
+          {
+            "pair_id": "PMID:42674669:s01:p02",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Objective</h4>To analyse the temporal trend of stroke incidence from 2019 to 2024 in Macao and evaluate its relationship with hypertension (HTN) and type 2 diabetes mellitus (T2DM) management within a universal health coverage (UHC) system.<h4>Design</h4>Retrospective observational study using routinely collected electronic health records.<h4>Setting</h4>Macao Health Bureau's primary care system, which provides free, publicly funded community health services to all residents.<h4>Participants</h4>Macao residents aged \u226515 years with a confirmed diagnosis of ischaemic or haemorrhagic stroke recorded in the Macao Health Bureau medical system between 1 January 2019 and 31 December 2024 (n=8265).<h4>Results</h4>Age-standardised stroke incidence declined from 250.03 per 100\u2009000 in 2019 to 219.95 per 100\u2009000 in 2022, followed by a rebound in 2023-2024\u2009which may partly reflect pandemic-related data entry delays."
+          },
+          {
+            "pair_id": "PMID:42523808:s01:p06",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Background</h4>Within the last three decades, common metabolic diseases have become a worldwide health burden, including type 2 diabetes mellitus (T2DM), hypertension, obesity, hypercholesterolemia, and metabolic dysfunction-associated steatotic liver disease (MASLD)."
+          },
+          {
+            "pair_id": "PMID:42299201:s11:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Age greater than 45 years, female gender, higher BMI (overweight or obese), and uncontrolled T2DM (HbA1c \u22657) were identified as risk factors for hypovitaminosis D. Age \u226545 years, female gender, and uncontrolled T2DM were found to be significant predictors of hypovitaminosis D. A significant association was observed between hypovitaminosis D and microvascular complications of T2DM.<h4>Conclusions</h4>The prevalence of hypovitaminosis D among patients with T2DM was high."
+          },
+          {
+            "pair_id": "PMID:42588238:s03:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "This scoping review aimed to map mechanism-oriented evidence linking T2DM, HTN, and OA to falls and fall-related outcomes in older adults."
+          },
+          {
+            "pair_id": "PMID:42756900:s01:p03",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Type 2 diabetes mellitus (T2DM) is a prevalent metabolic disorder whose development and progression are influenced not only by genetic susceptibility, obesity, and lifestyle-related factors but also by gut microbiota dysbiosis, chronic low-grade inflammation, and disruption of immunometabolic homeostasis."
+          },
+          {
+            "pair_id": "PMID:42817769:s06:p01",
+            "reference": "association_only",
+            "prediction": "causal",
+            "sentence_text": "In the T2DM cohort, the odds of LGA were numerically higher with each 1\u2009kg/m<sup>2</sup> increase in BMI, but this was no longer statistically significant after adjustment for potential confounders.<h4>Conclusions</h4>On separate analyses within each diabetes subtype, maternal overweight/obesity was potentially associated with increased odds of pre-eclampsia and preterm delivery in the T2DM cohort."
+          },
+          {
+            "pair_id": "PMID:42491982:s01:p02",
+            "reference": "causal",
+            "prediction": "none",
+            "sentence_text": "Type 2 diabetes mellitus (T2DM) is a chronic metabolic disorder characterized by insulin resistance and progressive \u03b2-cell dysfunction, resulting in persistent hyperglycemia and long-term vascular complications."
+          },
+          {
+            "pair_id": "PMID:42466348:s02:p02",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) consistently reduce major adverse cardiovascular events (MACE) in patients with type 2 diabetes (T2DM) and established atherosclerotic cardiovascular disease (ASCVD), while semaglutide 2.4 mg has extended the evidence base to people with overweight or obesity and established cardiovascular disease in the absence of diabetes."
+          },
+          {
+            "pair_id": "PMID:42694689:s02:p03",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Exercise and physical activity are cornerstones of T2DM management, but current recommendations remain largely centered on standardized exercise doses and uniform physical activity targets, with limited consideration of individual variability and medication-related safety."
+          },
+          {
+            "pair_id": "PMID:41998064:s02:p03",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Obesity is a risk factor for type 2 diabetes mellitus through insulin resistance."
+          },
+          {
+            "pair_id": "PMID:42466348:s02:p06",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "Glucagon-like peptide-1 receptor agonists (GLP-1 RAs) consistently reduce major adverse cardiovascular events (MACE) in patients with type 2 diabetes (T2DM) and established atherosclerotic cardiovascular disease (ASCVD), while semaglutide 2.4 mg has extended the evidence base to people with overweight or obesity and established cardiovascular disease in the absence of diabetes."
+          },
+          {
+            "pair_id": "PMID:42615248:s06:p10",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Overall, 72.4% of participants had at least 1 comorbidity, most often overweight/obesity (63.4%) (composite measure: overweight/obesity, hypertension, and reduced eGFR), and 81.1% had at least 1 diabetes-related complication, most commonly neuropathy (59.6%)."
+          },
+          {
+            "pair_id": "PMID:42299201:s11:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Age greater than 45 years, female gender, higher BMI (overweight or obese), and uncontrolled T2DM (HbA1c \u22657) were identified as risk factors for hypovitaminosis D. Age \u226545 years, female gender, and uncontrolled T2DM were found to be significant predictors of hypovitaminosis D. A significant association was observed between hypovitaminosis D and microvascular complications of T2DM.<h4>Conclusions</h4>The prevalence of hypovitaminosis D among patients with T2DM was high."
+          },
+          {
+            "pair_id": "PMID:42707353:s08:p01",
+            "reference": "causal",
+            "prediction": "association_only",
+            "sentence_text": "The rate showed no improvement between 1990 and 2023 and increased with age.<h4>Conclusion</h4>Household air pollution from solid fuels caused a significant premature mortality related to type 2 diabetes mellitus in the Eastern Sub-Saharan Africa region, with a stagnant impact from 1990 to 2023 and a disproportionate impact on older adults."
+          },
+          {
+            "pair_id": "PMID:42299201:s11:p23",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Age greater than 45 years, female gender, higher BMI (overweight or obese), and uncontrolled T2DM (HbA1c \u22657) were identified as risk factors for hypovitaminosis D. Age \u226545 years, female gender, and uncontrolled T2DM were found to be significant predictors of hypovitaminosis D. A significant association was observed between hypovitaminosis D and microvascular complications of T2DM.<h4>Conclusions</h4>The prevalence of hypovitaminosis D among patients with T2DM was high."
+          },
+          {
+            "pair_id": "PMID:42575672:s05:p06",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Fine-Gray competing risks Cox models estimated adjusted HRs (aHRs) and 95% CIs for a primary composite outcome of incident HF or HF-related death, adjusting for sociodemographic factors, deprivation, obesity, smoking, hypertension and T2DM and accounting for all-cause mortality."
+          },
+          {
+            "pair_id": "PMID:42748410:s05:p09",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Individuals with specific risk factors were identified: obesity (BMI >30\u00a0kg/m2), type 2 diabetes, alcohol consumption >400/>280\u00a0g/week in males/females, respectively, coding for steatosis and ALT >50/>35\u00a0IU/mL in males/females, respectively."
+          },
+          {
+            "pair_id": "PMID:42523808:s01:p05",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Background</h4>Within the last three decades, common metabolic diseases have become a worldwide health burden, including type 2 diabetes mellitus (T2DM), hypertension, obesity, hypercholesterolemia, and metabolic dysfunction-associated steatotic liver disease (MASLD)."
+          },
+          {
+            "pair_id": "PMID:42299201:s11:p09",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Age greater than 45 years, female gender, higher BMI (overweight or obese), and uncontrolled T2DM (HbA1c \u22657) were identified as risk factors for hypovitaminosis D. Age \u226545 years, female gender, and uncontrolled T2DM were found to be significant predictors of hypovitaminosis D. A significant association was observed between hypovitaminosis D and microvascular complications of T2DM.<h4>Conclusions</h4>The prevalence of hypovitaminosis D among patients with T2DM was high."
+          },
+          {
+            "pair_id": "PMID:42299201:s11:p03",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Age greater than 45 years, female gender, higher BMI (overweight or obese), and uncontrolled T2DM (HbA1c \u22657) were identified as risk factors for hypovitaminosis D. Age \u226545 years, female gender, and uncontrolled T2DM were found to be significant predictors of hypovitaminosis D. A significant association was observed between hypovitaminosis D and microvascular complications of T2DM.<h4>Conclusions</h4>The prevalence of hypovitaminosis D among patients with T2DM was high."
+          },
+          {
+            "pair_id": "PMID:42189766:s07:p04",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "While smoking exposure declined in all regions, low physical activity and diets high in red and processed meat increased over time.<h4>Conclusion</h4>T2DM burden in Brazil is growing due to the increasing exposure to T2DM risk factors."
+          },
+          {
+            "pair_id": "PMID:42575672:s06:p06",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Secondary outcomes were incident hypertension and T2DM.<h4>Results</h4>Among 124 777 participants (mean age 56.1\u00b17.8 years; 56% female; 7% with diabetes; 36% with hypertension), followed for a mean of 12 years, 2931 HF events and 441 HF-related deaths occurred."
+          },
+          {
+            "pair_id": "PMID:42491982:s01:p03",
+            "reference": "causal",
+            "prediction": "none",
+            "sentence_text": "Type 2 diabetes mellitus (T2DM) is a chronic metabolic disorder characterized by insulin resistance and progressive \u03b2-cell dysfunction, resulting in persistent hyperglycemia and long-term vascular complications."
+          },
+          {
+            "pair_id": "PMID:42481915:s03:p06",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Compared to women with T2DM but no history of GDM or GHTD, women with T2DM and a history of GDM or GHTD exhibited higher incident CVD (adjusted hazard ratio [aHR]: 1.19, 95% CI: 1.01, 1.41) and CAD (aHR: 1.35, 95% CI: 1.10, 1.66) risks."
+          },
+          {
+            "pair_id": "PMID:42713502:s01:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Insulin resistance (IR) and Type 2 diabetes mellitus (DM) are intricately related metabolic conditions that significantly contribute to the global health burden."
+          }
+        ],
+        "full_extraction_diagnostics": {
+          "counts": {
+            "entity_linking_error": 6,
+            "negation_uncertainty_error": 18,
+            "assoc_vs_causal": 3
+          },
+          "examples_per_category": {
+            "entity_linking_error": [
+              {
+                "pair_id": "PMID:42575672:s05:p04",
+                "sentence_text": "Fine-Gray competing risks Cox models estimated adjusted HRs (aHRs) and 95% CIs for a primary composite outcome of incident HF or HF-related death, adjusting for sociodemographic factors, deprivation, obesity, smoking, hypertension and T2DM and accounting for all-cause mortality.",
+                "entity_1": "smoking",
+                "entity_2": "hypertension",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                }
+              },
+              {
+                "pair_id": "PMID:42707244:s05:p03",
+                "sentence_text": "Logistic regression models were applied to evaluate the association between the NNR score and T2DM risk, with progressive adjustment for age, sex, smoking, physical activity, BMI, and total caloric intake.<h4>Results</h4>Cases had significantly higher BMI (28.32\u202f\u00b1\u202f2.64 vs. 26.85\u202f\u00b1\u202f2.15\u202fkg/m<sup>2</sup>; <i>p</i>\u202f=\u202f0.039), caloric intake, carbohydrate, and cholesterol consumption, alongside significantly lower intakes of dietary fibre, PUFA, magnesium, selenium, folate, vitamins A, E, and B\u2081, beta-carotene, and biotin compared to controls.",
+                "entity_1": "smoking",
+                "entity_2": "physical activity",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                }
+              }
+            ],
+            "negation_uncertainty_error": [
+              {
+                "pair_id": "PMID:42481915:s01:p39",
+                "sentence_text": "<h4>Aim</h4>We investigated the contribution of antecedent gestational diabetes mellitus (GDM) or gestational hypertensive disorder (GHTD) to the risk of cardiovascular disease (CVD) among women with Type 2 diabetes mellitus (T2DM).<h4>Methods</h4>In a population-based cohort using the Ministry of Health of Ontario (Canada) healthcare administrative data, women without prior CVD with T2DM and a history of GDM or GHTD as of 1 January 2018 (n\u2009=\u200911\u2009525, mean age: 43\u2009years) were age-matched to three comparator cohorts (women with T2DM and no history of GDM or GHTD [n\u2009=\u200911\u2009525], women without T2DM and without GDM or GHTD [n\u2009=\u200911\u2009525] and men with T2DM [n\u2009=\u200911\u2009525]).",
+                "entity_1": "T2DM",
+                "entity_2": "men",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "negated"
+                }
+              },
+              {
+                "pair_id": "PMID:41531546:s09:p01",
+                "sentence_text": "In addition, specific AA profiles were related to insulin resistance and demand for insulin or oral hypoglycemic drug treatment.<h4>Conclusion</h4>Our study results demonstrate a close relationship between AA levels and the occurrence, development, and treatment demand for T2DM, offering potential biomarkers for predicting complications and guiding personalized treatment.",
+                "entity_1": "insulin resistance",
+                "entity_2": "T2DM",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "uncertain"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                }
+              }
+            ],
+            "assoc_vs_causal": [
+              {
+                "pair_id": "PMID:42817769:s05:p01",
+                "sentence_text": "In the T2DM cohort (N\u2009=\u2009140, 90% overweight or obese), each 1\u2009kg/m<sup>2</sup> increase in BMI above ethnicity-adjusted normal range was associated with increased odds of pre-eclampsia (aOR 1.082, 95% CI 1.024 to 1.144) and preterm delivery (aOR 1.042, 95% CI 1.001 to 1.084).",
+                "entity_1": "T2DM",
+                "entity_2": "overweight",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "causal",
+                  "dir": "entity_1->entity_2",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                }
+              },
+              {
+                "pair_id": "PMID:42817769:s06:p01",
+                "sentence_text": "In the T2DM cohort, the odds of LGA were numerically higher with each 1\u2009kg/m<sup>2</sup> increase in BMI, but this was no longer statistically significant after adjustment for potential confounders.<h4>Conclusions</h4>On separate analyses within each diabetes subtype, maternal overweight/obesity was potentially associated with increased odds of pre-eclampsia and preterm delivery in the T2DM cohort.",
+                "entity_1": "T2DM",
+                "entity_2": "overweight",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "uncertain"
+                },
+                "pred": {
+                  "rel": "causal",
+                  "dir": "entity_1->entity_2",
+                  "pol": "increases",
+                  "lang": "negated"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "TF-IDF + LogisticRegression": {
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "misclassified_count": 0,
+        "misclassified_pairs": []
+      },
+      "MiniLM frozen encoder + LogisticRegression": {
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "misclassified_count": 26,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:42651350:s01:p01",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "<b>Background:</b> Elderly patients with type 2 diabetes mellitus (T2DM) often experience cognitive decline and physical function degradation."
+          },
+          {
+            "pair_id": "PMID:42502734:s01:p05",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "<h4>Background</h4>Type 2 diabetes mellitus (T2DM) progresses through prediabetes (PD), which is characterized by insulin resistance and \u03b2-cell dysfunction."
+          },
+          {
+            "pair_id": "PMID:42862335:s01:p02",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "<h4>Aims</h4>Individuals with overweight and obesity are at high risk of cardiovascular disease (CVD), chronic kidney disease (CKD), and type 2 diabetes mellitus (T2DM)."
+          },
+          {
+            "pair_id": "PMID:42707244:s05:p03",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Logistic regression models were applied to evaluate the association between the NNR score and T2DM risk, with progressive adjustment for age, sex, smoking, physical activity, BMI, and total caloric intake.<h4>Results</h4>Cases had significantly higher BMI (28.32\u202f\u00b1\u202f2.64 vs. 26.85\u202f\u00b1\u202f2.15\u202fkg/m<sup>2</sup>; <i>p</i>\u202f=\u202f0.039), caloric intake, carbohydrate, and cholesterol consumption, alongside significantly lower intakes of dietary fibre, PUFA, magnesium, selenium, folate, vitamins A, E, and B\u2081, beta-carotene, and biotin compared to controls."
+          },
+          {
+            "pair_id": "PMID:42760186:s01:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "<h4>Background</h4>Obesity is the primary risk factor for type 2 diabetes mellitus (T2DM), characterized by progressive loss of pancreatic function."
+          },
+          {
+            "pair_id": "PMID:42817769:s05:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "In the T2DM cohort (N\u2009=\u2009140, 90% overweight or obese), each 1\u2009kg/m<sup>2</sup> increase in BMI above ethnicity-adjusted normal range was associated with increased odds of pre-eclampsia (aOR 1.082, 95% CI 1.024 to 1.144) and preterm delivery (aOR 1.042, 95% CI 1.001 to 1.084)."
+          },
+          {
+            "pair_id": "PMID:41531546:s09:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "In addition, specific AA profiles were related to insulin resistance and demand for insulin or oral hypoglycemic drug treatment.<h4>Conclusion</h4>Our study results demonstrate a close relationship between AA levels and the occurrence, development, and treatment demand for T2DM, offering potential biomarkers for predicting complications and guiding personalized treatment."
+          },
+          {
+            "pair_id": "PMID:42877484:s09:p01",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "Of the cohort, 32%, 36%, and 74% had CVD, type 2 diabetes mellitus, and hypertension, respectively."
+          },
+          {
+            "pair_id": "PMID:42582489:s10:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Sex, BMI, and physical activity are structural AUSDRISK components presented descriptively only.<h4>Conclusion</h4>Nearly one in three Saudi university students had elevated T2DM risk."
+          },
+          {
+            "pair_id": "PMID:42651340:s02:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "This study evaluated awareness of future T2DM risk among parous women in Riyadh, Saudi Arabia, comparing women with and without a self-reported history of GDM, and identified sociodemographic and clinical determinants of risk awareness and adherence to follow-up and preventive measures."
+          },
+          {
+            "pair_id": "PMID:42756900:s01:p03",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "Type 2 diabetes mellitus (T2DM) is a prevalent metabolic disorder whose development and progression are influenced not only by genetic susceptibility, obesity, and lifestyle-related factors but also by gut microbiota dysbiosis, chronic low-grade inflammation, and disruption of immunometabolic homeostasis."
+          },
+          {
+            "pair_id": "PMID:42817769:s06:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "In the T2DM cohort, the odds of LGA were numerically higher with each 1\u2009kg/m<sup>2</sup> increase in BMI, but this was no longer statistically significant after adjustment for potential confounders.<h4>Conclusions</h4>On separate analyses within each diabetes subtype, maternal overweight/obesity was potentially associated with increased odds of pre-eclampsia and preterm delivery in the T2DM cohort."
+          },
+          {
+            "pair_id": "PMID:42488722:s03:p04",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "Metabolic syndrome (MetS)-defined by central obesity, hypertriglyceridemia, low HDL cholesterol, hypertension, and type 2 diabetes mellitus (T2DM)-is increasingly prevalent worldwide and is characterized by chronic immune dysregulation and alterations in gut microbiota."
+          },
+          {
+            "pair_id": "PMID:42305142:s04:p02",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "This review investigates the pathological mechanisms of OA within the geriatric comorbidity network, focusing on its bidirectional interactions with osteoporosis, obesity, diabetes, and hypertension, and examines the effects of commonly used medications in elderly patients with comorbidities."
+          },
+          {
+            "pair_id": "PMID:42685090:s02:p03",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "HF medication use and all-cause death, cardiovascular death, first HF hospitalization (HHF), their composite, and end-stage renal disease (ESRD) were assessed.<h4>Results</h4>Among 54 341 patients (34% females, mean age 73 years), 51% had no CKD/no T2DM, 24% CKD only, 14% T2DM only, and 11% both CKD/T2DM."
+          },
+          {
+            "pair_id": "PMID:41998064:s02:p03",
+            "reference": "association_only",
+            "prediction": "causal",
+            "sentence_text": "Obesity is a risk factor for type 2 diabetes mellitus through insulin resistance."
+          },
+          {
+            "pair_id": "PMID:42388961:s01:p03",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "<h4>Background</h4>Type 2 diabetes mellitus (T2DM) is a chronic inflammatory-metabolic disorder in which cytokine-mediated pathways play a crucial role in insulin resistance and \u03b2-cell dysfunction."
+          },
+          {
+            "pair_id": "PMID:42381871:s03:p09",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "This study assessed the associations between serum testosterone and cardiometabolic risk in Nigerian men with T2DM.<h4>Methods</h4>In this cross-sectional study, 537 adult men were recruited, 358 with T2DM and 179 non-diabetic controls."
+          },
+          {
+            "pair_id": "PMID:42632082:s01:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Aims</h4>To identify, appraise and synthesise the current evidence relating to symptoms, experiences, management and impact of menopause on QoL among women with type 1 diabetes (T1DM) or type 2 diabetes (T2DM) and to identify evidence gaps.<h4>Methods</h4>We conducted a scoping review guided by Arksey and O'Mally's framework by searching CINAHL, MEDLINE, EMBASE, PsychINFO and PubMed using an iterative approach to pre-specified eligibility criteria which were reviewed with increasing familiarity with the literature."
+          },
+          {
+            "pair_id": "PMID:42898555:s02:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Emerging evidence indicates that rising temperatures impair glucose homeostasis-specifically through reduced brown adipose tissue activity and increased insulin resistance-thereby exacerbating type 2 diabetes mellitus (T2DM) risk."
+          },
+          {
+            "pair_id": "PMID:42381871:s07:p02",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Data were analyzed using two-way ANOVA, Pearson correlations, and multivariable regression.<h4>Results</h4>Men with T2DM had significantly higher ASCVD 10-year score than non-diabetic controls, independent of testosterone status (P<sub>T2DM</sub><0.0001)."
+          },
+          {
+            "pair_id": "PMID:42707244:s05:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Logistic regression models were applied to evaluate the association between the NNR score and T2DM risk, with progressive adjustment for age, sex, smoking, physical activity, BMI, and total caloric intake.<h4>Results</h4>Cases had significantly higher BMI (28.32\u202f\u00b1\u202f2.64 vs. 26.85\u202f\u00b1\u202f2.15\u202fkg/m<sup>2</sup>; <i>p</i>\u202f=\u202f0.039), caloric intake, carbohydrate, and cholesterol consumption, alongside significantly lower intakes of dietary fibre, PUFA, magnesium, selenium, folate, vitamins A, E, and B\u2081, beta-carotene, and biotin compared to controls."
+          },
+          {
+            "pair_id": "PMID:42189766:s07:p04",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "While smoking exposure declined in all regions, low physical activity and diets high in red and processed meat increased over time.<h4>Conclusion</h4>T2DM burden in Brazil is growing due to the increasing exposure to T2DM risk factors."
+          },
+          {
+            "pair_id": "PMID:42713502:s01:p01",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "Insulin resistance (IR) and Type 2 diabetes mellitus (DM) are intricately related metabolic conditions that significantly contribute to the global health burden."
+          },
+          {
+            "pair_id": "PMID:41804913:s02:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "We investigated the prospective association between plasma angiopoietin-like protein 7 (ANGPTL7) and incident HF, and examined the extent to which this relationship is mediated by insulin resistance (IR).<h4>Materials and methods</h4>This study included 2871 participants with T2DM and no baseline HF from the UK Biobank."
+          },
+          {
+            "pair_id": "PMID:42058783:s04:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Receiver operating characteristic (ROC) curves, calibration curves, and decision curve analysis (DCA) were employed to comprehensively assess the predictive performance and clinical utility of the model.<h4>Result</h4>Multifactorial logistic regression analysis showed that age, duration of diabetes, duration of hypertension, urine albumin-to-creatinine ratio (UACR) > 30 mg/g, as well as core indicators SIRI and TyG index, were significantly associated with the occurrence of microvascular complications in type 2 diabetes mellitus (T2DM) (P < 0.05)."
+          }
+        ]
+      }
+    },
+    "dev": {
+      "spaCy-Rules": {
+        "evaluated_fields": [
+          "relation_class",
+          "direction",
+          "polarity",
+          "language_status"
+        ],
+        "misclassified_count": 3,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:41634666:s03:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "We sought to investigate the 2-year risk of reoperation following THA due to osteoarthritis (OA) among people with and without the metabolic risk factors, T2DM and obesity."
+          },
+          {
+            "pair_id": "PMID:41439842:s01:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "<h4>Background</h4>Robust evidence demonstrates that tobacco use acts as a causal and, therefore, modifiable risk factor for the development of type 2 diabetes mellitus (T2DM)."
+          },
+          {
+            "pair_id": "PMID:42271260:s04:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "TyG significantly mediated the relationship between OBS and CVMD risk, with mediation proportions of 1.8% for CVD, 7.8% for hypertension, and 10.5% for T2DM."
+          }
+        ],
+        "full_extraction_diagnostics": {
+          "counts": {
+            "negation_uncertainty_error": 14,
+            "entity_linking_error": 7
+          },
+          "examples_per_category": {
+            "negation_uncertainty_error": [
+              {
+                "pair_id": "PMID:42595238:s01:p01",
+                "sentence_text": "<h4>Background</h4>The triglyceride-glucose (TyG) index, a simple laboratory marker of insulin resistance, has been associated with cardiometabolic risk.<h4>Objectives</h4>The purpose of this study was to evaluate whether baseline TyG predicts long-term major adverse cardiovascular events (MACE) in patients with type 2 diabetes (T2DM) without clinical coronary artery disease (CAD), independent of traditional risk factors and coronary artery calcium scoring (CACS).<h4>Methods</h4>We conducted a retrospective analysis of a prospectively recruited cohort of 735 patients with T2DM, aged 55-74 years (48% women), enrolled between 2006 and 2008.",
+                "entity_1": "insulin resistance",
+                "entity_2": "type 2 diabetes",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "negated"
+                }
+              },
+              {
+                "pair_id": "PMID:42694168:s01:p01",
+                "sentence_text": "<h4>Background</h4>The impact of early menopause on adverse cardiovascular events may be modified by smoking and type 2 diabetes mellitus (T2DM).",
+                "entity_1": "smoking",
+                "entity_2": "type 2 diabetes mellitus",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "uncertain"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                }
+              }
+            ],
+            "entity_linking_error": [
+              {
+                "pair_id": "PMID:42694168:s07:p01",
+                "sentence_text": "Among non-smoking women, early menopause was associated with a higher risk of heart failure (HF: HR = 1.23, 95% CI = 1.02-1.49, <i>p</i> = 0.031, <i>I</i> <sup>2</sup> = 87.9%, <i>n</i> = 2) and coronary heart disease (CHD: RR = 1.26, 95% CI = 1.18-1.35, <i>p</i> < 0.001, <i>I</i> <sup>2</sup> = 0.0%, <i>n</i> = 2).",
+                "entity_1": "smoking",
+                "entity_2": "women",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                }
+              },
+              {
+                "pair_id": "PMID:42694168:s01:p01",
+                "sentence_text": "<h4>Background</h4>The impact of early menopause on adverse cardiovascular events may be modified by smoking and type 2 diabetes mellitus (T2DM).",
+                "entity_1": "smoking",
+                "entity_2": "type 2 diabetes mellitus",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "uncertain"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "KeywordHeuristic": {
+        "evaluated_fields": [
+          "relation_class",
+          "direction",
+          "polarity",
+          "language_status"
+        ],
+        "misclassified_count": 9,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:42802801:s02:p03",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "This study determined the prevalence of ED and evaluated associated clinical and socioeconomic factors among Filipino men with T2DM.<h4>Methodology</h4>We conducted a cross-sectional study among 384 adult Filipino men with T2DM recruited from private clinics, an outpatient service clinic, and an affiliated community clinic of Cardinal Santos Medical Center."
+          },
+          {
+            "pair_id": "PMID:42819449:s04:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Ten-year predicted risks for coronary artery disease, stroke, type 2 diabetes mellitus, hypertension, and major adverse cardiovascular events were estimated using the Chronic Disease Risk Assessment Platform."
+          },
+          {
+            "pair_id": "PMID:42653674:s01:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<b>Background/Objectives</b>: The global rise in obesity-related hypertension, metabolic syndrome, and chronic inflammation calls for a precise characterization of the safety profiles of first-line therapies."
+          },
+          {
+            "pair_id": "PMID:42177716:s06:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Independent validation showed an underprediction for cardiovascular disease (CVD) and mortality with an OLS LRL of 0.9309 and an R<sup>2</sup> of 0.8984 across all populations (normoglycaemic/prediabetic populations: OLS LRL = 0.9485, R<sup>2</sup> = 0.8854; T2DM populations: OLS LRL = 0.9208, R<sup>2</sup> = 0.9068).<h4>Conclusions</h4>The Obesity Lifecycle Model demonstrates favourable concordance with observed clinical and quality-of-life outcomes, supporting its use for evaluating obesity-related complications and informing healthcare decision making."
+          },
+          {
+            "pair_id": "PMID:42763718:s03:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "The aim of this study was to investigate the gender-specific differences in predictive performance of eight obesity-related indicators concerning DKD risk among type 2 diabetes mellitus (T2DM) patients.<h4>Methods</h4>This cross-sectional study analyzed data from 1586 T2DM patients aged 18-80 years."
+          },
+          {
+            "pair_id": "PMID:41634666:s03:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "We sought to investigate the 2-year risk of reoperation following THA due to osteoarthritis (OA) among people with and without the metabolic risk factors, T2DM and obesity."
+          },
+          {
+            "pair_id": "PMID:41439842:s01:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "<h4>Background</h4>Robust evidence demonstrates that tobacco use acts as a causal and, therefore, modifiable risk factor for the development of type 2 diabetes mellitus (T2DM)."
+          },
+          {
+            "pair_id": "PMID:42502449:s05:p01",
+            "reference": "association_only",
+            "prediction": "causal",
+            "sentence_text": "The retrieved articles were categorized according to their primary predictors and outcomes, including T2DM, thyroid function, thyroid hormone sensitivity, and insulin resistance.<h4>Results</h4>Over 18 years, a longitudinal analysis of 1938 adults showed that each unit increase in log-transformed thyroid-stimulating hormone (TSH) was associated with a 25% lower risk of developing T2DM (HR, 0.75; 95% CI, 0.64 - 0.90), whereas higher free thyroxine (FT4) levels were associated with a slightly increased risk of T2DM."
+          },
+          {
+            "pair_id": "PMID:42819449:s05:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "To assess associations between predicted risk and demographic or occupational variables, we used ordinal logistic regression, generalized linear models, and decision tree algorithms.<h4>Results</h4>Hypertension exhibited the highest overall predicted risk (38.6%), followed by type 2 diabetes mellitus and MACE."
+          }
+        ],
+        "full_extraction_diagnostics": {
+          "counts": {
+            "negation_uncertainty_error": 7,
+            "entity_linking_error": 7,
+            "assoc_vs_causal": 1
+          },
+          "examples_per_category": {
+            "negation_uncertainty_error": [
+              {
+                "pair_id": "PMID:42802801:s02:p03",
+                "sentence_text": "This study determined the prevalence of ED and evaluated associated clinical and socioeconomic factors among Filipino men with T2DM.<h4>Methodology</h4>We conducted a cross-sectional study among 384 adult Filipino men with T2DM recruited from private clinics, an outpatient service clinic, and an affiliated community clinic of Cardinal Santos Medical Center.",
+                "entity_1": "men",
+                "entity_2": "T2DM",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "negated"
+                }
+              },
+              {
+                "pair_id": "PMID:41634666:s14:p03",
+                "sentence_text": "In the subgroups with overweight or obesity, T2DM was neither associated with increased risk of all-cause reoperation nor reoperation due to PJI.",
+                "entity_1": "obesity",
+                "entity_2": "T2DM",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "negated"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                }
+              }
+            ],
+            "entity_linking_error": [
+              {
+                "pair_id": "PMID:42694168:s07:p01",
+                "sentence_text": "Among non-smoking women, early menopause was associated with a higher risk of heart failure (HF: HR = 1.23, 95% CI = 1.02-1.49, <i>p</i> = 0.031, <i>I</i> <sup>2</sup> = 87.9%, <i>n</i> = 2) and coronary heart disease (CHD: RR = 1.26, 95% CI = 1.18-1.35, <i>p</i> < 0.001, <i>I</i> <sup>2</sup> = 0.0%, <i>n</i> = 2).",
+                "entity_1": "smoking",
+                "entity_2": "women",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                }
+              },
+              {
+                "pair_id": "PMID:42694168:s01:p01",
+                "sentence_text": "<h4>Background</h4>The impact of early menopause on adverse cardiovascular events may be modified by smoking and type 2 diabetes mellitus (T2DM).",
+                "entity_1": "smoking",
+                "entity_2": "type 2 diabetes mellitus",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "uncertain"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "uncertain"
+                }
+              }
+            ],
+            "assoc_vs_causal": [
+              {
+                "pair_id": "PMID:42502449:s05:p01",
+                "sentence_text": "The retrieved articles were categorized according to their primary predictors and outcomes, including T2DM, thyroid function, thyroid hormone sensitivity, and insulin resistance.<h4>Results</h4>Over 18 years, a longitudinal analysis of 1938 adults showed that each unit increase in log-transformed thyroid-stimulating hormone (TSH) was associated with a 25% lower risk of developing T2DM (HR, 0.75; 95% CI, 0.64 - 0.90), whereas higher free thyroxine (FT4) levels were associated with a slightly increased risk of T2DM.",
+                "entity_1": "T2DM",
+                "entity_2": "insulin resistance",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "decreases",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "causal",
+                  "dir": "entity_1->entity_2",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "TF-IDF + LogisticRegression": {
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "misclassified_count": 7,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:42595238:s01:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "<h4>Background</h4>The triglyceride-glucose (TyG) index, a simple laboratory marker of insulin resistance, has been associated with cardiometabolic risk.<h4>Objectives</h4>The purpose of this study was to evaluate whether baseline TyG predicts long-term major adverse cardiovascular events (MACE) in patients with type 2 diabetes (T2DM) without clinical coronary artery disease (CAD), independent of traditional risk factors and coronary artery calcium scoring (CACS).<h4>Methods</h4>We conducted a retrospective analysis of a prospectively recruited cohort of 735 patients with T2DM, aged 55-74 years (48% women), enrolled between 2006 and 2008."
+          },
+          {
+            "pair_id": "PMID:42819449:s04:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Ten-year predicted risks for coronary artery disease, stroke, type 2 diabetes mellitus, hypertension, and major adverse cardiovascular events were estimated using the Chronic Disease Risk Assessment Platform."
+          },
+          {
+            "pair_id": "PMID:41634666:s03:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "We sought to investigate the 2-year risk of reoperation following THA due to osteoarthritis (OA) among people with and without the metabolic risk factors, T2DM and obesity."
+          },
+          {
+            "pair_id": "PMID:41439842:s01:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "<h4>Background</h4>Robust evidence demonstrates that tobacco use acts as a causal and, therefore, modifiable risk factor for the development of type 2 diabetes mellitus (T2DM)."
+          },
+          {
+            "pair_id": "PMID:42595238:s01:p03",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "<h4>Background</h4>The triglyceride-glucose (TyG) index, a simple laboratory marker of insulin resistance, has been associated with cardiometabolic risk.<h4>Objectives</h4>The purpose of this study was to evaluate whether baseline TyG predicts long-term major adverse cardiovascular events (MACE) in patients with type 2 diabetes (T2DM) without clinical coronary artery disease (CAD), independent of traditional risk factors and coronary artery calcium scoring (CACS).<h4>Methods</h4>We conducted a retrospective analysis of a prospectively recruited cohort of 735 patients with T2DM, aged 55-74 years (48% women), enrolled between 2006 and 2008."
+          },
+          {
+            "pair_id": "PMID:42819449:s05:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "To assess associations between predicted risk and demographic or occupational variables, we used ordinal logistic regression, generalized linear models, and decision tree algorithms.<h4>Results</h4>Hypertension exhibited the highest overall predicted risk (38.6%), followed by type 2 diabetes mellitus and MACE."
+          },
+          {
+            "pair_id": "PMID:42783806:s03:p07",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "This study investigated the association between obesity severity and Met-Age and identified factors associated with Met-Age.<h4>Methods</h4>In this retrospective observational study, 683 adults with T2DM were classified into five BMI categories: normal weight, overweight, and class I, II, and III obesity."
+          }
+        ]
+      },
+      "MiniLM frozen encoder + LogisticRegression": {
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "misclassified_count": 21,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:42595238:s01:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "<h4>Background</h4>The triglyceride-glucose (TyG) index, a simple laboratory marker of insulin resistance, has been associated with cardiometabolic risk.<h4>Objectives</h4>The purpose of this study was to evaluate whether baseline TyG predicts long-term major adverse cardiovascular events (MACE) in patients with type 2 diabetes (T2DM) without clinical coronary artery disease (CAD), independent of traditional risk factors and coronary artery calcium scoring (CACS).<h4>Methods</h4>We conducted a retrospective analysis of a prospectively recruited cohort of 735 patients with T2DM, aged 55-74 years (48% women), enrolled between 2006 and 2008."
+          },
+          {
+            "pair_id": "PMID:42819449:s02:p01",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "Nurses and hospital staff are especially vulnerable to hypertension, type 2 diabetes mellitus, stroke, and cardiovascular disease risk."
+          },
+          {
+            "pair_id": "PMID:41634666:s14:p03",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "In the subgroups with overweight or obesity, T2DM was neither associated with increased risk of all-cause reoperation nor reoperation due to PJI."
+          },
+          {
+            "pair_id": "PMID:42694168:s01:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Background</h4>The impact of early menopause on adverse cardiovascular events may be modified by smoking and type 2 diabetes mellitus (T2DM)."
+          },
+          {
+            "pair_id": "PMID:42819449:s04:p01",
+            "reference": "association_only",
+            "prediction": "causal",
+            "sentence_text": "Ten-year predicted risks for coronary artery disease, stroke, type 2 diabetes mellitus, hypertension, and major adverse cardiovascular events were estimated using the Chronic Disease Risk Assessment Platform."
+          },
+          {
+            "pair_id": "PMID:41634666:s17:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Risk of reoperation was more strongly associated with BMI rather than T2DM, suggesting that the additional risk observed in obese patients is likely influenced by multiple interrelated factors beyond T2DM alone."
+          },
+          {
+            "pair_id": "PMID:42889580:s01:p02",
+            "reference": "none",
+            "prediction": "causal",
+            "sentence_text": "Insulin resistance is an early feature of type 2 diabetes mellitus (T2DM), but progression to persistent hyperglycemia requires failure of pancreatic \u03b2-cell compensation."
+          },
+          {
+            "pair_id": "PMID:42783806:s08:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "No significant correlations were found between Met-Age and fasting blood glucose (FBG) or hemoglobin A1c (HbA1c) levels (all <i>p</i> > 0.05).<h4>Conclusions</h4>In individuals with T2DM, greater obesity severity was associated with higher BIA-derived Met-Age."
+          },
+          {
+            "pair_id": "PMID:42763718:s03:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "The aim of this study was to investigate the gender-specific differences in predictive performance of eight obesity-related indicators concerning DKD risk among type 2 diabetes mellitus (T2DM) patients.<h4>Methods</h4>This cross-sectional study analyzed data from 1586 T2DM patients aged 18-80 years."
+          },
+          {
+            "pair_id": "PMID:41634666:s03:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "We sought to investigate the 2-year risk of reoperation following THA due to osteoarthritis (OA) among people with and without the metabolic risk factors, T2DM and obesity."
+          },
+          {
+            "pair_id": "PMID:42824721:s12:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Being female (AOR\u202f=\u202f2.36, 95% CI: 1.34-4.15), monthly income >20,000 Ethiopian birr (AOR\u202f=\u202f2.38, 95% CI: 1.26-4.49), physical inactivity (AOR\u202f=\u202f2.36, 95% CI: 1.22-4.55) and poor glycemic control (AOR\u202f=\u202f8.86, 95% CI: 4.67-16.80) were also significantly associated with higher odds of overweight or obesity.<h4>Conclusion</h4>In this single-center cross-sectional study, more than half of participants met body mass index criteria for overweight or obesity."
+          },
+          {
+            "pair_id": "PMID:41634666:s17:p03",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Risk of reoperation was more strongly associated with BMI rather than T2DM, suggesting that the additional risk observed in obese patients is likely influenced by multiple interrelated factors beyond T2DM alone."
+          },
+          {
+            "pair_id": "PMID:42694168:s02:p03",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "This study aims to investigate the effect of early menopause on adverse cardiovascular events in women, with stratification by smoking status and T2DM status.<h4>Methods</h4>Studies were retrieved from four databases (Embase, Web of Science, PubMed, and Cochrane Library) from their inception to January 2026."
+          },
+          {
+            "pair_id": "PMID:41439842:s01:p02",
+            "reference": "association_only",
+            "prediction": "causal",
+            "sentence_text": "<h4>Background</h4>Robust evidence demonstrates that tobacco use acts as a causal and, therefore, modifiable risk factor for the development of type 2 diabetes mellitus (T2DM)."
+          },
+          {
+            "pair_id": "PMID:42595238:s01:p03",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "<h4>Background</h4>The triglyceride-glucose (TyG) index, a simple laboratory marker of insulin resistance, has been associated with cardiometabolic risk.<h4>Objectives</h4>The purpose of this study was to evaluate whether baseline TyG predicts long-term major adverse cardiovascular events (MACE) in patients with type 2 diabetes (T2DM) without clinical coronary artery disease (CAD), independent of traditional risk factors and coronary artery calcium scoring (CACS).<h4>Methods</h4>We conducted a retrospective analysis of a prospectively recruited cohort of 735 patients with T2DM, aged 55-74 years (48% women), enrolled between 2006 and 2008."
+          },
+          {
+            "pair_id": "PMID:42819449:s05:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "To assess associations between predicted risk and demographic or occupational variables, we used ordinal logistic regression, generalized linear models, and decision tree algorithms.<h4>Results</h4>Hypertension exhibited the highest overall predicted risk (38.6%), followed by type 2 diabetes mellitus and MACE."
+          },
+          {
+            "pair_id": "PMID:42824721:s12:p07",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Being female (AOR\u202f=\u202f2.36, 95% CI: 1.34-4.15), monthly income >20,000 Ethiopian birr (AOR\u202f=\u202f2.38, 95% CI: 1.26-4.49), physical inactivity (AOR\u202f=\u202f2.36, 95% CI: 1.22-4.55) and poor glycemic control (AOR\u202f=\u202f8.86, 95% CI: 4.67-16.80) were also significantly associated with higher odds of overweight or obesity.<h4>Conclusion</h4>In this single-center cross-sectional study, more than half of participants met body mass index criteria for overweight or obesity."
+          },
+          {
+            "pair_id": "PMID:42271260:s04:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "TyG significantly mediated the relationship between OBS and CVMD risk, with mediation proportions of 1.8% for CVD, 7.8% for hypertension, and 10.5% for T2DM."
+          },
+          {
+            "pair_id": "PMID:42630215:s04:p02",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Serum 25(OH)D, chemerin, and CRP were measured by ELISA.<h4>Results</h4>A total of 176 participants were included in the study (88 with diabetes and 88 non-diabetic comparison participants), with equal sex distribution in both groups (44 females and 44 males per group)."
+          },
+          {
+            "pair_id": "PMID:42783806:s03:p07",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "This study investigated the association between obesity severity and Met-Age and identified factors associated with Met-Age.<h4>Methods</h4>In this retrospective observational study, 683 adults with T2DM were classified into five BMI categories: normal weight, overweight, and class I, II, and III obesity."
+          },
+          {
+            "pair_id": "PMID:42694168:s02:p02",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "This study aims to investigate the effect of early menopause on adverse cardiovascular events in women, with stratification by smoking status and T2DM status.<h4>Methods</h4>Studies were retrieved from four databases (Embase, Web of Science, PubMed, and Cochrane Library) from their inception to January 2026."
+          }
+        ]
+      }
+    },
+    "test": {
+      "spaCy-Rules": {
+        "evaluated_fields": [
+          "relation_class",
+          "direction",
+          "polarity",
+          "language_status"
+        ],
+        "misclassified_count": 5,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:42700058:s02:p04",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Within this context, physical inactivity and prolonged sedentary behavior emerge as prominent, modifiable risk factors contributing to type 2 diabetes mellitus (T2DM)."
+          },
+          {
+            "pair_id": "PMID:42422434:s13:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Impaired renal function, obesity, dyslipidemia, hypertension, MetS, and alcohol consumption are the primary risk factors."
+          },
+          {
+            "pair_id": "PMID:42381893:s06:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Among women, no significant differences were observed between NWO and obesity groups (11.70% vs. 13.20%, <i>p</i>\u00a0>\u00a00.05).<h4>Conclusions</h4>NWO showed sex-specific differences in association with T2DM prevalence; causal relationships cannot be inferred."
+          },
+          {
+            "pair_id": "PMID:42422434:s12:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Male sex was a significant risk factor for gout.<h4>Conclusion</h4>The prevalence of HUA and gout is significantly higher in patients with T2DM than in the general population."
+          },
+          {
+            "pair_id": "PMID:42381893:s06:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Among women, no significant differences were observed between NWO and obesity groups (11.70% vs. 13.20%, <i>p</i>\u00a0>\u00a00.05).<h4>Conclusions</h4>NWO showed sex-specific differences in association with T2DM prevalence; causal relationships cannot be inferred."
+          }
+        ],
+        "full_extraction_diagnostics": {
+          "counts": {
+            "entity_linking_error": 5,
+            "negation_uncertainty_error": 2
+          },
+          "examples_per_category": {
+            "entity_linking_error": [
+              {
+                "pair_id": "PMID:42187875:s01:p11",
+                "sentence_text": "<h4>Objectives</h4>This cross-sectional study examined associations of lifestyle factors (physical activity (PA), diet, obesity, and smoking), age groups, and sex with the prevalence of non-communicable diseases (NCDs) in Saudi adults, including the World Health Organization (WHO) core NCDs (type 2 diabetes (T2DM), hypertension (HTN), chronic obstructive pulmonary disease (COPD) and NCD-associated conditions (osteoporosis (OP), chronic kidney disease (CKD)).<h4>Methods</h4>A cross-sectional study was conducted across Saudi Arabia involving 2877 participants aged \u226530 years.",
+                "entity_1": "smoking",
+                "entity_2": "T2DM",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                }
+              },
+              {
+                "pair_id": "PMID:42655935:s05:p08",
+                "sentence_text": "An interpretable risk scoring system was subsequently derived using the selected predictors.<h4>Results</h4>Older age at cancer diagnosis, male sex, longer duration between T2DM diagnosis and lung cancer diagnosis (T2DM duration), smoking, alcohol consumption, history of stroke, and higher HbA1c were associated with increased mortality risk, whereas hypertension, coronary heart disease, insulin usage, anti-lipid usage, and anti-diabetic usage were associated with reduced mortality risk.",
+                "entity_1": "T2DM",
+                "entity_2": "smoking",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "decreases",
+                  "lang": "affirmed"
+                }
+              }
+            ],
+            "negation_uncertainty_error": [
+              {
+                "pair_id": "PMID:42381893:s06:p02",
+                "sentence_text": "Among women, no significant differences were observed between NWO and obesity groups (11.70% vs. 13.20%, <i>p</i>\u00a0>\u00a00.05).<h4>Conclusions</h4>NWO showed sex-specific differences in association with T2DM prevalence; causal relationships cannot be inferred.",
+                "entity_1": "women",
+                "entity_2": "T2DM",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "negated"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                }
+              },
+              {
+                "pair_id": "PMID:42381893:s06:p01",
+                "sentence_text": "Among women, no significant differences were observed between NWO and obesity groups (11.70% vs. 13.20%, <i>p</i>\u00a0>\u00a00.05).<h4>Conclusions</h4>NWO showed sex-specific differences in association with T2DM prevalence; causal relationships cannot be inferred.",
+                "entity_1": "women",
+                "entity_2": "obesity",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "negated"
+                },
+                "pred": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "KeywordHeuristic": {
+        "evaluated_fields": [
+          "relation_class",
+          "direction",
+          "polarity",
+          "language_status"
+        ],
+        "misclassified_count": 10,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:42700058:s02:p04",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Within this context, physical inactivity and prolonged sedentary behavior emerge as prominent, modifiable risk factors contributing to type 2 diabetes mellitus (T2DM)."
+          },
+          {
+            "pair_id": "PMID:42656766:s02:p11",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Therefore, we aimed to pool the prevalence and associated factors of overweight and obesity among patients with T2DM using a systematic review and meta-analysis.<h4>Methods</h4>This was a systematic review and meta-analysis of studies reporting overweight and obesity among patients with T2DM in Ethiopia."
+          },
+          {
+            "pair_id": "PMID:42422434:s13:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Impaired renal function, obesity, dyslipidemia, hypertension, MetS, and alcohol consumption are the primary risk factors."
+          },
+          {
+            "pair_id": "PMID:42187875:s01:p11",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Objectives</h4>This cross-sectional study examined associations of lifestyle factors (physical activity (PA), diet, obesity, and smoking), age groups, and sex with the prevalence of non-communicable diseases (NCDs) in Saudi adults, including the World Health Organization (WHO) core NCDs (type 2 diabetes (T2DM), hypertension (HTN), chronic obstructive pulmonary disease (COPD) and NCD-associated conditions (osteoporosis (OP), chronic kidney disease (CKD)).<h4>Methods</h4>A cross-sectional study was conducted across Saudi Arabia involving 2877 participants aged \u226530 years."
+          },
+          {
+            "pair_id": "PMID:42656766:s02:p02",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "Therefore, we aimed to pool the prevalence and associated factors of overweight and obesity among patients with T2DM using a systematic review and meta-analysis.<h4>Methods</h4>This was a systematic review and meta-analysis of studies reporting overweight and obesity among patients with T2DM in Ethiopia."
+          },
+          {
+            "pair_id": "PMID:42187875:s01:p06",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Objectives</h4>This cross-sectional study examined associations of lifestyle factors (physical activity (PA), diet, obesity, and smoking), age groups, and sex with the prevalence of non-communicable diseases (NCDs) in Saudi adults, including the World Health Organization (WHO) core NCDs (type 2 diabetes (T2DM), hypertension (HTN), chronic obstructive pulmonary disease (COPD) and NCD-associated conditions (osteoporosis (OP), chronic kidney disease (CKD)).<h4>Methods</h4>A cross-sectional study was conducted across Saudi Arabia involving 2877 participants aged \u226530 years."
+          },
+          {
+            "pair_id": "PMID:42187875:s01:p07",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Objectives</h4>This cross-sectional study examined associations of lifestyle factors (physical activity (PA), diet, obesity, and smoking), age groups, and sex with the prevalence of non-communicable diseases (NCDs) in Saudi adults, including the World Health Organization (WHO) core NCDs (type 2 diabetes (T2DM), hypertension (HTN), chronic obstructive pulmonary disease (COPD) and NCD-associated conditions (osteoporosis (OP), chronic kidney disease (CKD)).<h4>Methods</h4>A cross-sectional study was conducted across Saudi Arabia involving 2877 participants aged \u226530 years."
+          },
+          {
+            "pair_id": "PMID:42381893:s06:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Among women, no significant differences were observed between NWO and obesity groups (11.70% vs. 13.20%, <i>p</i>\u00a0>\u00a00.05).<h4>Conclusions</h4>NWO showed sex-specific differences in association with T2DM prevalence; causal relationships cannot be inferred."
+          },
+          {
+            "pair_id": "PMID:42422434:s12:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Male sex was a significant risk factor for gout.<h4>Conclusion</h4>The prevalence of HUA and gout is significantly higher in patients with T2DM than in the general population."
+          },
+          {
+            "pair_id": "PMID:42381893:s06:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Among women, no significant differences were observed between NWO and obesity groups (11.70% vs. 13.20%, <i>p</i>\u00a0>\u00a00.05).<h4>Conclusions</h4>NWO showed sex-specific differences in association with T2DM prevalence; causal relationships cannot be inferred."
+          }
+        ],
+        "full_extraction_diagnostics": {
+          "counts": {
+            "entity_linking_error": 5
+          },
+          "examples_per_category": {
+            "entity_linking_error": [
+              {
+                "pair_id": "PMID:42187875:s01:p11",
+                "sentence_text": "<h4>Objectives</h4>This cross-sectional study examined associations of lifestyle factors (physical activity (PA), diet, obesity, and smoking), age groups, and sex with the prevalence of non-communicable diseases (NCDs) in Saudi adults, including the World Health Organization (WHO) core NCDs (type 2 diabetes (T2DM), hypertension (HTN), chronic obstructive pulmonary disease (COPD) and NCD-associated conditions (osteoporosis (OP), chronic kidney disease (CKD)).<h4>Methods</h4>A cross-sectional study was conducted across Saudi Arabia involving 2877 participants aged \u226530 years.",
+                "entity_1": "smoking",
+                "entity_2": "T2DM",
+                "gold": {
+                  "rel": "none",
+                  "dir": "not_applicable",
+                  "pol": "not_applicable",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                }
+              },
+              {
+                "pair_id": "PMID:42655935:s05:p08",
+                "sentence_text": "An interpretable risk scoring system was subsequently derived using the selected predictors.<h4>Results</h4>Older age at cancer diagnosis, male sex, longer duration between T2DM diagnosis and lung cancer diagnosis (T2DM duration), smoking, alcohol consumption, history of stroke, and higher HbA1c were associated with increased mortality risk, whereas hypertension, coronary heart disease, insulin usage, anti-lipid usage, and anti-diabetic usage were associated with reduced mortality risk.",
+                "entity_1": "T2DM",
+                "entity_2": "smoking",
+                "gold": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                },
+                "pred": {
+                  "rel": "association_only",
+                  "dir": "not_applicable",
+                  "pol": "increases",
+                  "lang": "affirmed"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "TF-IDF + LogisticRegression": {
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "misclassified_count": 7,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:42700058:s02:p04",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Within this context, physical inactivity and prolonged sedentary behavior emerge as prominent, modifiable risk factors contributing to type 2 diabetes mellitus (T2DM)."
+          },
+          {
+            "pair_id": "PMID:42733913:s02:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "With a prevalence of 32% among adults, NAFLD is linked to obesity, metabolic disorders, and type 2 diabetes mellitus (T2DM), yet awareness remains disproportionately low, reaching as low as 4.4% in some developed countries like the US, despite its high prevalence."
+          },
+          {
+            "pair_id": "PMID:42422434:s13:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Impaired renal function, obesity, dyslipidemia, hypertension, MetS, and alcohol consumption are the primary risk factors."
+          },
+          {
+            "pair_id": "PMID:42656766:s12:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "A narrative synthesis identified fifteen significant factors associated with overweight and obesity among patients with type 2 diabetes in Ethiopia."
+          },
+          {
+            "pair_id": "PMID:41867241:s07:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "In a propensity-score-matched cohort (>200,000 individuals per group), men with ED and T2DM had higher risks of ischemic heart disease (15.7% vs. 11.5%, OR: 1.44; 95% CI 1.41-1.46), stroke (OR 1.45; 95% CI 1.42-1.48), peripheral artery disease (OR 1.38; 95% CI 1.35-1.41), and heart failure (8.4% vs. 4.9%, OR 1.78; 95% CI 1.74-1.81)."
+          },
+          {
+            "pair_id": "PMID:42685619:s10:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Notably, levels of fasting blood glucose, serum insulin, and area under the curve for oral glucose tolerance tests and insulin tolerance tests were all higher in the DP group than in the DNP group.<h4>Conclusions</h4>Periodontitis is related to intestinal barrier disruption, TLR4/NF-\u03baB signalling activation, and worsened metabolic parameters in T2DM mice.<h4>Clinical relevance</h4>These findings may establish periodontitis as a potent driver of gut barrier dysfunction, systemic inflammation, and insulin resistance, highlighting its profound impact on metabolic health."
+          },
+          {
+            "pair_id": "PMID:42607927:s09:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Obesity, hypertension, and male sex were consistently associated with a higher reported OSA prevalence, although causal inference is limited by the predominance of cross-sectional designs.<h4>Conclusion</h4>OSA is common among adults with T2DM, but estimates vary substantially by diagnostic method, region, and study population."
+          }
+        ]
+      },
+      "MiniLM frozen encoder + LogisticRegression": {
+        "evaluated_fields": [
+          "relation_class"
+        ],
+        "misclassified_count": 12,
+        "misclassified_pairs": [
+          {
+            "pair_id": "PMID:42700058:s02:p04",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Within this context, physical inactivity and prolonged sedentary behavior emerge as prominent, modifiable risk factors contributing to type 2 diabetes mellitus (T2DM)."
+          },
+          {
+            "pair_id": "PMID:41883562:s01:p14",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Background</h4>To investigate the association between melatonin levels and bone mineral density (BMD) in postmenopausal women with type 2 diabetes mellitus (T2DM).<h4>Methods</h4>One hundred and ninety postmenopausal women who visited the clinic between September 2023 and September 2024 were selected and divided into 4 groups according to their disease status: the normal group (n\u2009=\u200945); the abnormal bone mass group (n\u2009=\u200943); the T2DM group (n\u2009=\u200946); and the T2DM with abnormal bone mass group (n\u2009=\u200956)."
+          },
+          {
+            "pair_id": "PMID:42733913:s02:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "With a prevalence of 32% among adults, NAFLD is linked to obesity, metabolic disorders, and type 2 diabetes mellitus (T2DM), yet awareness remains disproportionately low, reaching as low as 4.4% in some developed countries like the US, despite its high prevalence."
+          },
+          {
+            "pair_id": "PMID:42656766:s12:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "A narrative synthesis identified fifteen significant factors associated with overweight and obesity among patients with type 2 diabetes in Ethiopia."
+          },
+          {
+            "pair_id": "PMID:41867241:s07:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "In a propensity-score-matched cohort (>200,000 individuals per group), men with ED and T2DM had higher risks of ischemic heart disease (15.7% vs. 11.5%, OR: 1.44; 95% CI 1.41-1.46), stroke (OR 1.45; 95% CI 1.42-1.48), peripheral artery disease (OR 1.38; 95% CI 1.35-1.41), and heart failure (8.4% vs. 4.9%, OR 1.78; 95% CI 1.74-1.81)."
+          },
+          {
+            "pair_id": "PMID:42566486:s02:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "This study examines the longitudinal associations between the Atherogenic Index of Plasma (AIP) and Cumulative Atherogenic Index of Plasma (CumAIP) with the development of T2DM complicated by CKD in middle-aged and older adults.<h4>Methods</h4>A total of 5,779 participants from the CHARLS cohort were included."
+          },
+          {
+            "pair_id": "PMID:42899427:s07:p01",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "In the MASLD subgroup, older age (OR: 1.04), hypertension (OR: 2.31), T2DM (OR: 3.07), and chronic HBV infection (OR: 3.59) remained significant."
+          },
+          {
+            "pair_id": "PMID:41883562:s01:p05",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Background</h4>To investigate the association between melatonin levels and bone mineral density (BMD) in postmenopausal women with type 2 diabetes mellitus (T2DM).<h4>Methods</h4>One hundred and ninety postmenopausal women who visited the clinic between September 2023 and September 2024 were selected and divided into 4 groups according to their disease status: the normal group (n\u2009=\u200945); the abnormal bone mass group (n\u2009=\u200943); the T2DM group (n\u2009=\u200946); and the T2DM with abnormal bone mass group (n\u2009=\u200956)."
+          },
+          {
+            "pair_id": "PMID:42469908:s11:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Normal BMI was associated with lower CAN prevalence, whereas greater sedentary behavior and higher HbA1c were associated with higher prevalence."
+          },
+          {
+            "pair_id": "PMID:42381893:s06:p02",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Among women, no significant differences were observed between NWO and obesity groups (11.70% vs. 13.20%, <i>p</i>\u00a0>\u00a00.05).<h4>Conclusions</h4>NWO showed sex-specific differences in association with T2DM prevalence; causal relationships cannot be inferred."
+          },
+          {
+            "pair_id": "PMID:41883562:s01:p04",
+            "reference": "none",
+            "prediction": "association_only",
+            "sentence_text": "<h4>Background</h4>To investigate the association between melatonin levels and bone mineral density (BMD) in postmenopausal women with type 2 diabetes mellitus (T2DM).<h4>Methods</h4>One hundred and ninety postmenopausal women who visited the clinic between September 2023 and September 2024 were selected and divided into 4 groups according to their disease status: the normal group (n\u2009=\u200945); the abnormal bone mass group (n\u2009=\u200943); the T2DM group (n\u2009=\u200946); and the T2DM with abnormal bone mass group (n\u2009=\u200956)."
+          },
+          {
+            "pair_id": "PMID:42381893:s06:p01",
+            "reference": "association_only",
+            "prediction": "none",
+            "sentence_text": "Among women, no significant differences were observed between NWO and obesity groups (11.70% vs. 13.20%, <i>p</i>\u00a0>\u00a00.05).<h4>Conclusions</h4>NWO showed sex-specific differences in association with T2DM prevalence; causal relationships cannot be inferred."
+          }
+        ]
+      }
+    }
+  }
+}

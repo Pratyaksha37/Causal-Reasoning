@@ -1,0 +1,250 @@
+[
+  {
+    "state": "underweight",
+    "observational": {
+      "kind": "observational",
+      "target": "Outcome",
+      "evidence": {
+        "BMICat": "underweight"
+      },
+      "distribution": {
+        "0": 0.9483529020297571,
+        "1": 0.0516470979702429
+      },
+      "model_mode": "literature_prior",
+      "data_source": {
+        "kind": "real_observations",
+        "path": "data/brfss/raw/LLCP2015XPT.zip",
+        "path_scope": "project_relative",
+        "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+        "is_synthetic": false
+      },
+      "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+    },
+    "interventional": {
+      "kind": "interventional",
+      "target": "Outcome",
+      "evidence": {},
+      "distribution": {
+        "0": 0.9483529020297571,
+        "1": 0.0516470979702429
+      },
+      "model_mode": "literature_prior",
+      "data_source": {
+        "kind": "real_observations",
+        "path": "data/brfss/raw/LLCP2015XPT.zip",
+        "path_scope": "project_relative",
+        "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+        "is_synthetic": false
+      },
+      "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+      "interventions": {
+        "BMICat": "underweight"
+      },
+      "identification": {
+        "status": "model_simulation_only",
+        "identified_under_assumptions": false,
+        "real_world_causal_validity_established": false,
+        "unmet_assumptions": [
+          "assume_causal_sufficiency",
+          "assume_consistency",
+          "acknowledge_structural_prior"
+        ],
+        "positivity_violations": [],
+        "positivity_unverified_variables": [],
+        "method": "Truncated factorization in a fully observed causal DAG",
+        "limitations": [
+          "No causal discovery or proof of absent unmeasured confounding",
+          "No front-door, latent-confounder ID algorithm, or transportability claim",
+          "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+        ]
+      }
+    }
+  },
+  {
+    "state": "normal",
+    "observational": {
+      "kind": "observational",
+      "target": "Outcome",
+      "evidence": {
+        "BMICat": "normal"
+      },
+      "distribution": {
+        "0": 0.9323851666078117,
+        "1": 0.06761483339218838
+      },
+      "model_mode": "literature_prior",
+      "data_source": {
+        "kind": "real_observations",
+        "path": "data/brfss/raw/LLCP2015XPT.zip",
+        "path_scope": "project_relative",
+        "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+        "is_synthetic": false
+      },
+      "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+    },
+    "interventional": {
+      "kind": "interventional",
+      "target": "Outcome",
+      "evidence": {},
+      "distribution": {
+        "0": 0.9323851666078117,
+        "1": 0.06761483339218838
+      },
+      "model_mode": "literature_prior",
+      "data_source": {
+        "kind": "real_observations",
+        "path": "data/brfss/raw/LLCP2015XPT.zip",
+        "path_scope": "project_relative",
+        "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+        "is_synthetic": false
+      },
+      "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+      "interventions": {
+        "BMICat": "normal"
+      },
+      "identification": {
+        "status": "model_simulation_only",
+        "identified_under_assumptions": false,
+        "real_world_causal_validity_established": false,
+        "unmet_assumptions": [
+          "assume_causal_sufficiency",
+          "assume_consistency",
+          "acknowledge_structural_prior"
+        ],
+        "positivity_violations": [],
+        "positivity_unverified_variables": [],
+        "method": "Truncated factorization in a fully observed causal DAG",
+        "limitations": [
+          "No causal discovery or proof of absent unmeasured confounding",
+          "No front-door, latent-confounder ID algorithm, or transportability claim",
+          "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+        ]
+      }
+    }
+  },
+  {
+    "state": "overweight",
+    "observational": {
+      "kind": "observational",
+      "target": "Outcome",
+      "evidence": {
+        "BMICat": "overweight"
+      },
+      "distribution": {
+        "0": 0.8656859873115387,
+        "1": 0.13431401268846127
+      },
+      "model_mode": "literature_prior",
+      "data_source": {
+        "kind": "real_observations",
+        "path": "data/brfss/raw/LLCP2015XPT.zip",
+        "path_scope": "project_relative",
+        "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+        "is_synthetic": false
+      },
+      "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+    },
+    "interventional": {
+      "kind": "interventional",
+      "target": "Outcome",
+      "evidence": {},
+      "distribution": {
+        "0": 0.8656859873115387,
+        "1": 0.13431401268846127
+      },
+      "model_mode": "literature_prior",
+      "data_source": {
+        "kind": "real_observations",
+        "path": "data/brfss/raw/LLCP2015XPT.zip",
+        "path_scope": "project_relative",
+        "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+        "is_synthetic": false
+      },
+      "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+      "interventions": {
+        "BMICat": "overweight"
+      },
+      "identification": {
+        "status": "model_simulation_only",
+        "identified_under_assumptions": false,
+        "real_world_causal_validity_established": false,
+        "unmet_assumptions": [
+          "assume_causal_sufficiency",
+          "assume_consistency",
+          "acknowledge_structural_prior"
+        ],
+        "positivity_violations": [],
+        "positivity_unverified_variables": [],
+        "method": "Truncated factorization in a fully observed causal DAG",
+        "limitations": [
+          "No causal discovery or proof of absent unmeasured confounding",
+          "No front-door, latent-confounder ID algorithm, or transportability claim",
+          "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+        ]
+      }
+    }
+  },
+  {
+    "state": "obese",
+    "observational": {
+      "kind": "observational",
+      "target": "Outcome",
+      "evidence": {
+        "BMICat": "obese"
+      },
+      "distribution": {
+        "0": 0.7377814865495503,
+        "1": 0.26221851345044966
+      },
+      "model_mode": "literature_prior",
+      "data_source": {
+        "kind": "real_observations",
+        "path": "data/brfss/raw/LLCP2015XPT.zip",
+        "path_scope": "project_relative",
+        "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+        "is_synthetic": false
+      },
+      "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+    },
+    "interventional": {
+      "kind": "interventional",
+      "target": "Outcome",
+      "evidence": {},
+      "distribution": {
+        "0": 0.7377814865495503,
+        "1": 0.26221851345044966
+      },
+      "model_mode": "literature_prior",
+      "data_source": {
+        "kind": "real_observations",
+        "path": "data/brfss/raw/LLCP2015XPT.zip",
+        "path_scope": "project_relative",
+        "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+        "is_synthetic": false
+      },
+      "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+      "interventions": {
+        "BMICat": "obese"
+      },
+      "identification": {
+        "status": "model_simulation_only",
+        "identified_under_assumptions": false,
+        "real_world_causal_validity_established": false,
+        "unmet_assumptions": [
+          "assume_causal_sufficiency",
+          "assume_consistency",
+          "acknowledge_structural_prior"
+        ],
+        "positivity_violations": [],
+        "positivity_unverified_variables": [],
+        "method": "Truncated factorization in a fully observed causal DAG",
+        "limitations": [
+          "No causal discovery or proof of absent unmeasured confounding",
+          "No front-door, latent-confounder ID algorithm, or transportability claim",
+          "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+        ]
+      }
+    }
+  }
+]

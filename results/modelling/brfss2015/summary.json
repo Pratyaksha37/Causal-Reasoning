@@ -1,0 +1,707 @@
+{
+  "stage": "bayesian_modelling",
+  "source": {
+    "kind": "real_observations",
+    "path": "data/brfss/raw/LLCP2015XPT.zip",
+    "path_scope": "project_relative",
+    "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+    "is_synthetic": false
+  },
+  "model_fitted": true,
+  "human_validation": "pending",
+  "structure": {
+    "nodes": [
+      "BMICat",
+      "Outcome"
+    ],
+    "edges": [
+      [
+        "BMICat",
+        "Outcome"
+      ]
+    ],
+    "normalized": true,
+    "cpds": 2,
+    "is_dag": true,
+    "status": "project_accepted_prior_not_human_validated"
+  },
+  "preprocessing": {
+    "profile": "brfss_2015",
+    "year": 2015,
+    "is_synthetic": false,
+    "source": "https://www.cdc.gov/brfss/annual_data/annual_2015.html",
+    "rows_input": 441456,
+    "rows_retained": 401327,
+    "rows_removed": 40129,
+    "invalid_or_missing_by_variable": {
+      "AgeCat": 0,
+      "Sex": 0,
+      "Education": 1811,
+      "Income": 79505,
+      "Smoker": 17549,
+      "PhysActivity": 37992,
+      "Outcome": 4406,
+      "BMICat": 36398
+    },
+    "available_variables": [
+      "AgeCat",
+      "Sex",
+      "Education",
+      "Income",
+      "Smoker",
+      "PhysActivity",
+      "Outcome",
+      "BMICat"
+    ],
+    "unavailable_variables": [],
+    "required_variables": [
+      "BMICat",
+      "Outcome"
+    ],
+    "policy": "Complete cases for model variables only; optional missing states retained",
+    "survey_design": "Unweighted respondent-level model; not population prevalence or a design-based estimate",
+    "outcome": "Self-reported diabetes OR prediabetes; pregnancy-only diabetes excluded",
+    "age_boundaries": [
+      18,
+      45,
+      65,
+      75,
+      81
+    ],
+    "source_fields": {
+      "AgeCat": "_AGE80",
+      "Sex": "SEX",
+      "Education": "EDUCA",
+      "Income": "INCOME2",
+      "Smoker": "SMOKE100",
+      "PhysActivity": "EXERANY2",
+      "BMICat": "_BMI5",
+      "Outcome": "DIABETE3"
+    },
+    "ignored_columns": []
+  },
+  "dataset_summary": {
+    "AgeCat": {
+      "middle_aged": 154145,
+      "young": 105033,
+      "older": 81415,
+      "elderly": 60734
+    },
+    "Sex": {
+      "female": 222565,
+      "male": 178762
+    },
+    "Education": {
+      "high": 258388,
+      "medium": 111972,
+      "low": 30085,
+      "nan": 882
+    },
+    "Income": {
+      "high": 164145,
+      "low": 90001,
+      "medium": 85820,
+      "nan": 61361
+    },
+    "Smoker": {
+      "0": 219099,
+      "1": 173332,
+      "nan": 8896
+    },
+    "PhysActivity": {
+      "1": 276189,
+      "0": 98476,
+      "nan": 26662
+    },
+    "Outcome": {
+      "0": 341486,
+      "1": 59841
+    },
+    "BMICat": {
+      "overweight": 145837,
+      "normal": 130232,
+      "obese": 118604,
+      "underweight": 6654
+    }
+  },
+  "split": {
+    "seed": 42,
+    "test_size": 0.2,
+    "stratified": true,
+    "train_rows": 321061,
+    "test_rows": 80266,
+    "overlap": 0
+  },
+  "evaluation": {
+    "status": "observational_predictive_evaluation",
+    "n_test": 80266,
+    "conditioning_features": [
+      "BMICat"
+    ],
+    "log_loss": 0.396413265951748,
+    "brier_score": 0.1204832904437921,
+    "baseline": {
+      "log_loss": 0.42115212972609756,
+      "brier_score": 0.12687215752193923
+    },
+    "baseline_training_prevalence": 0.14910873634605262,
+    "calibration": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "count": 27560,
+        "mean_predicted": 0.06680601776631627,
+        "observed_rate": 0.0671988388969521
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "count": 28921,
+        "mean_predicted": 0.13431401268846124,
+        "observed_rate": 0.13180733722900315
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.30000000000000004,
+        "count": 23785,
+        "mean_predicted": 0.2622185134504496,
+        "observed_rate": 0.2650409922219886
+      }
+    ],
+    "calibration_coverage": {
+      "populated_bins": 3,
+      "total_bins": 10,
+      "distinct_predicted_probabilities": 4,
+      "minimum_prediction": 0.0516470979702429,
+      "maximum_prediction": 0.26221851345044966,
+      "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+    },
+    "causal_accuracy": null,
+    "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+    "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+  },
+  "comparisons": [
+    {
+      "state": "underweight",
+      "observational": {
+        "kind": "observational",
+        "target": "Outcome",
+        "evidence": {
+          "BMICat": "underweight"
+        },
+        "distribution": {
+          "0": 0.9483529020297571,
+          "1": 0.0516470979702429
+        },
+        "model_mode": "literature_prior",
+        "data_source": {
+          "kind": "real_observations",
+          "path": "data/brfss/raw/LLCP2015XPT.zip",
+          "path_scope": "project_relative",
+          "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+          "is_synthetic": false
+        },
+        "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+      },
+      "interventional": {
+        "kind": "interventional",
+        "target": "Outcome",
+        "evidence": {},
+        "distribution": {
+          "0": 0.9483529020297571,
+          "1": 0.0516470979702429
+        },
+        "model_mode": "literature_prior",
+        "data_source": {
+          "kind": "real_observations",
+          "path": "data/brfss/raw/LLCP2015XPT.zip",
+          "path_scope": "project_relative",
+          "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+          "is_synthetic": false
+        },
+        "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+        "interventions": {
+          "BMICat": "underweight"
+        },
+        "identification": {
+          "status": "model_simulation_only",
+          "identified_under_assumptions": false,
+          "real_world_causal_validity_established": false,
+          "unmet_assumptions": [
+            "assume_causal_sufficiency",
+            "assume_consistency",
+            "acknowledge_structural_prior"
+          ],
+          "positivity_violations": [],
+          "positivity_unverified_variables": [],
+          "method": "Truncated factorization in a fully observed causal DAG",
+          "limitations": [
+            "No causal discovery or proof of absent unmeasured confounding",
+            "No front-door, latent-confounder ID algorithm, or transportability claim",
+            "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+          ]
+        }
+      }
+    },
+    {
+      "state": "normal",
+      "observational": {
+        "kind": "observational",
+        "target": "Outcome",
+        "evidence": {
+          "BMICat": "normal"
+        },
+        "distribution": {
+          "0": 0.9323851666078117,
+          "1": 0.06761483339218838
+        },
+        "model_mode": "literature_prior",
+        "data_source": {
+          "kind": "real_observations",
+          "path": "data/brfss/raw/LLCP2015XPT.zip",
+          "path_scope": "project_relative",
+          "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+          "is_synthetic": false
+        },
+        "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+      },
+      "interventional": {
+        "kind": "interventional",
+        "target": "Outcome",
+        "evidence": {},
+        "distribution": {
+          "0": 0.9323851666078117,
+          "1": 0.06761483339218838
+        },
+        "model_mode": "literature_prior",
+        "data_source": {
+          "kind": "real_observations",
+          "path": "data/brfss/raw/LLCP2015XPT.zip",
+          "path_scope": "project_relative",
+          "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+          "is_synthetic": false
+        },
+        "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+        "interventions": {
+          "BMICat": "normal"
+        },
+        "identification": {
+          "status": "model_simulation_only",
+          "identified_under_assumptions": false,
+          "real_world_causal_validity_established": false,
+          "unmet_assumptions": [
+            "assume_causal_sufficiency",
+            "assume_consistency",
+            "acknowledge_structural_prior"
+          ],
+          "positivity_violations": [],
+          "positivity_unverified_variables": [],
+          "method": "Truncated factorization in a fully observed causal DAG",
+          "limitations": [
+            "No causal discovery or proof of absent unmeasured confounding",
+            "No front-door, latent-confounder ID algorithm, or transportability claim",
+            "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+          ]
+        }
+      }
+    },
+    {
+      "state": "overweight",
+      "observational": {
+        "kind": "observational",
+        "target": "Outcome",
+        "evidence": {
+          "BMICat": "overweight"
+        },
+        "distribution": {
+          "0": 0.8656859873115387,
+          "1": 0.13431401268846127
+        },
+        "model_mode": "literature_prior",
+        "data_source": {
+          "kind": "real_observations",
+          "path": "data/brfss/raw/LLCP2015XPT.zip",
+          "path_scope": "project_relative",
+          "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+          "is_synthetic": false
+        },
+        "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+      },
+      "interventional": {
+        "kind": "interventional",
+        "target": "Outcome",
+        "evidence": {},
+        "distribution": {
+          "0": 0.8656859873115387,
+          "1": 0.13431401268846127
+        },
+        "model_mode": "literature_prior",
+        "data_source": {
+          "kind": "real_observations",
+          "path": "data/brfss/raw/LLCP2015XPT.zip",
+          "path_scope": "project_relative",
+          "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+          "is_synthetic": false
+        },
+        "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+        "interventions": {
+          "BMICat": "overweight"
+        },
+        "identification": {
+          "status": "model_simulation_only",
+          "identified_under_assumptions": false,
+          "real_world_causal_validity_established": false,
+          "unmet_assumptions": [
+            "assume_causal_sufficiency",
+            "assume_consistency",
+            "acknowledge_structural_prior"
+          ],
+          "positivity_violations": [],
+          "positivity_unverified_variables": [],
+          "method": "Truncated factorization in a fully observed causal DAG",
+          "limitations": [
+            "No causal discovery or proof of absent unmeasured confounding",
+            "No front-door, latent-confounder ID algorithm, or transportability claim",
+            "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+          ]
+        }
+      }
+    },
+    {
+      "state": "obese",
+      "observational": {
+        "kind": "observational",
+        "target": "Outcome",
+        "evidence": {
+          "BMICat": "obese"
+        },
+        "distribution": {
+          "0": 0.7377814865495503,
+          "1": 0.26221851345044966
+        },
+        "model_mode": "literature_prior",
+        "data_source": {
+          "kind": "real_observations",
+          "path": "data/brfss/raw/LLCP2015XPT.zip",
+          "path_scope": "project_relative",
+          "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+          "is_synthetic": false
+        },
+        "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+      },
+      "interventional": {
+        "kind": "interventional",
+        "target": "Outcome",
+        "evidence": {},
+        "distribution": {
+          "0": 0.7377814865495503,
+          "1": 0.26221851345044966
+        },
+        "model_mode": "literature_prior",
+        "data_source": {
+          "kind": "real_observations",
+          "path": "data/brfss/raw/LLCP2015XPT.zip",
+          "path_scope": "project_relative",
+          "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+          "is_synthetic": false
+        },
+        "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+        "interventions": {
+          "BMICat": "obese"
+        },
+        "identification": {
+          "status": "model_simulation_only",
+          "identified_under_assumptions": false,
+          "real_world_causal_validity_established": false,
+          "unmet_assumptions": [
+            "assume_causal_sufficiency",
+            "assume_consistency",
+            "acknowledge_structural_prior"
+          ],
+          "positivity_violations": [],
+          "positivity_unverified_variables": [],
+          "method": "Truncated factorization in a fully observed causal DAG",
+          "limitations": [
+            "No causal discovery or proof of absent unmeasured confounding",
+            "No front-door, latent-confounder ID algorithm, or transportability claim",
+            "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+          ]
+        }
+      }
+    }
+  ],
+  "sensitivity": [
+    {
+      "experiment": "smoothing",
+      "equivalent_sample_size": 1.0,
+      "evaluation": {
+        "status": "observational_predictive_evaluation",
+        "n_test": 80266,
+        "conditioning_features": [
+          "BMICat"
+        ],
+        "log_loss": 0.3964135321662098,
+        "brier_score": 0.12048331632010226,
+        "baseline": {
+          "log_loss": 0.42115212972609756,
+          "brier_score": 0.12687215752193923
+        },
+        "baseline_training_prevalence": 0.14910873634605262,
+        "calibration": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "count": 27560,
+            "mean_predicted": 0.06679775438053412,
+            "observed_rate": 0.0671988388969521
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 28921,
+            "mean_predicted": 0.13431088492831408,
+            "observed_rate": 0.13180733722900315
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "count": 23785,
+            "mean_predicted": 0.2622160057161388,
+            "observed_rate": 0.2650409922219886
+          }
+        ],
+        "calibration_coverage": {
+          "populated_bins": 3,
+          "total_bins": 10,
+          "distinct_predicted_probabilities": 4,
+          "minimum_prediction": 0.051561831407787764,
+          "maximum_prediction": 0.26221600571613884,
+          "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+        },
+        "causal_accuracy": null,
+        "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+        "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+      },
+      "bmi_risks": {
+        "underweight": 0.051561831407787764,
+        "normal": 0.0676106785691121,
+        "overweight": 0.13431088492831408,
+        "obese": 0.26221600571613884
+      }
+    },
+    {
+      "experiment": "smoothing",
+      "equivalent_sample_size": 5.0,
+      "evaluation": {
+        "status": "observational_predictive_evaluation",
+        "n_test": 80266,
+        "conditioning_features": [
+          "BMICat"
+        ],
+        "log_loss": 0.396413265951748,
+        "brier_score": 0.1204832904437921,
+        "baseline": {
+          "log_loss": 0.42115212972609756,
+          "brier_score": 0.12687215752193923
+        },
+        "baseline_training_prevalence": 0.14910873634605262,
+        "calibration": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "count": 27560,
+            "mean_predicted": 0.06680601776631627,
+            "observed_rate": 0.0671988388969521
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 28921,
+            "mean_predicted": 0.13431401268846124,
+            "observed_rate": 0.13180733722900315
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "count": 23785,
+            "mean_predicted": 0.2622185134504496,
+            "observed_rate": 0.2650409922219886
+          }
+        ],
+        "calibration_coverage": {
+          "populated_bins": 3,
+          "total_bins": 10,
+          "distinct_predicted_probabilities": 4,
+          "minimum_prediction": 0.0516470979702429,
+          "maximum_prediction": 0.26221851345044966,
+          "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+        },
+        "causal_accuracy": null,
+        "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+        "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+      },
+      "bmi_risks": {
+        "underweight": 0.0516470979702429,
+        "normal": 0.06761483339218838,
+        "overweight": 0.13431401268846127,
+        "obese": 0.26221851345044966
+      }
+    },
+    {
+      "experiment": "smoothing",
+      "equivalent_sample_size": 20.0,
+      "evaluation": {
+        "status": "observational_predictive_evaluation",
+        "n_test": 80266,
+        "conditioning_features": [
+          "BMICat"
+        ],
+        "log_loss": 0.3964122965059942,
+        "brier_score": 0.12048319594562579,
+        "baseline": {
+          "log_loss": 0.42115212972609756,
+          "brier_score": 0.12687215752193923
+        },
+        "baseline_training_prevalence": 0.14910873634605262,
+        "calibration": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "count": 27560,
+            "mean_predicted": 0.0668369901702919,
+            "observed_rate": 0.0671988388969521
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 28921,
+            "mean_predicted": 0.13432574131251013,
+            "observed_rate": 0.13180733722900315
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "count": 23785,
+            "mean_predicted": 0.2622279169830422,
+            "observed_rate": 0.2650409922219886
+          }
+        ],
+        "calibration_coverage": {
+          "populated_bins": 3,
+          "total_bins": 10,
+          "distinct_predicted_probabilities": 4,
+          "minimum_prediction": 0.051966558996769906,
+          "maximum_prediction": 0.26222791698304226,
+          "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+        },
+        "causal_accuracy": null,
+        "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+        "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+      },
+      "bmi_risks": {
+        "underweight": 0.051966558996769906,
+        "normal": 0.06763041326761024,
+        "overweight": 0.13432574131251016,
+        "obese": 0.26222791698304226
+      }
+    },
+    {
+      "experiment": "exploratory_all_edges_removed_independence_assumption",
+      "structure": {
+        "active_edges": [],
+        "source_prior_edges": [
+          [
+            "BMICat",
+            "Outcome"
+          ]
+        ]
+      },
+      "counts_reestimated": true,
+      "evaluation": {
+        "status": "observational_predictive_evaluation",
+        "n_test": 80266,
+        "conditioning_features": [],
+        "log_loss": 0.42115213003792246,
+        "brier_score": 0.12687215760106627,
+        "baseline": {
+          "log_loss": 0.42115212972609756,
+          "brier_score": 0.12687215752193923
+        },
+        "baseline_training_prevalence": 0.14910873634605262,
+        "calibration": [
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 80266,
+            "mean_predicted": 0.1491142008185233,
+            "observed_rate": 0.14910422844043555
+          }
+        ],
+        "calibration_coverage": {
+          "populated_bins": 1,
+          "total_bins": 10,
+          "distinct_predicted_probabilities": 1,
+          "minimum_prediction": 0.1491142008185233,
+          "maximum_prediction": 0.1491142008185233,
+          "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+        },
+        "causal_accuracy": null,
+        "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+        "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+      }
+    }
+  ],
+  "causal_validity_established": false,
+  "reproducibility": {
+    "python": "3.11.17",
+    "config": {
+      "seed": 42,
+      "test_size": 0.2,
+      "paths": {
+        "graph": "results/graph/current/evidence_graph_after_repair.graphml",
+        "provenance": "results/graph/current/provenance.json",
+        "annotation_queue": "data/annotations/human_annotation_queue.jsonl",
+        "output": "results/modelling/brfss2015"
+      },
+      "model": {
+        "mode": "literature_prior",
+        "variables": [
+          "BMICat",
+          "Outcome"
+        ],
+        "exploratory_edges": [],
+        "acknowledge_independence": false
+      },
+      "estimation": {
+        "method": "bayesian",
+        "equivalent_sample_size": 5.0
+      },
+      "data": {
+        "year": 2015,
+        "profile": "brfss_2015",
+        "missing_policy": "complete_case_model_variables",
+        "age_boundaries": [
+          18,
+          45,
+          65,
+          75,
+          81
+        ],
+        "outcome_definition": "prediabetes_or_diabetes"
+      },
+      "causal": {
+        "assume_causal_sufficiency": false,
+        "assume_consistency": false,
+        "acknowledge_structural_prior": false
+      }
+    },
+    "versions": {
+      "pgmpy": "1.0.0",
+      "pandas": "3.0.6",
+      "numpy": "1.26.4",
+      "networkx": "3.6.1",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.11.2"
+    }
+  }
+}

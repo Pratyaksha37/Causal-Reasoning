@@ -1,0 +1,221 @@
+[
+  {
+    "experiment": "smoothing",
+    "equivalent_sample_size": 1.0,
+    "evaluation": {
+      "status": "observational_predictive_evaluation",
+      "n_test": 80266,
+      "conditioning_features": [
+        "BMICat"
+      ],
+      "log_loss": 0.3964135321662098,
+      "brier_score": 0.12048331632010226,
+      "baseline": {
+        "log_loss": 0.42115212972609756,
+        "brier_score": 0.12687215752193923
+      },
+      "baseline_training_prevalence": 0.14910873634605262,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 27560,
+          "mean_predicted": 0.06679775438053412,
+          "observed_rate": 0.0671988388969521
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 28921,
+          "mean_predicted": 0.13431088492831408,
+          "observed_rate": 0.13180733722900315
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 23785,
+          "mean_predicted": 0.2622160057161388,
+          "observed_rate": 0.2650409922219886
+        }
+      ],
+      "calibration_coverage": {
+        "populated_bins": 3,
+        "total_bins": 10,
+        "distinct_predicted_probabilities": 4,
+        "minimum_prediction": 0.051561831407787764,
+        "maximum_prediction": 0.26221600571613884,
+        "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+      },
+      "causal_accuracy": null,
+      "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+      "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+    },
+    "bmi_risks": {
+      "underweight": 0.051561831407787764,
+      "normal": 0.0676106785691121,
+      "overweight": 0.13431088492831408,
+      "obese": 0.26221600571613884
+    }
+  },
+  {
+    "experiment": "smoothing",
+    "equivalent_sample_size": 5.0,
+    "evaluation": {
+      "status": "observational_predictive_evaluation",
+      "n_test": 80266,
+      "conditioning_features": [
+        "BMICat"
+      ],
+      "log_loss": 0.396413265951748,
+      "brier_score": 0.1204832904437921,
+      "baseline": {
+        "log_loss": 0.42115212972609756,
+        "brier_score": 0.12687215752193923
+      },
+      "baseline_training_prevalence": 0.14910873634605262,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 27560,
+          "mean_predicted": 0.06680601776631627,
+          "observed_rate": 0.0671988388969521
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 28921,
+          "mean_predicted": 0.13431401268846124,
+          "observed_rate": 0.13180733722900315
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 23785,
+          "mean_predicted": 0.2622185134504496,
+          "observed_rate": 0.2650409922219886
+        }
+      ],
+      "calibration_coverage": {
+        "populated_bins": 3,
+        "total_bins": 10,
+        "distinct_predicted_probabilities": 4,
+        "minimum_prediction": 0.0516470979702429,
+        "maximum_prediction": 0.26221851345044966,
+        "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+      },
+      "causal_accuracy": null,
+      "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+      "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+    },
+    "bmi_risks": {
+      "underweight": 0.0516470979702429,
+      "normal": 0.06761483339218838,
+      "overweight": 0.13431401268846127,
+      "obese": 0.26221851345044966
+    }
+  },
+  {
+    "experiment": "smoothing",
+    "equivalent_sample_size": 20.0,
+    "evaluation": {
+      "status": "observational_predictive_evaluation",
+      "n_test": 80266,
+      "conditioning_features": [
+        "BMICat"
+      ],
+      "log_loss": 0.3964122965059942,
+      "brier_score": 0.12048319594562579,
+      "baseline": {
+        "log_loss": 0.42115212972609756,
+        "brier_score": 0.12687215752193923
+      },
+      "baseline_training_prevalence": 0.14910873634605262,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 27560,
+          "mean_predicted": 0.0668369901702919,
+          "observed_rate": 0.0671988388969521
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 28921,
+          "mean_predicted": 0.13432574131251013,
+          "observed_rate": 0.13180733722900315
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 23785,
+          "mean_predicted": 0.2622279169830422,
+          "observed_rate": 0.2650409922219886
+        }
+      ],
+      "calibration_coverage": {
+        "populated_bins": 3,
+        "total_bins": 10,
+        "distinct_predicted_probabilities": 4,
+        "minimum_prediction": 0.051966558996769906,
+        "maximum_prediction": 0.26222791698304226,
+        "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+      },
+      "causal_accuracy": null,
+      "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+      "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+    },
+    "bmi_risks": {
+      "underweight": 0.051966558996769906,
+      "normal": 0.06763041326761024,
+      "overweight": 0.13432574131251016,
+      "obese": 0.26222791698304226
+    }
+  },
+  {
+    "experiment": "exploratory_all_edges_removed_independence_assumption",
+    "structure": {
+      "active_edges": [],
+      "source_prior_edges": [
+        [
+          "BMICat",
+          "Outcome"
+        ]
+      ]
+    },
+    "counts_reestimated": true,
+    "evaluation": {
+      "status": "observational_predictive_evaluation",
+      "n_test": 80266,
+      "conditioning_features": [],
+      "log_loss": 0.42115213003792246,
+      "brier_score": 0.12687215760106627,
+      "baseline": {
+        "log_loss": 0.42115212972609756,
+        "brier_score": 0.12687215752193923
+      },
+      "baseline_training_prevalence": 0.14910873634605262,
+      "calibration": [
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 80266,
+          "mean_predicted": 0.1491142008185233,
+          "observed_rate": 0.14910422844043555
+        }
+      ],
+      "calibration_coverage": {
+        "populated_bins": 1,
+        "total_bins": 10,
+        "distinct_predicted_probabilities": 1,
+        "minimum_prediction": 0.1491142008185233,
+        "maximum_prediction": 0.1491142008185233,
+        "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+      },
+      "causal_accuracy": null,
+      "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+      "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+    }
+  }
+]

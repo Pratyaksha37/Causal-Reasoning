@@ -1,0 +1,1721 @@
+{
+  "artifacts": {
+    "graph_dir": "results/graph/current",
+    "graph_figures": "results/figures/graph",
+    "benchmark_dir": "results/benchmark"
+  },
+  "project": "Neuro-Symbolic Diabetes Evidence",
+  "corpus": {
+    "abstracts": 500,
+    "hashes_verified": true,
+    "manifest_sha256": "e8fba23b76d91b6d56d679a28301729cd5cdecd052dec2090acf40bbd6e2ed7e"
+  },
+  "nlp": {
+    "annotations_path": "data/annotations/sample.jsonl",
+    "artifact_dir": "results/benchmark",
+    "task": "relation_class_only",
+    "label_status": "PROVISIONAL_RULE_PSEUDO_GOLD",
+    "human_benchmark_claim": false,
+    "primary_metric": "macro_f1_supported_classes",
+    "label_provenance": {
+      "labeling_methods": [
+        "rule_heuristic_regex_v1"
+      ],
+      "recorded_generator": "rule_heuristic_regex_v1",
+      "generator_implementation_verified": false,
+      "independent_gold": false,
+      "rule_method_comparison_bias": "Rule-generated references may make related rule evaluations circular; exact generator implementation is not verified by metadata alone."
+    },
+    "split_strategy": "existing_frozen_document_holdout",
+    "input_sha256": "e38bba42ec74af9e1ca381225d4499bf36ba3430ff6fa3a4d8d4229d2a05c404",
+    "document_overlap": 0,
+    "partitions": {
+      "train": {
+        "pairs": 150,
+        "documents": 76
+      },
+      "dev": {
+        "pairs": 50,
+        "documents": 22
+      },
+      "test": {
+        "pairs": 50,
+        "documents": 26
+      }
+    },
+    "split_pair_ids": {
+      "train": [
+        "PMID:42432886:s03:p02",
+        "PMID:42630470:s09:p17",
+        "PMID:42730413:s03:p01",
+        "PMID:42582489:s05:p01",
+        "PMID:42575672:s05:p04",
+        "PMID:42381871:s09:p15",
+        "PMID:42651350:s01:p01",
+        "PMID:42630470:s09:p06",
+        "PMID:42718572:s03:p29",
+        "PMID:42502734:s01:p05",
+        "PMID:42542636:s03:p02",
+        "PMID:42817769:s01:p03",
+        "PMID:42481915:s01:p39",
+        "PMID:42862335:s01:p02",
+        "PMID:42745276:s01:p03",
+        "PMID:42707244:s05:p03",
+        "PMID:42381871:s09:p06",
+        "PMID:42760186:s01:p02",
+        "PMID:42504374:s09:p03",
+        "PMID:42817769:s05:p01",
+        "PMID:42730413:s03:p05",
+        "PMID:41531546:s09:p01",
+        "PMID:42682447:s10:p05",
+        "PMID:41645112:s07:p01",
+        "PMID:42523808:s01:p04",
+        "PMID:42481915:s01:p34",
+        "PMID:42381871:s09:p08",
+        "PMID:42877484:s09:p01",
+        "PMID:42817769:s01:p02",
+        "PMID:42582489:s10:p01",
+        "PMID:42213742:s02:p03",
+        "PMID:42674669:s01:p02",
+        "PMID:42898555:s02:p02",
+        "PMID:42651340:s02:p01",
+        "PMID:42718572:s03:p34",
+        "PMID:42812257:s09:p01",
+        "PMID:42381871:s08:p03",
+        "PMID:42796348:s02:p03",
+        "PMID:42523808:s01:p06",
+        "PMID:42707244:s05:p02",
+        "PMID:42299201:s11:p02",
+        "PMID:42630470:s03:p03",
+        "PMID:42588238:s03:p01",
+        "PMID:42756900:s01:p03",
+        "PMID:42817769:s06:p01",
+        "PMID:42620560:s02:p02",
+        "PMID:42862335:s13:p10",
+        "PMID:42638941:s07:p02",
+        "PMID:42363097:s11:p03",
+        "PMID:42488722:s03:p04",
+        "PMID:42299201:s10:p02",
+        "PMID:42424092:s09:p01",
+        "PMID:42491982:s01:p02",
+        "PMID:42601774:s04:p02",
+        "PMID:42388501:s02:p06",
+        "PMID:42305142:s04:p02",
+        "PMID:42466348:s02:p02",
+        "PMID:42255424:s01:p12",
+        "PMID:42685090:s02:p03",
+        "PMID:42670404:s14:p02",
+        "PMID:42862335:s13:p14",
+        "PMID:42694689:s02:p03",
+        "PMID:42499222:s01:p04",
+        "PMID:42424092:s09:p02",
+        "PMID:42747132:s01:p03",
+        "PMID:42630470:s09:p05",
+        "PMID:42718572:s03:p14",
+        "PMID:42718572:s03:p25",
+        "PMID:41998064:s02:p03",
+        "PMID:42331891:s01:p02",
+        "PMID:42466348:s02:p06",
+        "PMID:42796297:s06:p01",
+        "PMID:42615248:s06:p10",
+        "PMID:42388961:s01:p03",
+        "PMID:42381871:s03:p09",
+        "PMID:42620560:s02:p05",
+        "PMID:42891248:s04:p01",
+        "PMID:42817769:s08:p03",
+        "PMID:42632082:s01:p01",
+        "PMID:42363097:s04:p03",
+        "PMID:42523808:s02:p03",
+        "PMID:42796297:s06:p02",
+        "PMID:42638941:s07:p06",
+        "PMID:42299201:s11:p01",
+        "PMID:42620560:s03:p03",
+        "PMID:42259891:s11:p01",
+        "PMID:42381871:s09:p07",
+        "PMID:42420879:s01:p04",
+        "PMID:42503624:s01:p03",
+        "PMID:42694689:s03:p01",
+        "PMID:42898555:s02:p01",
+        "PMID:42784648:s12:p01",
+        "PMID:42707353:s08:p01",
+        "PMID:42620560:s03:p01",
+        "PMID:42670404:s12:p01",
+        "PMID:42381871:s07:p02",
+        "PMID:42510915:s03:p03",
+        "PMID:42624955:s01:p01",
+        "PMID:42381871:s07:p03",
+        "PMID:42643835:s01:p05",
+        "PMID:42299201:s11:p23",
+        "PMID:42638941:s07:p01",
+        "PMID:42651350:s11:p01",
+        "PMID:42620560:s02:p03",
+        "PMID:42523808:s02:p01",
+        "PMID:42575672:s05:p06",
+        "PMID:42718572:s03:p50",
+        "PMID:42363097:s11:p05",
+        "PMID:42620560:s02:p01",
+        "PMID:42255424:s01:p20",
+        "PMID:42481915:s01:p50",
+        "PMID:42255424:s01:p19",
+        "PMID:42299201:s12:p01",
+        "PMID:42718572:s01:p02",
+        "PMID:42365226:s01:p05",
+        "PMID:42748410:s05:p09",
+        "PMID:42450077:s04:p03",
+        "PMID:42547683:s02:p03",
+        "PMID:42707244:s05:p01",
+        "PMID:42872196:s08:p01",
+        "PMID:42630470:s09:p15",
+        "PMID:42812257:s07:p01",
+        "PMID:42718572:s03:p31",
+        "PMID:42523808:s01:p05",
+        "PMID:42587650:s11:p01",
+        "PMID:42299201:s11:p09",
+        "PMID:42299201:s11:p03",
+        "PMID:42189766:s07:p04",
+        "PMID:42527195:s10:p01",
+        "PMID:42575672:s06:p06",
+        "PMID:42491982:s01:p03",
+        "PMID:42213742:s02:p09",
+        "PMID:42630470:s09:p20",
+        "PMID:42718572:s03:p02",
+        "PMID:42331891:s01:p01",
+        "PMID:42718572:s03:p28",
+        "PMID:42523808:s04:p03",
+        "PMID:42718572:s01:p07",
+        "PMID:42481915:s03:p06",
+        "PMID:42812257:s09:p03",
+        "PMID:42349256:s03:p02",
+        "PMID:42713502:s01:p01",
+        "PMID:42718572:s03:p54",
+        "PMID:42643835:s01:p06",
+        "PMID:42769387:s01:p08",
+        "PMID:41804913:s02:p01",
+        "PMID:42630470:s09:p11",
+        "PMID:42899079:s01:p01",
+        "PMID:42058783:s04:p02",
+        "PMID:42718572:s03:p49"
+      ],
+      "dev": [
+        "PMID:35570489:s04:p03",
+        "PMID:42523603:s04:p03",
+        "PMID:42595238:s01:p01",
+        "PMID:42802801:s02:p03",
+        "PMID:42523603:s04:p02",
+        "PMID:42819449:s02:p01",
+        "PMID:42694168:s07:p01",
+        "PMID:41634666:s14:p03",
+        "PMID:42694168:s01:p01",
+        "PMID:42819449:s04:p01",
+        "PMID:42513540:s01:p01",
+        "PMID:42694168:s11:p05",
+        "PMID:41634666:s17:p01",
+        "PMID:42889580:s01:p02",
+        "PMID:42783806:s08:p01",
+        "PMID:42571999:s02:p02",
+        "PMID:42653674:s01:p01",
+        "PMID:42571999:s02:p01",
+        "PMID:42177716:s06:p01",
+        "PMID:42502449:s08:p01",
+        "PMID:42763718:s09:p03",
+        "PMID:42763718:s03:p01",
+        "PMID:41634666:s03:p01",
+        "PMID:42824721:s12:p01",
+        "PMID:42824721:s14:p01",
+        "PMID:42513540:s01:p02",
+        "PMID:42818676:s11:p02",
+        "PMID:41634666:s17:p03",
+        "PMID:42824721:s03:p04",
+        "PMID:35570489:s04:p01",
+        "PMID:42654275:s01:p01",
+        "PMID:42694168:s02:p03",
+        "PMID:41975840:s05:p02",
+        "PMID:42694168:s11:p10",
+        "PMID:41439842:s01:p02",
+        "PMID:42502449:s05:p01",
+        "PMID:42818676:s11:p03",
+        "PMID:42595238:s01:p03",
+        "PMID:42513540:s03:p01",
+        "PMID:42819449:s05:p01",
+        "PMID:42824721:s12:p07",
+        "PMID:42694168:s11:p04",
+        "PMID:42271260:s04:p01",
+        "PMID:42824721:s03:p02",
+        "PMID:42630215:s04:p02",
+        "PMID:42783806:s03:p07",
+        "PMID:42694168:s10:p01",
+        "PMID:42818676:s11:p04",
+        "PMID:42694168:s02:p02",
+        "PMID:42824721:s03:p03"
+      ],
+      "test": [
+        "PMID:42381893:s01:p03",
+        "PMID:42700058:s02:p04",
+        "PMID:42466973:s08:p01",
+        "PMID:42656766:s02:p11",
+        "PMID:42899427:s09:p01",
+        "PMID:41883562:s01:p14",
+        "PMID:42074925:s02:p03",
+        "PMID:42733913:s02:p01",
+        "PMID:42422434:s13:p01",
+        "PMID:42187875:s01:p11",
+        "PMID:42656766:s12:p02",
+        "PMID:42639604:s05:p17",
+        "PMID:42763678:s07:p01",
+        "PMID:42655935:s05:p08",
+        "PMID:42656766:s02:p02",
+        "PMID:42607927:s01:p02",
+        "PMID:41867241:s07:p01",
+        "PMID:42700058:s03:p01",
+        "PMID:42656766:s13:p35",
+        "PMID:42187875:s01:p06",
+        "PMID:42717744:s04:p01",
+        "PMID:42639604:s06:p01",
+        "PMID:42694683:s07:p01",
+        "PMID:42254320:s05:p01",
+        "PMID:42656766:s13:p27",
+        "PMID:42074925:s01:p01",
+        "PMID:42566486:s02:p01",
+        "PMID:42685619:s10:p01",
+        "PMID:42656766:s13:p23",
+        "PMID:42607927:s09:p02",
+        "PMID:42655935:s05:p02",
+        "PMID:42899427:s07:p01",
+        "PMID:42851090:s09:p01",
+        "PMID:42656766:s13:p22",
+        "PMID:41883562:s01:p05",
+        "PMID:42656766:s13:p04",
+        "PMID:42187875:s01:p07",
+        "PMID:42656766:s13:p21",
+        "PMID:42469908:s11:p01",
+        "PMID:42399945:s05:p01",
+        "PMID:42381893:s06:p02",
+        "PMID:42639604:s05:p16",
+        "PMID:42422434:s12:p01",
+        "PMID:42409396:s08:p03",
+        "PMID:42550956:s03:p02",
+        "PMID:41883562:s01:p04",
+        "PMID:42550956:s03:p01",
+        "PMID:42656766:s13:p30",
+        "PMID:42381893:s06:p01",
+        "PMID:42897745:s02:p06"
+      ]
+    },
+    "results": {
+      "train": {
+        "spaCy-Rules": {
+          "schema_version": 1,
+          "n": 150,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.9220085470085472,
+          "macro_f1_supported_classes": 0.9220085470085472,
+          "causal_generalization_measured": true,
+          "per_class": {
+            "causal": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4,
+              "evaluable": true
+            },
+            "association_only": {
+              "precision": 0.8974358974358975,
+              "recall": 0.7777777777777778,
+              "f1": 0.8333333333333334,
+              "support": 45,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.9065420560747663,
+              "recall": 0.9603960396039604,
+              "f1": 0.9326923076923077,
+              "support": 101,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              0,
+              35,
+              10
+            ],
+            [
+              0,
+              4,
+              97
+            ]
+          ]
+        },
+        "KeywordHeuristic": {
+          "schema_version": 1,
+          "n": 150,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.6058323158323158,
+          "macro_f1_supported_classes": 0.6058323158323158,
+          "causal_generalization_measured": true,
+          "per_class": {
+            "causal": {
+              "precision": 0.2,
+              "recall": 0.25,
+              "f1": 0.2222222222222222,
+              "support": 4,
+              "evaluable": true
+            },
+            "association_only": {
+              "precision": 0.717391304347826,
+              "recall": 0.7333333333333333,
+              "f1": 0.7252747252747253,
+              "support": 45,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.8787878787878788,
+              "recall": 0.8613861386138614,
+              "f1": 0.87,
+              "support": 101,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              33,
+              10
+            ],
+            [
+              2,
+              12,
+              87
+            ]
+          ]
+        },
+        "TF-IDF + LogisticRegression": {
+          "schema_version": 1,
+          "n": 150,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 1.0,
+          "macro_f1_supported_classes": 1.0,
+          "causal_generalization_measured": true,
+          "per_class": {
+            "causal": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 4,
+              "evaluable": true
+            },
+            "association_only": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 45,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 101,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              0,
+              45,
+              0
+            ],
+            [
+              0,
+              0,
+              101
+            ]
+          ]
+        },
+        "MiniLM frozen encoder + LogisticRegression": {
+          "schema_version": 1,
+          "n": 150,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.7156079137722858,
+          "macro_f1_supported_classes": 0.7156079137722858,
+          "causal_generalization_measured": true,
+          "per_class": {
+            "causal": {
+              "precision": 0.3076923076923077,
+              "recall": 1.0,
+              "f1": 0.47058823529411764,
+              "support": 4,
+              "evaluable": true
+            },
+            "association_only": {
+              "precision": 0.7755102040816326,
+              "recall": 0.8444444444444444,
+              "f1": 0.8085106382978723,
+              "support": 45,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.9318181818181818,
+              "recall": 0.8118811881188119,
+              "f1": 0.8677248677248677,
+              "support": 101,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              1,
+              38,
+              6
+            ],
+            [
+              8,
+              11,
+              82
+            ]
+          ]
+        }
+      },
+      "dev": {
+        "spaCy-Rules": {
+          "schema_version": 1,
+          "n": 50,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.6262626262626263,
+          "macro_f1_supported_classes": 0.9393939393939394,
+          "causal_generalization_measured": false,
+          "per_class": {
+            "causal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "evaluable": false,
+              "note": "Zero reference support; class generalization is unmeasured."
+            },
+            "association_only": {
+              "precision": 0.9545454545454546,
+              "recall": 0.9130434782608695,
+              "f1": 0.9333333333333333,
+              "support": 23,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.9285714285714286,
+              "recall": 0.9629629629629629,
+              "f1": 0.9454545454545454,
+              "support": 27,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              21,
+              2
+            ],
+            [
+              0,
+              1,
+              26
+            ]
+          ]
+        },
+        "KeywordHeuristic": {
+          "schema_version": 1,
+          "n": 50,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.5506172839506173,
+          "macro_f1_supported_classes": 0.825925925925926,
+          "causal_generalization_measured": false,
+          "per_class": {
+            "causal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "evaluable": false,
+              "note": "Zero reference support; class generalization is unmeasured."
+            },
+            "association_only": {
+              "precision": 0.8181818181818182,
+              "recall": 0.782608695652174,
+              "f1": 0.8,
+              "support": 23,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.8518518518518519,
+              "recall": 0.8518518518518519,
+              "f1": 0.8518518518518519,
+              "support": 27,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              18,
+              4
+            ],
+            [
+              0,
+              4,
+              23
+            ]
+          ]
+        },
+        "TF-IDF + LogisticRegression": {
+          "schema_version": 1,
+          "n": 50,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.5685862407173882,
+          "macro_f1_supported_classes": 0.8528793610760823,
+          "causal_generalization_measured": false,
+          "per_class": {
+            "causal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "evaluable": false,
+              "note": "Zero reference support; class generalization is unmeasured."
+            },
+            "association_only": {
+              "precision": 1.0,
+              "recall": 0.6956521739130435,
+              "f1": 0.8205128205128205,
+              "support": 23,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.7941176470588235,
+              "recall": 1.0,
+              "f1": 0.8852459016393442,
+              "support": 27,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              16,
+              7
+            ],
+            [
+              0,
+              0,
+              27
+            ]
+          ]
+        },
+        "MiniLM frozen encoder + LogisticRegression": {
+          "schema_version": 1,
+          "n": 50,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.3931623931623931,
+          "macro_f1_supported_classes": 0.5897435897435896,
+          "causal_generalization_measured": false,
+          "per_class": {
+            "causal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "evaluable": false,
+              "note": "Zero reference support; class generalization is unmeasured."
+            },
+            "association_only": {
+              "precision": 0.625,
+              "recall": 0.43478260869565216,
+              "f1": 0.5128205128205128,
+              "support": 23,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.6333333333333333,
+              "recall": 0.7037037037037037,
+              "f1": 0.6666666666666666,
+              "support": 27,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              10,
+              11
+            ],
+            [
+              2,
+              6,
+              19
+            ]
+          ]
+        }
+      },
+      "test": {
+        "spaCy-Rules": {
+          "schema_version": 1,
+          "n": 50,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.5857212238950947,
+          "macro_f1_supported_classes": 0.878581835842642,
+          "causal_generalization_measured": false,
+          "per_class": {
+            "causal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "evaluable": false,
+              "note": "Zero reference support; class generalization is unmeasured."
+            },
+            "association_only": {
+              "precision": 1.0,
+              "recall": 0.7058823529411765,
+              "f1": 0.8275862068965517,
+              "support": 17,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.868421052631579,
+              "recall": 1.0,
+              "f1": 0.9295774647887324,
+              "support": 33,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              12,
+              5
+            ],
+            [
+              0,
+              0,
+              33
+            ]
+          ]
+        },
+        "KeywordHeuristic": {
+          "schema_version": 1,
+          "n": 50,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.5181224004753416,
+          "macro_f1_supported_classes": 0.7771836007130125,
+          "causal_generalization_measured": false,
+          "per_class": {
+            "causal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "evaluable": false,
+              "note": "Zero reference support; class generalization is unmeasured."
+            },
+            "association_only": {
+              "precision": 0.7058823529411765,
+              "recall": 0.7058823529411765,
+              "f1": 0.7058823529411765,
+              "support": 17,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.8484848484848485,
+              "recall": 0.8484848484848485,
+              "f1": 0.8484848484848485,
+              "support": 33,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              12,
+              5
+            ],
+            [
+              0,
+              5,
+              28
+            ]
+          ]
+        },
+        "TF-IDF + LogisticRegression": {
+          "schema_version": 1,
+          "n": 50,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.5533430467864658,
+          "macro_f1_supported_classes": 0.8300145701796988,
+          "causal_generalization_measured": false,
+          "per_class": {
+            "causal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "evaluable": false,
+              "note": "Zero reference support; class generalization is unmeasured."
+            },
+            "association_only": {
+              "precision": 0.9166666666666666,
+              "recall": 0.6470588235294118,
+              "f1": 0.7586206896551724,
+              "support": 17,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.8421052631578947,
+              "recall": 0.9696969696969697,
+              "f1": 0.9014084507042254,
+              "support": 33,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              11,
+              6
+            ],
+            [
+              0,
+              1,
+              32
+            ]
+          ]
+        },
+        "MiniLM frozen encoder + LogisticRegression": {
+          "schema_version": 1,
+          "n": 50,
+          "evaluated_fields": [
+            "relation_class"
+          ],
+          "primary_metric": "macro_f1_supported_classes",
+          "macro_f1_all_three_classes": 0.4884135472370767,
+          "macro_f1_supported_classes": 0.732620320855615,
+          "causal_generalization_measured": false,
+          "per_class": {
+            "causal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "evaluable": false,
+              "note": "Zero reference support; class generalization is unmeasured."
+            },
+            "association_only": {
+              "precision": 0.6470588235294118,
+              "recall": 0.6470588235294118,
+              "f1": 0.6470588235294118,
+              "support": 17,
+              "evaluable": true
+            },
+            "none": {
+              "precision": 0.8181818181818182,
+              "recall": 0.8181818181818182,
+              "f1": 0.8181818181818182,
+              "support": 33,
+              "evaluable": true
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              11,
+              6
+            ],
+            [
+              0,
+              6,
+              27
+            ]
+          ]
+        }
+      }
+    },
+    "timings": {
+      "spaCy-Rules": {
+        "inference_seconds": 0.06898729197564535,
+        "training_seconds": 0
+      },
+      "KeywordHeuristic": {
+        "inference_seconds": 0.010411249997559935,
+        "training_seconds": 0
+      },
+      "encoder_setup_seconds": 0.3155876660021022,
+      "TF-IDF + LogisticRegression": {
+        "training_seconds": 0.021494709013495594,
+        "inference_seconds": 0.00926304201129824
+      },
+      "MiniLM frozen encoder + LogisticRegression": {
+        "training_seconds": 0.004482290998566896,
+        "inference_seconds": 0.010643749992595986,
+        "embedding_seconds_including_cache": 0.0028473330021370202
+      }
+    },
+    "encoder": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+      "weights_sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+      "architecture": "BertModel",
+      "parameter_count": 22713216,
+      "encoder_finetuned": false,
+      "pooling": "attention_mask_mean_then_l2_normalization",
+      "device": "cpu",
+      "max_length": 256
+    },
+    "common_tokenizer_truncated_examples": 4,
+    "same_classifier_settings": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "max_iter": 2000,
+      "random_state": 42
+    },
+    "fairness": [
+      "Same candidate IDs, document splits, relation classes, and metrics for every method",
+      "TF-IDF vocabulary and both classifier heads fit on train only",
+      "Both learned models receive the same token-bounded mention-marked texts",
+      "Pretrained transformer is frozen; only its logistic head is fitted",
+      "No test-based hyperparameter selection; settings fixed in configuration",
+      "Rules operate on original sentence/mention spans; learned systems use bounded text",
+      "Training time is not directly comparable to fixed pretrained-model inference"
+    ],
+    "limitations": [
+      "Pseudo-labels are rule-derived, favouring related rules; not independent gold accuracy",
+      "Dev/test have zero causal support: held-out causal generalization is unmeasured",
+      "Small training set: only four causal training pairs",
+      "Relation classification alone does not estimate direction/polarity or justify a DAG edge",
+      "Historical LLM pilots cover different subsets and are excluded from this controlled comparison",
+      "Frozen encoder benchmark is not full transformer fine-tuning; pretraining corpus overlap is unknown"
+    ],
+    "error_analysis_path": "results/benchmark/error_analysis.json"
+  },
+  "graph": {
+    "raw_edges": 1,
+    "pre_repair_cycles": 0,
+    "edges_removed": 0,
+    "post_repair_edges": 1,
+    "is_dag": true,
+    "filtering_stats": {
+      "filtered_self_loops_count": 0,
+      "association_edges_count": 31,
+      "causal_edges_count": 1,
+      "causal_nodes_count": 2,
+      "association_nodes_count": 10,
+      "combined_nodes_count": 10,
+      "combined_edges_count": 32
+    },
+    "predictions_loaded": 2326,
+    "predictions_per_file": {
+      "keywordheuristic_predictions.jsonl": 1143,
+      "prompted-llm-gemini_predictions.jsonl": 20,
+      "prompted-llm-groq_predictions.jsonl": 20,
+      "spacy-rules_predictions.jsonl": 1143
+    }
+  },
+  "bayesian": {
+    "stage": "bayesian_modelling",
+    "source": {
+      "kind": "real_observations",
+      "path": "data/brfss/raw/LLCP2015XPT.zip",
+      "path_scope": "project_relative",
+      "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+      "is_synthetic": false
+    },
+    "model_fitted": true,
+    "human_validation": "pending",
+    "structure": {
+      "nodes": [
+        "BMICat",
+        "Outcome"
+      ],
+      "edges": [
+        [
+          "BMICat",
+          "Outcome"
+        ]
+      ],
+      "normalized": true,
+      "cpds": 2,
+      "is_dag": true,
+      "status": "project_accepted_prior_not_human_validated"
+    },
+    "preprocessing": {
+      "profile": "brfss_2015",
+      "year": 2015,
+      "is_synthetic": false,
+      "source": "https://www.cdc.gov/brfss/annual_data/annual_2015.html",
+      "rows_input": 441456,
+      "rows_retained": 401327,
+      "rows_removed": 40129,
+      "invalid_or_missing_by_variable": {
+        "AgeCat": 0,
+        "Sex": 0,
+        "Education": 1811,
+        "Income": 79505,
+        "Smoker": 17549,
+        "PhysActivity": 37992,
+        "Outcome": 4406,
+        "BMICat": 36398
+      },
+      "available_variables": [
+        "AgeCat",
+        "Sex",
+        "Education",
+        "Income",
+        "Smoker",
+        "PhysActivity",
+        "Outcome",
+        "BMICat"
+      ],
+      "unavailable_variables": [],
+      "required_variables": [
+        "BMICat",
+        "Outcome"
+      ],
+      "policy": "Complete cases for model variables only; optional missing states retained",
+      "survey_design": "Unweighted respondent-level model; not population prevalence or a design-based estimate",
+      "outcome": "Self-reported diabetes OR prediabetes; pregnancy-only diabetes excluded",
+      "age_boundaries": [
+        18,
+        45,
+        65,
+        75,
+        81
+      ],
+      "source_fields": {
+        "AgeCat": "_AGE80",
+        "Sex": "SEX",
+        "Education": "EDUCA",
+        "Income": "INCOME2",
+        "Smoker": "SMOKE100",
+        "PhysActivity": "EXERANY2",
+        "BMICat": "_BMI5",
+        "Outcome": "DIABETE3"
+      },
+      "ignored_columns": []
+    },
+    "dataset_summary": {
+      "AgeCat": {
+        "middle_aged": 154145,
+        "young": 105033,
+        "older": 81415,
+        "elderly": 60734
+      },
+      "Sex": {
+        "female": 222565,
+        "male": 178762
+      },
+      "Education": {
+        "high": 258388,
+        "medium": 111972,
+        "low": 30085,
+        "nan": 882
+      },
+      "Income": {
+        "high": 164145,
+        "low": 90001,
+        "medium": 85820,
+        "nan": 61361
+      },
+      "Smoker": {
+        "0": 219099,
+        "1": 173332,
+        "nan": 8896
+      },
+      "PhysActivity": {
+        "1": 276189,
+        "0": 98476,
+        "nan": 26662
+      },
+      "Outcome": {
+        "0": 341486,
+        "1": 59841
+      },
+      "BMICat": {
+        "overweight": 145837,
+        "normal": 130232,
+        "obese": 118604,
+        "underweight": 6654
+      }
+    },
+    "split": {
+      "seed": 42,
+      "test_size": 0.2,
+      "stratified": true,
+      "train_rows": 321061,
+      "test_rows": 80266,
+      "overlap": 0
+    },
+    "evaluation": {
+      "status": "observational_predictive_evaluation",
+      "n_test": 80266,
+      "conditioning_features": [
+        "BMICat"
+      ],
+      "log_loss": 0.396413265951748,
+      "brier_score": 0.1204832904437921,
+      "baseline": {
+        "log_loss": 0.42115212972609756,
+        "brier_score": 0.12687215752193923
+      },
+      "baseline_training_prevalence": 0.14910873634605262,
+      "calibration": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 27560,
+          "mean_predicted": 0.06680601776631627,
+          "observed_rate": 0.0671988388969521
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 28921,
+          "mean_predicted": 0.13431401268846124,
+          "observed_rate": 0.13180733722900315
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 23785,
+          "mean_predicted": 0.2622185134504496,
+          "observed_rate": 0.2650409922219886
+        }
+      ],
+      "calibration_coverage": {
+        "populated_bins": 3,
+        "total_bins": 10,
+        "distinct_predicted_probabilities": 4,
+        "minimum_prediction": 0.0516470979702429,
+        "maximum_prediction": 0.26221851345044966,
+        "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+      },
+      "causal_accuracy": null,
+      "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+      "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+    },
+    "comparisons": [
+      {
+        "state": "underweight",
+        "observational": {
+          "kind": "observational",
+          "target": "Outcome",
+          "evidence": {
+            "BMICat": "underweight"
+          },
+          "distribution": {
+            "0": 0.9483529020297571,
+            "1": 0.0516470979702429
+          },
+          "model_mode": "literature_prior",
+          "data_source": {
+            "kind": "real_observations",
+            "path": "data/brfss/raw/LLCP2015XPT.zip",
+            "path_scope": "project_relative",
+            "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+            "is_synthetic": false
+          },
+          "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+        },
+        "interventional": {
+          "kind": "interventional",
+          "target": "Outcome",
+          "evidence": {},
+          "distribution": {
+            "0": 0.9483529020297571,
+            "1": 0.0516470979702429
+          },
+          "model_mode": "literature_prior",
+          "data_source": {
+            "kind": "real_observations",
+            "path": "data/brfss/raw/LLCP2015XPT.zip",
+            "path_scope": "project_relative",
+            "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+            "is_synthetic": false
+          },
+          "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+          "interventions": {
+            "BMICat": "underweight"
+          },
+          "identification": {
+            "status": "model_simulation_only",
+            "identified_under_assumptions": false,
+            "real_world_causal_validity_established": false,
+            "unmet_assumptions": [
+              "assume_causal_sufficiency",
+              "assume_consistency",
+              "acknowledge_structural_prior"
+            ],
+            "positivity_violations": [],
+            "positivity_unverified_variables": [],
+            "method": "Truncated factorization in a fully observed causal DAG",
+            "limitations": [
+              "No causal discovery or proof of absent unmeasured confounding",
+              "No front-door, latent-confounder ID algorithm, or transportability claim",
+              "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+            ]
+          }
+        }
+      },
+      {
+        "state": "normal",
+        "observational": {
+          "kind": "observational",
+          "target": "Outcome",
+          "evidence": {
+            "BMICat": "normal"
+          },
+          "distribution": {
+            "0": 0.9323851666078117,
+            "1": 0.06761483339218838
+          },
+          "model_mode": "literature_prior",
+          "data_source": {
+            "kind": "real_observations",
+            "path": "data/brfss/raw/LLCP2015XPT.zip",
+            "path_scope": "project_relative",
+            "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+            "is_synthetic": false
+          },
+          "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+        },
+        "interventional": {
+          "kind": "interventional",
+          "target": "Outcome",
+          "evidence": {},
+          "distribution": {
+            "0": 0.9323851666078117,
+            "1": 0.06761483339218838
+          },
+          "model_mode": "literature_prior",
+          "data_source": {
+            "kind": "real_observations",
+            "path": "data/brfss/raw/LLCP2015XPT.zip",
+            "path_scope": "project_relative",
+            "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+            "is_synthetic": false
+          },
+          "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+          "interventions": {
+            "BMICat": "normal"
+          },
+          "identification": {
+            "status": "model_simulation_only",
+            "identified_under_assumptions": false,
+            "real_world_causal_validity_established": false,
+            "unmet_assumptions": [
+              "assume_causal_sufficiency",
+              "assume_consistency",
+              "acknowledge_structural_prior"
+            ],
+            "positivity_violations": [],
+            "positivity_unverified_variables": [],
+            "method": "Truncated factorization in a fully observed causal DAG",
+            "limitations": [
+              "No causal discovery or proof of absent unmeasured confounding",
+              "No front-door, latent-confounder ID algorithm, or transportability claim",
+              "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+            ]
+          }
+        }
+      },
+      {
+        "state": "overweight",
+        "observational": {
+          "kind": "observational",
+          "target": "Outcome",
+          "evidence": {
+            "BMICat": "overweight"
+          },
+          "distribution": {
+            "0": 0.8656859873115387,
+            "1": 0.13431401268846127
+          },
+          "model_mode": "literature_prior",
+          "data_source": {
+            "kind": "real_observations",
+            "path": "data/brfss/raw/LLCP2015XPT.zip",
+            "path_scope": "project_relative",
+            "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+            "is_synthetic": false
+          },
+          "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+        },
+        "interventional": {
+          "kind": "interventional",
+          "target": "Outcome",
+          "evidence": {},
+          "distribution": {
+            "0": 0.8656859873115387,
+            "1": 0.13431401268846127
+          },
+          "model_mode": "literature_prior",
+          "data_source": {
+            "kind": "real_observations",
+            "path": "data/brfss/raw/LLCP2015XPT.zip",
+            "path_scope": "project_relative",
+            "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+            "is_synthetic": false
+          },
+          "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+          "interventions": {
+            "BMICat": "overweight"
+          },
+          "identification": {
+            "status": "model_simulation_only",
+            "identified_under_assumptions": false,
+            "real_world_causal_validity_established": false,
+            "unmet_assumptions": [
+              "assume_causal_sufficiency",
+              "assume_consistency",
+              "acknowledge_structural_prior"
+            ],
+            "positivity_violations": [],
+            "positivity_unverified_variables": [],
+            "method": "Truncated factorization in a fully observed causal DAG",
+            "limitations": [
+              "No causal discovery or proof of absent unmeasured confounding",
+              "No front-door, latent-confounder ID algorithm, or transportability claim",
+              "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+            ]
+          }
+        }
+      },
+      {
+        "state": "obese",
+        "observational": {
+          "kind": "observational",
+          "target": "Outcome",
+          "evidence": {
+            "BMICat": "obese"
+          },
+          "distribution": {
+            "0": 0.7377814865495503,
+            "1": 0.26221851345044966
+          },
+          "model_mode": "literature_prior",
+          "data_source": {
+            "kind": "real_observations",
+            "path": "data/brfss/raw/LLCP2015XPT.zip",
+            "path_scope": "project_relative",
+            "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+            "is_synthetic": false
+          },
+          "interpretation": "Conditional probability; not an intervention or clinical recommendation"
+        },
+        "interventional": {
+          "kind": "interventional",
+          "target": "Outcome",
+          "evidence": {},
+          "distribution": {
+            "0": 0.7377814865495503,
+            "1": 0.26221851345044966
+          },
+          "model_mode": "literature_prior",
+          "data_source": {
+            "kind": "real_observations",
+            "path": "data/brfss/raw/LLCP2015XPT.zip",
+            "path_scope": "project_relative",
+            "sha256": "38bfd48c64b99328c67feac36cedfff6f2991d49e89c4ffd549083cb626764f0",
+            "is_synthetic": false
+          },
+          "interpretation": "Hypothetical intervention under the stated graph and assumptions; not clinical efficacy",
+          "interventions": {
+            "BMICat": "obese"
+          },
+          "identification": {
+            "status": "model_simulation_only",
+            "identified_under_assumptions": false,
+            "real_world_causal_validity_established": false,
+            "unmet_assumptions": [
+              "assume_causal_sufficiency",
+              "assume_consistency",
+              "acknowledge_structural_prior"
+            ],
+            "positivity_violations": [],
+            "positivity_unverified_variables": [],
+            "method": "Truncated factorization in a fully observed causal DAG",
+            "limitations": [
+              "No causal discovery or proof of absent unmeasured confounding",
+              "No front-door, latent-confounder ID algorithm, or transportability claim",
+              "BRFSS is cross-sectional self-report; timing and intervention consistency are assumptions"
+            ]
+          }
+        }
+      }
+    ],
+    "sensitivity": [
+      {
+        "experiment": "smoothing",
+        "equivalent_sample_size": 1.0,
+        "evaluation": {
+          "status": "observational_predictive_evaluation",
+          "n_test": 80266,
+          "conditioning_features": [
+            "BMICat"
+          ],
+          "log_loss": 0.3964135321662098,
+          "brier_score": 0.12048331632010226,
+          "baseline": {
+            "log_loss": 0.42115212972609756,
+            "brier_score": 0.12687215752193923
+          },
+          "baseline_training_prevalence": 0.14910873634605262,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "count": 27560,
+              "mean_predicted": 0.06679775438053412,
+              "observed_rate": 0.0671988388969521
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 28921,
+              "mean_predicted": 0.13431088492831408,
+              "observed_rate": 0.13180733722900315
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.30000000000000004,
+              "count": 23785,
+              "mean_predicted": 0.2622160057161388,
+              "observed_rate": 0.2650409922219886
+            }
+          ],
+          "calibration_coverage": {
+            "populated_bins": 3,
+            "total_bins": 10,
+            "distinct_predicted_probabilities": 4,
+            "minimum_prediction": 0.051561831407787764,
+            "maximum_prediction": 0.26221600571613884,
+            "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+          },
+          "causal_accuracy": null,
+          "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+          "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+        },
+        "bmi_risks": {
+          "underweight": 0.051561831407787764,
+          "normal": 0.0676106785691121,
+          "overweight": 0.13431088492831408,
+          "obese": 0.26221600571613884
+        }
+      },
+      {
+        "experiment": "smoothing",
+        "equivalent_sample_size": 5.0,
+        "evaluation": {
+          "status": "observational_predictive_evaluation",
+          "n_test": 80266,
+          "conditioning_features": [
+            "BMICat"
+          ],
+          "log_loss": 0.396413265951748,
+          "brier_score": 0.1204832904437921,
+          "baseline": {
+            "log_loss": 0.42115212972609756,
+            "brier_score": 0.12687215752193923
+          },
+          "baseline_training_prevalence": 0.14910873634605262,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "count": 27560,
+              "mean_predicted": 0.06680601776631627,
+              "observed_rate": 0.0671988388969521
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 28921,
+              "mean_predicted": 0.13431401268846124,
+              "observed_rate": 0.13180733722900315
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.30000000000000004,
+              "count": 23785,
+              "mean_predicted": 0.2622185134504496,
+              "observed_rate": 0.2650409922219886
+            }
+          ],
+          "calibration_coverage": {
+            "populated_bins": 3,
+            "total_bins": 10,
+            "distinct_predicted_probabilities": 4,
+            "minimum_prediction": 0.0516470979702429,
+            "maximum_prediction": 0.26221851345044966,
+            "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+          },
+          "causal_accuracy": null,
+          "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+          "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+        },
+        "bmi_risks": {
+          "underweight": 0.0516470979702429,
+          "normal": 0.06761483339218838,
+          "overweight": 0.13431401268846127,
+          "obese": 0.26221851345044966
+        }
+      },
+      {
+        "experiment": "smoothing",
+        "equivalent_sample_size": 20.0,
+        "evaluation": {
+          "status": "observational_predictive_evaluation",
+          "n_test": 80266,
+          "conditioning_features": [
+            "BMICat"
+          ],
+          "log_loss": 0.3964122965059942,
+          "brier_score": 0.12048319594562579,
+          "baseline": {
+            "log_loss": 0.42115212972609756,
+            "brier_score": 0.12687215752193923
+          },
+          "baseline_training_prevalence": 0.14910873634605262,
+          "calibration": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "count": 27560,
+              "mean_predicted": 0.0668369901702919,
+              "observed_rate": 0.0671988388969521
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 28921,
+              "mean_predicted": 0.13432574131251013,
+              "observed_rate": 0.13180733722900315
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.30000000000000004,
+              "count": 23785,
+              "mean_predicted": 0.2622279169830422,
+              "observed_rate": 0.2650409922219886
+            }
+          ],
+          "calibration_coverage": {
+            "populated_bins": 3,
+            "total_bins": 10,
+            "distinct_predicted_probabilities": 4,
+            "minimum_prediction": 0.051966558996769906,
+            "maximum_prediction": 0.26222791698304226,
+            "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+          },
+          "causal_accuracy": null,
+          "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+          "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+        },
+        "bmi_risks": {
+          "underweight": 0.051966558996769906,
+          "normal": 0.06763041326761024,
+          "overweight": 0.13432574131251016,
+          "obese": 0.26222791698304226
+        }
+      },
+      {
+        "experiment": "exploratory_all_edges_removed_independence_assumption",
+        "structure": {
+          "active_edges": [],
+          "source_prior_edges": [
+            [
+              "BMICat",
+              "Outcome"
+            ]
+          ]
+        },
+        "counts_reestimated": true,
+        "evaluation": {
+          "status": "observational_predictive_evaluation",
+          "n_test": 80266,
+          "conditioning_features": [],
+          "log_loss": 0.42115213003792246,
+          "brier_score": 0.12687215760106627,
+          "baseline": {
+            "log_loss": 0.42115212972609756,
+            "brier_score": 0.12687215752193923
+          },
+          "baseline_training_prevalence": 0.14910873634605262,
+          "calibration": [
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "count": 80266,
+              "mean_predicted": 0.1491142008185233,
+              "observed_rate": 0.14910422844043555
+            }
+          ],
+          "calibration_coverage": {
+            "populated_bins": 1,
+            "total_bins": 10,
+            "distinct_predicted_probabilities": 1,
+            "minimum_prediction": 0.1491142008185233,
+            "maximum_prediction": 0.1491142008185233,
+            "limitation": "Only populated risk bins are assessed; calibration outside observed prediction support is unmeasured."
+          },
+          "causal_accuracy": null,
+          "causal_evaluation_requirements": "A prespecified causal estimand, defensible identification assumptions, and independent interventional or credible quasi-experimental outcome evidence; an RCT linkage alone does not define a generic causal accuracy metric.",
+          "interpretation": "Unweighted held-out respondent prediction; not causal validation"
+        }
+      }
+    ],
+    "causal_validity_established": false,
+    "reproducibility": {
+      "python": "3.11.17",
+      "config": {
+        "seed": 42,
+        "test_size": 0.2,
+        "paths": {
+          "graph": "results/graph/current/evidence_graph_after_repair.graphml",
+          "provenance": "results/graph/current/provenance.json",
+          "annotation_queue": "data/annotations/human_annotation_queue.jsonl",
+          "output": "results/modelling/brfss2015"
+        },
+        "model": {
+          "mode": "literature_prior",
+          "variables": [
+            "BMICat",
+            "Outcome"
+          ],
+          "exploratory_edges": [],
+          "acknowledge_independence": false
+        },
+        "estimation": {
+          "method": "bayesian",
+          "equivalent_sample_size": 5.0
+        },
+        "data": {
+          "year": 2015,
+          "profile": "brfss_2015",
+          "missing_policy": "complete_case_model_variables",
+          "age_boundaries": [
+            18,
+            45,
+            65,
+            75,
+            81
+          ],
+          "outcome_definition": "prediabetes_or_diabetes"
+        },
+        "causal": {
+          "assume_causal_sufficiency": false,
+          "assume_consistency": false,
+          "acknowledge_structural_prior": false
+        }
+      },
+      "versions": {
+        "pgmpy": "1.0.0",
+        "pandas": "3.0.6",
+        "numpy": "1.26.4",
+        "networkx": "3.6.1",
+        "scikit-learn": "1.9.1",
+        "matplotlib": "3.11.2"
+      }
+    }
+  },
+  "data_lineage": "Frozen biomedical text \u2192 saved sentence predictions \u2192 filtered prior DAG \u2192 BRFSS CPDs",
+  "causal_validity_established": false
+}

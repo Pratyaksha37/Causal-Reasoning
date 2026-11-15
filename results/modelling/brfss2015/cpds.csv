@@ -1,0 +1,13 @@
+variable,parents,state,probability
+BMICat,{},underweight,0.016380588414843054
+BMICat,{},normal,0.32413662611425686
+BMICat,{},overweight,0.3641533205010808
+BMICat,{},obese,0.29532946496981927
+Outcome,"{""BMICat"": ""underweight""}",0,0.9483529020297571
+Outcome,"{""BMICat"": ""underweight""}",1,0.0516470979702429
+Outcome,"{""BMICat"": ""normal""}",0,0.9323851666078117
+Outcome,"{""BMICat"": ""normal""}",1,0.06761483339218838
+Outcome,"{""BMICat"": ""overweight""}",0,0.8656859873115387
+Outcome,"{""BMICat"": ""overweight""}",1,0.13431401268846127
+Outcome,"{""BMICat"": ""obese""}",0,0.7377814865495503
+Outcome,"{""BMICat"": ""obese""}",1,0.26221851345044966

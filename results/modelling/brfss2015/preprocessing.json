@@ -1,0 +1,55 @@
+{
+  "profile": "brfss_2015",
+  "year": 2015,
+  "is_synthetic": false,
+  "source": "https://www.cdc.gov/brfss/annual_data/annual_2015.html",
+  "rows_input": 441456,
+  "rows_retained": 401327,
+  "rows_removed": 40129,
+  "invalid_or_missing_by_variable": {
+    "AgeCat": 0,
+    "Sex": 0,
+    "Education": 1811,
+    "Income": 79505,
+    "Smoker": 17549,
+    "PhysActivity": 37992,
+    "Outcome": 4406,
+    "BMICat": 36398
+  },
+  "available_variables": [
+    "AgeCat",
+    "Sex",
+    "Education",
+    "Income",
+    "Smoker",
+    "PhysActivity",
+    "Outcome",
+    "BMICat"
+  ],
+  "unavailable_variables": [],
+  "required_variables": [
+    "BMICat",
+    "Outcome"
+  ],
+  "policy": "Complete cases for model variables only; optional missing states retained",
+  "survey_design": "Unweighted respondent-level model; not population prevalence or a design-based estimate",
+  "outcome": "Self-reported diabetes OR prediabetes; pregnancy-only diabetes excluded",
+  "age_boundaries": [
+    18,
+    45,
+    65,
+    75,
+    81
+  ],
+  "source_fields": {
+    "AgeCat": "_AGE80",
+    "Sex": "SEX",
+    "Education": "EDUCA",
+    "Income": "INCOME2",
+    "Smoker": "SMOKE100",
+    "PhysActivity": "EXERANY2",
+    "BMICat": "_BMI5",
+    "Outcome": "DIABETE3"
+  },
+  "ignored_columns": []
+}
