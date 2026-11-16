@@ -1,0 +1,271 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx,booktabs,tabularx,array,amsmath,amssymb,url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\newcommand{\subhead}[1]{\subsection{#1}}
+\newcommand{\takeaway}[1]{\par\smallskip\noindent\textit{Interpretation:} #1\par\smallskip}
+\newcommand{\source}[1]{\par\smallskip{\footnotesize\textit{Artifact provenance:} \nolinkurl{#1}}\par\smallskip}
+\newcommand{\cmd}[1]{\par\smallskip{\footnotesize\ttfamily\raggedright\detokenize{#1}\par}\smallskip}
+\begin{document}
+\raggedbottom
+\title{Neuro-Symbolic Causal Inference for Diabetes-Related Health Evidence}
+\author{\IEEEauthorblockN{Yogesh Mishra, Shagun Singh, Pratyaksha Shastri, Shiva Sharma, and Shashwat Sinha}
+\IEEEauthorblockA{Team T003\\Student IDs: 2401010518, 2401010434, 2401010348, 2401010441, 2401010438}}
+\maketitle
+\begin{abstract}
+This report presents an auditable research prototype that connects biomedical relation extraction to probabilistic reasoning about diabetes-related health evidence. A frozen corpus of 500 abstracts supplies typed, provenance-linked relations and a two-node structural prior. A discrete Bayesian network is fitted to 321,061 BRFSS 2015 training respondents and evaluated on 80,266 held-out respondents. The model achieves log loss 0.396413 and Brier score 0.120483, improving on a constant training-prevalence baseline. A document-disjoint NLP comparison uses 250 provisional rule-derived labels; its test split contains no causal examples. Exact observational inference and hypothetical intervention software are implemented. The results support a reproducible predictive demonstration, while independent causal-extraction validation and real-world causal identification remain unresolved.
+\end{abstract}
+\begin{IEEEkeywords}
+Biomedical relation extraction, neuro-symbolic systems, Bayesian networks, diabetes, causal inference, BRFSS.
+\end{IEEEkeywords}
+\section{The completed project}
+An auditable path from literature claims to a small probabilistic model.
+
+The system extracts typed relationships from biomedical abstracts, normalizes them to canonical health concepts and retains sentence-level provenance. A directed evidence graph becomes the structural prior for a discrete Bayesian network fitted to real BRFSS 2015 observations. The same project exposes text extraction, observational queries, hypothetical interventions and a results viewer.
+\subhead{Measured outcomes}
+\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.30\linewidth}>{\raggedright\arraybackslash}X@{}}\toprule
+\textbf{Component}&\textbf{Current result}\\\midrule
+Literature corpus&500 frozen abstracts; 1,143 non-self candidate pairs.\\
+Controlled NLP benchmark&250 provisional labels; document-disjoint 150/50/50 split.\\
+Best supported-class test F1&0.879 for spaCy rules; 0.830 for TF-IDF; 0.733 for frozen MiniLM.\\
+Directed structure&2 nodes, 1 edge, 0 cycles; two supporting sentences from two papers.\\
+Survey model&401,327 retained respondents; 80,266 held out.\\
+Probability evaluation&Log loss 0.39641; Brier score 0.12048; both improve on a constant training-prevalence baseline.\\
+Recorded software verification&96 tests passed; lint and type checks clean.\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+\subhead{What is ready to present}
+\begin{itemize}
+\item A working, integrated implementation with inspectable artifacts and a local demonstration.
+\item A controlled comparison of symbolic, traditional ML and transformer representations.
+\item Explicit separation of evidence assertions, predictive performance and causal identification.
+\end{itemize}
+\takeaway{These results support a reproducible research demonstration. They do not establish reliable causal extraction on independent labels or a clinically valid effect of changing BMI.}
+\source{results/benchmark/comparison.csv; results/modelling/brfss2015/summary.json}
+
+\section{How Phase 2 reuses Phase 1}
+One vocabulary, one evidence handoff and one project entry point.
+
+\subhead{End-to-end flow}
+\begin{center}\normalsize
+Frozen abstracts $\longrightarrow$ canonical entity pairs\\[8pt]
+Typed relation extraction $\longrightarrow$ filtered evidence graph\\[8pt]
+Literature structural prior + BRFSS training data\\[8pt]
+$\Downarrow$\\[8pt]
+Bayesian CPDs $\longrightarrow$ queries, simulations and evaluation
+\end{center}
+\subhead{Reuse rather than duplication}
+Phase 1 supplies the canonical variable names, relation records, evidence provenance and repaired graph. Phase 2 reads the current graph and its provenance from \nolinkurl{results/graph/current/}. The Bayesian configuration specifies which variables and estimation policy to use. Both stages run through the root CLI and feed the same results viewer.
+\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.34\linewidth}>{\raggedright\arraybackslash}X@{}}\toprule
+\textbf{Responsibility}&\textbf{Main project location}\\\midrule
+Integrated orchestration&\nolinkurl{src/pipeline.py}; \nolinkurl{src/cli.py}\\
+NLP benchmark&\nolinkurl{src/evaluation/benchmark.py}\\
+Graph construction&\nolinkurl{src/graph/}\\
+Survey preprocessing&\nolinkurl{src/data/brfss.py}\\
+Model and estimation&\nolinkurl{src/bayesian/}\\
+Intervention logic&\nolinkurl{src/causal/intervention.py}\\
+Configuration&\nolinkurl{configs/benchmark.yaml}; \nolinkurl{configs/bayesian.yaml}\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+\subhead{Audit boundary}
+An extracted statement records what a paper claims. A survey CPD records a conditional distribution under the chosen preprocessing and graph. A graph-surgery output is a hypothetical consequence of a model. None of these alone proves an intervention effect in the real world.
+\source{src/pipeline.py; configs/bayesian.yaml; results/graph/current/provenance.json}
+
+\section{Traditional ML and transformer methods}
+All four methods use the same held-out pairs and relation label space.
+
+\subhead{Corpus and relation task}
+The frozen literature corpus contains 500 abstracts. Candidate generation produces 2,586 pairs in total, including self-pairs; 1,143 are non-self pairs. Canonical aliases link mentions to project health concepts. Candidate-bearing documents number 453. Extraction assigns causal, association or none labels; rule outputs also expose direction and polarity for evidence processing.
+The benchmark has 250 provisional examples. Documents are disjoint between training (150), development (50) and test (50), avoiding sentence leakage from the same paper. The labels carry the source marker \nolinkurl{rule_heuristic_regex_v1}; the exact historical generator implementation is not verified. They are not independently adjudicated gold labels.
+\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.28\linewidth}>{\raggedright\arraybackslash}X@{}}\toprule
+\textbf{Method}&\textbf{Choice and rationale}\\\midrule
+spaCy rules&Interpretable linguistic and pattern baseline; inspectable decisions and typed evidence.\\
+Keyword heuristic&Simple lexical control that tests whether richer machinery adds value.\\
+TF-IDF + logistic regression&Strong, inexpensive sparse-text baseline; fitted vocabulary and classifier use training data only.\\
+MiniLM + logistic regression&Actual pretrained transformer embeddings with a frozen encoder; tests contextual representations without a costly full fine-tune.\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+\subhead{Controlled learned-model setup}
+Both learned methods receive the same entity-marked, token-bounded input. Logistic regression uses $C=1$, balanced class weights, maximum 2,000 iterations and seed 42. The encoder is \nolinkurl{sentence-transformers/all-MiniLM-L6-v2}, with 22,713,216 frozen parameters. Only its logistic head is trained. The legacy DistilBERT-named alias is a keyword implementation and is not presented as a transformer experiment. Historical LLM pilots with unequal coverage are excluded from this comparison.
+\takeaway{The comparison controls the evaluated examples and input construction. Its labels can still favor related rules, and its small size prevents strong ranking claims.}
+\source{configs/benchmark.yaml; results/benchmark/classifier_heads.json; comparison.csv}
+
+\section{What the F1 scores do and do not say}
+The held-out test set contains association and none, but no causal examples.
+
+For each class, precision is $TP/(TP+FP)$, recall is $TP/(TP+FN)$ and $F_1=2PR/(P+R)$. Macro-F1 averages class-level F1 equally rather than letting the larger none class dominate. Supported-class macro-F1 averages association and none on this test split. The all-class version also includes the unsupported causal class and is reported separately for transparency.
+\par\noindent\begin{tabularx}{\linewidth}{@{}Xrr@{}}\toprule
+\textbf{Test method ($n=50$)}&\textbf{Supported F1}&\textbf{All-class F1}\\\midrule
+spaCy rules&0.8786&0.5857\\
+TF-IDF + logistic regression&0.8300&0.5533\\
+Keyword heuristic&0.7772&0.5181\\
+MiniLM + logistic regression&0.7326&0.4884\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+\subhead{Label support explains the evaluation gap}
+\par\noindent\begin{tabularx}{\linewidth}{@{}Xrrr@{}}\toprule
+\textbf{Split}&\textbf{Causal}&\textbf{Association}&\textbf{None}\\\midrule
+Train&4&45&101\\
+Development&0&23&27\\
+Test&0&17&33\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+\begin{itemize}
+\item The rules have the highest supported-class score on these pseudo-labels. This is not evidence that they outperform transformers on independent causal extraction.
+\item MiniLM is frozen and has only 150 head-training examples, including four causal examples. Its score is a small-data result, not a verdict on transformer capacity.
+\item Zero causal test support means causal generalization is unmeasured. Replacing this missing evidence with an attractive aggregate score would misrepresent the experiment.
+\end{itemize}
+A 50-item human annotation queue exists, but annotations and adjudication remain pending. No human agreement or human-validated causal accuracy is claimed. Model-specific error-analysis artifacts are saved for inspection.
+\takeaway{Present the NLP scores as a provisional, document-held-out benchmark. Independent labels with adequate causal support are the next evaluation priority.}
+\source{results/benchmark/comparison.csv; results/benchmark/error_analysis.json}
+
+\section{A traceable, deliberately small DAG}
+Evidence selection is stricter than simply drawing every association as an arrow.
+
+\begin{center}\vspace{3mm}{\Large\textbf{BMICat $\longrightarrow$ Outcome}}\par\vspace{6mm}
+2 nodes \quad / \quad 1 directed edge \quad / \quad 0 cycles
+\end{center}
+Directional relations pass through context filters and evidence deduplication before graph construction. The final DAG is acyclic; cycle repair removes zero edges in the current run. The association graph remains separate, with 31 undirected edges across 10 concepts. Association-only predictions are not promoted into causal arrows. Learned class-only predictions do not automatically define directed graph edges.
+\subhead{Support for the current edge}
+\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.26\linewidth}>{\raggedright\arraybackslash}X@{}}\toprule
+\textbf{Local evidence ID}&\textbf{Claim represented in the saved corpus}\\\midrule
+\nolinkurl{41424208:s12}&An MR-analysis sentence identifies abdominal obesity, measured using waist circumference, as a dominant causal link between NAFLD and type 2 diabetes.\\
+\nolinkurl{42415555:s01}&A sentence links pediatric obesity to abnormal glucose metabolism, including dysglycemia, prediabetes and type 2 diabetes.\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+\subhead{Why this is a structural prior}
+The two sentences provide provenance for the project's accepted graph. They have not been independently adjudicated as sufficient causal identification evidence. They also require measurement alignment: a waist-circumference claim is mapped to BMI, while the survey outcome combines diabetes and prediabetes. Literature populations and BRFSS respondents need not support the same mechanisms.
+\begin{itemize}
+\item The graph is not data-driven causal discovery from the survey.
+\item Acyclicity and source traceability are software and audit properties, not proof that the arrow is causally valid.
+\item The default two-node model omits possible confounders and additional mechanisms.
+\end{itemize}
+\source{results/graph/current/provenance.json; evidence_graph_after_repair.graphml}
+
+\section{Survey preprocessing and inclusion}
+Real, cross-sectional respondent records from the official 2015 survey archive~\cite{cdc}.
+
+\par\noindent\begin{tabularx}{\linewidth}{@{}Xr@{}}\toprule
+\textbf{Processing stage}&\textbf{Respondents}\\\midrule
+Raw BRFSS 2015&441,456\\
+Excluded for incomplete model-variable data&40,129\\
+Retained&401,327\\
+Training split&321,061\\
+Held-out test split&80,266\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+\subhead{Variables and inclusion rules}
+\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.24\linewidth}>{\raggedright\arraybackslash}X@{}}\toprule
+\textbf{Variable}&\textbf{Operational definition}\\\midrule
+BMICat&\nolinkurl{_BMI5}/100; underweight $[12,18.5)$, normal $[18.5,25)$, overweight $[25,30)$, obese $[30,100)$. Invalid or missing BMI is excluded.\\
+Outcome&\nolinkurl{DIABETE3} 1 (diabetes) or 4 (prediabetes) maps to 1; code 3 (no) maps to 0. Pregnancy-only diabetes and unknown responses are excluded.\\
+Other mapped variables&Age category, sex, education, income, smoker and physical activity are available to the project but are not fitted in the default two-node model.\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+Complete-case filtering applies only to variables used by the fitted model. Optional missing states are retained rather than unnecessarily shrinking the sample. The train/test split is stratified, uses seed 42 and has zero row overlap. Probability estimation sees only the training partition.
+\subhead{Population and measurement limits}
+These are unweighted respondent-level estimates. Survey weights, strata and clusters are not incorporated, so the fitted probabilities must not be reported as national prevalence. Self-report and cross-sectional timing limit measurement quality and causal interpretation. The outcome is diabetes \emph{or} prediabetes, not incident type 2 diabetes.
+\source{results/modelling/brfss2015/preprocessing.json; summary.json}
+{\small Official source: \url{https://www.cdc.gov/brfss/annual_data/annual_2015.html}}
+
+\section{Counts become probabilities}
+A discrete Bayesian network with a weak, explicit smoothing prior.
+
+Following the probabilistic graphical model implementation in~\cite{pgmpy}, the fitted network uses \nolinkurl{pgmpy 1.0.0} and factorizes as
+\[P(B,Y)=P(B)P(Y\mid B),\]
+where $B$ is BMI category and $Y$ is the binary survey outcome. BDeu Dirichlet posterior means use equivalent sample size (ESS) 5. For four BMI parent configurations and two outcome states, the prior per outcome cell is $\alpha=5/(4\times2)=0.625$:
+\[\widehat P(Y=k\mid B=j)=\frac{N_{jk}+0.625}{N_j+1.25}.\]
+This count-based estimator is transparent, stable for sparse cells and compatible with a discrete graph. It estimates conditional probabilities; it does not repair an incorrect causal graph. CPDs must be finite, nonnegative and normalized. An MLE option exists and rejects unobserved parent configurations rather than silently inventing probabilities.
+\par\noindent\begin{tabularx}{\linewidth}{@{}Xrr@{}}\toprule
+\textbf{BMI category}&$\boldsymbol{P(Y=0\mid B)}$&$\boldsymbol{P(Y=1\mid B)}$\\\midrule
+Underweight&0.94835&0.05165\\
+Normal&0.93239&0.06761\\
+Overweight&0.86569&0.13431\\
+Obese&0.73778&0.26222\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+\subhead{What is saved}
+\nolinkurl{results/modelling/brfss2015/model.json} is an inspectable model artifact, not an executable pickle. It contains nodes, edges, state names, CPD values and metadata. Source and graph hashes, evidence references, training/split provenance, estimation settings and empirical counts make the fitted model traceable. The root BMI distribution is saved alongside the outcome CPD.
+Supporting artifacts include \nolinkurl{cpds.csv}, \nolinkurl{summary.json}, \nolinkurl{queries.json}, \nolinkurl{sensitivity.json} and preprocessing details. The NLP classifier heads are a separate artifact, \nolinkurl{results/benchmark/classifier_heads.json}; they are not the Bayesian model.
+\source{results/modelling/brfss2015/model.json; cpds.csv; src/bayesian/estimation.py}
+
+\section{Two queries with different meanings}
+Exact inference and graph surgery are implemented; identification remains an assumption.
+
+\subhead{Observational query}
+Variable elimination computes $P(Y\mid B=b)$ from the fitted network. For obese BMI, the saved model returns
+\[P(Y=1\mid B=\mathrm{obese})=0.2622185.\]
+This describes the fitted conditional distribution among survey respondents. It does not estimate the benefit of a weight-change intervention.
+\subhead{Intervention query}
+The intervention code copies the network, removes incoming edges to the intervened variable, replaces its CPD with a point mass and retains descendant mechanisms. Variable elimination then evaluates the modified distribution. In a causally valid fully observed DAG, this corresponds to truncated factorization~\cite{pearl}.
+\[P(Y=1\mid do(B=\mathrm{obese}))=0.2622185\quad\text{in this model}.\]
+The two values are equal because BMI has no parents in the current two-node graph. There is no modelled confounding path. Equality is a consequence of the specified structure, not empirical evidence that confounding is absent.
+\subhead{Why causal accuracy remains unmeasured}
+\begin{itemize}
+\item The default status is \nolinkurl{model_simulation_only}; real-world causal validity is false.
+\item Causal sufficiency, consistency and acceptance of the structural prior are not established. Configuration assertions alone would not prove them.
+\item No independently observed intervention outcomes and prespecified causal estimand are available for causal-effect evaluation.
+\item Empirical positivity checks use unsmoothed counts; smoothing is not treated as evidence of real-world support.
+\end{itemize}
+A synthetic confounding fixture yields observational probability 0.74 and intervention probability 0.50. This verifies the algorithm on a known test mechanism; it is not a diabetes finding.
+\takeaway{Present \nolinkurl{null} as unmeasured causal accuracy, not zero accuracy or a successful causal validation.}
+\source{src/causal/intervention.py; results/modelling/brfss2015/queries.json; summary.json}
+
+\section{Probability quality on held-out data}
+Proper scoring rules are more informative here than threshold accuracy alone.
+
+\par\noindent\begin{tabularx}{\linewidth}{@{}Xrr@{}}\toprule
+\textbf{Metric (lower is better)}&\textbf{Baseline}&\textbf{Bayesian model}\\\midrule
+Log loss&0.421152&0.396413\\
+Brier score&0.126872&0.120483\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+The constant baseline predicts the training prevalence (0.149109) for every held-out respondent. Log loss penalizes confidently incorrect probabilities; Brier score measures squared probability error. Neither metric validates a causal effect. The model reduces log loss by approximately 5.9\% and Brier score by 5.0\% relative to this simple baseline.
+\begin{center}\includegraphics[width=.95\linewidth]{calibration.png}\end{center}
+\vspace{-4mm}
+{\small Calibration uses the 80,266 held-out respondents. Only the three occupied bins are connected; the dashed line denotes perfect agreement.}
+\subhead{Coverage matters as much as closeness to the diagonal}
+There are four distinct predicted probabilities, ranging from 0.051647 to 0.262219. Only 3 of 10 calibration bins are populated. Predicted/observed rates are 0.066806/0.067199 ($n=27,560$), 0.134314/0.131807 ($n=28,921$) and 0.262219/0.265041 ($n=23,785$). Calibration in higher-risk ranges is unmeasured.
+At a 0.5 decision threshold, every probability is below threshold. Accuracy would therefore reward the majority class while positive-class recall and F1 are zero. This is why probability scores are the primary evaluation. ESS values 1, 5 and 20 change log loss only slightly; removing the edge returns baseline-level predictive performance. This shows predictive signal, not causal identification.
+\source{results/modelling/brfss2015/summary.json; sensitivity.json; figures/calibration.png}
+
+\section{How to run and explain the model}
+Use saved artifacts for a short, reproducible presentation.
+
+Run commands from the repository root after the documented environment and local assets are available. The saved-artifact query route avoids rerunning data collection during a live demonstration.
+\subhead{1. Show NLP extraction}
+\cmd{./run.sh predict-text --text "Obesity causes type 2 diabetes."}
+Explain the canonical entities, relation type and direction. A clean illustrative sentence demonstrates behavior; it is not an independent performance evaluation.
+\subhead{2. Inspect the evidence and probabilities}
+Open \nolinkurl{results/index.html}. Show the evidence edge with sentence provenance, then the fitted CPDs and held-out metrics. Inspect \nolinkurl{results/modelling/brfss2015/model.json} to show that the saved model contains actual state names and probability tables.
+\subhead{3. Query the saved network}
+\cmd{./run.sh query --model results/modelling/brfss2015/model.json}
+\cmd{  --evidence BMICat=obese}
+The command above is written over two lines for readability; run it as one line. Expected positive outcome probability: approximately 0.2622.
+\subhead{4. Run a hypothetical intervention}
+\cmd{./run.sh intervene --model results/modelling/brfss2015/model.json}
+\cmd{  --do BMICat=normal}
+Run as one line. Expected positive outcome probability: approximately 0.0676. Show the simulation-only status and explain why changing a model input does not establish real treatment efficacy.
+\subhead{Reproduction and test evidence}
+\cmd{./run.sh run --data data/brfss/raw/LLCP2015XPT.zip}
+\cmd{./run.sh test}
+The recorded verification run reports 96 tests passed in 20.62 seconds. Saved lint and type-check outputs are clean. Tests cover preprocessing, graph/model validation, CPD estimation, inference, intervention behavior, artifact integrity and integration. These are recorded software checks, not a new clinical validation or independent causal benchmark.
+\source{results/verification/test_results.txt; lint.txt; types.txt; src/cli.py}
+
+\section{What should come next}
+The implementation is complete as a prototype; the scientific evidence remains bounded.
+
+\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.27\linewidth}>{\raggedright\arraybackslash}X@{}}\toprule
+\textbf{Limitation}&\textbf{Consequence and next step}\\\midrule
+Rule-derived pseudo-labels&Ranking may favor related rules. Independently annotate and adjudicate a document-held-out set with adequate causal support.\\
+Tiny causal support&Four causal training examples and none in test cannot establish causal extraction performance. Expand the original task's labelled evidence.\\
+Two-node structural prior&Limited predictive detail and no adjusted confounding structure. Add variables only with defensible evidence and measurement alignment.\\
+Cross-sectional self-report&Timing, measurement error, survey design and confounding remain unresolved. Validate on an appropriate external design and population.\\
+Narrow prediction support&Only 5.16\%--26.22\% is assessed. Higher-risk calibration is unmeasured.\\
+No causal ground truth&Define an estimand, identification strategy and independent intervention or credible quasi-experimental evidence before evaluating effects.\\\bottomrule
+\end{tabularx}\par\vspace{4pt}
+
+\section{Conclusion}
+The implementation joins literature evidence, a traceable structural prior, discrete probability estimation, and transparent evaluation in one reproducible prototype. Its held-out probability scores establish predictive signal under the chosen preprocessing. Independent human labels, richer justified structure, appropriate survey design, and a defensible identification strategy are required before stronger causal claims can be assessed.
+\begin{thebibliography}{00}
+\bibitem{cdc} Centers for Disease Control and Prevention, ``2015 BRFSS Survey Data and Documentation.'' [Online]. Available: \url{https://www.cdc.gov/brfss/annual_data/annual_2015.html}
+\bibitem{pearl} J. Pearl, \emph{Causality: Models, Reasoning, and Inference}, 2nd ed. Cambridge University Press, 2009.
+\bibitem{pgmpy} A. Ankan and A. Panda, ``pgmpy: Probabilistic Graphical Models using Python,'' in \emph{Proc. Python in Science Conf.}, 2015.
+\bibitem{encoder} Sentence Transformers, ``all-MiniLM-L6-v2,'' pretrained encoder. Local encoder and trained-head provenance: \nolinkurl{results/benchmark/classifier_heads.json}.
+\bibitem{artifacts} Team T003, ``Project measurement and verification artifacts,'' local repository, 2026. \nolinkurl{results/benchmark/}, \nolinkurl{results/modelling/brfss2015/}, and \nolinkurl{results/verification/}.
+\end{thebibliography}
+\end{document}
